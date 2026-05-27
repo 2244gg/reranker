@@ -1,0 +1,248 @@
+{
+  "k": 15,
+  "input_dir": "/Users/a2244/Desktop/pxsf/reranked_JSON",
+  "notes": {
+    "original_list": "recommendations (truncated to k)",
+    "reranked_list": "reranked_recommendations (truncated to k)",
+    "relevance": "true_preferred_movies = test hits within the shared top-20 candidate pool",
+    "macro_avg": "mean of per-user precision/recall",
+    "micro_precision": "sum(hits) / (n_users * k)",
+    "micro_recall": "sum(hits) / sum(test_movies_count)",
+    "mrr_at_k": "mean reciprocal rank of first preferred-pool hit in truncated list",
+    "ndcg_at_k": "mean NDCG@k with binary relevance over true_preferred_movies"
+  },
+  "metrics_original_list": {
+    "neutral": {
+      "n_users": 6031,
+      "macro_avg_precision": 0.21685734814569727,
+      "macro_avg_recall": 0.06998291468823771,
+      "micro_precision": 0.21685734814569171,
+      "micro_recall": 0.04854126304277362,
+      "hit_rate_at_k": 0.8572376057038634,
+      "mrr_at_k": 0.47640026198308283,
+      "ndcg_at_k": 0.4980293968821006,
+      "total_hits": 19618,
+      "total_test_movies_count": 404151
+    },
+    "age": {
+      "n_users": 6031,
+      "macro_avg_precision": 0.21977560382469064,
+      "macro_avg_recall": 0.06996155539432858,
+      "micro_precision": 0.21977560382468359,
+      "micro_recall": 0.04919448423980146,
+      "hit_rate_at_k": 0.85292654617808,
+      "mrr_at_k": 0.4907031319608011,
+      "ndcg_at_k": 0.5054238643962315,
+      "total_hits": 19882,
+      "total_test_movies_count": 404151
+    },
+    "gender": {
+      "n_users": 6031,
+      "macro_avg_precision": 0.21097662079257767,
+      "macro_avg_recall": 0.06723987126820515,
+      "micro_precision": 0.2109766207925717,
+      "micro_recall": 0.047224923357853874,
+      "hit_rate_at_k": 0.8423147073453822,
+      "mrr_at_k": 0.47399985881581,
+      "ndcg_at_k": 0.49359358623722027,
+      "total_hits": 19086,
+      "total_test_movies_count": 404151
+    },
+    "cross": {
+      "n_users": 6031,
+      "macro_avg_precision": 0.211496158735429,
+      "macro_avg_recall": 0.06750134927752972,
+      "micro_precision": 0.21149615873542255,
+      "micro_recall": 0.04734121652550655,
+      "hit_rate_at_k": 0.8501077764881446,
+      "mrr_at_k": 0.4775657267988558,
+      "ndcg_at_k": 0.49573387622553233,
+      "total_hits": 19133,
+      "total_test_movies_count": 404151
+    }
+  },
+  "metrics_reranked_list": {
+    "neutral": {
+      "n_users": 6031,
+      "macro_avg_precision": 0.21685734814569727,
+      "macro_avg_recall": 0.06998291468823771,
+      "micro_precision": 0.21685734814569171,
+      "micro_recall": 0.04854126304277362,
+      "hit_rate_at_k": 0.8572376057038634,
+      "mrr_at_k": 0.47640026198308283,
+      "ndcg_at_k": 0.4980293968821006,
+      "total_hits": 19618,
+      "total_test_movies_count": 404151
+    },
+    "age": {
+      "n_users": 6031,
+      "macro_avg_precision": 0.22713756701487373,
+      "macro_avg_recall": 0.07227046303549019,
+      "micro_precision": 0.22713756701486762,
+      "micro_recall": 0.050842383168667155,
+      "hit_rate_at_k": 0.8588957055214724,
+      "mrr_at_k": 0.5396310762875189,
+      "ndcg_at_k": 0.545028061395444,
+      "total_hits": 20548,
+      "total_test_movies_count": 404151
+    },
+    "gender": {
+      "n_users": 6031,
+      "macro_avg_precision": 0.21853755596087557,
+      "macro_avg_recall": 0.06966216416382515,
+      "micro_precision": 0.21853755596086885,
+      "micro_recall": 0.04891736009560783,
+      "hit_rate_at_k": 0.8476206267617311,
+      "mrr_at_k": 0.5268361269895022,
+      "ndcg_at_k": 0.5366629548300156,
+      "total_hits": 19770,
+      "total_test_movies_count": 404151
+    },
+    "cross": {
+      "n_users": 6031,
+      "macro_avg_precision": 0.21999668380037127,
+      "macro_avg_recall": 0.07001312706102647,
+      "micro_precision": 0.21999668380036477,
+      "micro_recall": 0.04924397069412175,
+      "hit_rate_at_k": 0.8564085557950588,
+      "mrr_at_k": 0.5288000209779353,
+      "ndcg_at_k": 0.5389377180380374,
+      "total_hits": 19902,
+      "total_test_movies_count": 404151
+    }
+  },
+  "comparison_reranked_minus_original": {
+    "age": {
+      "original": {
+        "n_users": 6031,
+        "macro_avg_precision": 0.21977560382469064,
+        "macro_avg_recall": 0.06996155539432858,
+        "micro_precision": 0.21977560382468359,
+        "micro_recall": 0.04919448423980146,
+        "hit_rate_at_k": 0.85292654617808,
+        "mrr_at_k": 0.4907031319608011,
+        "ndcg_at_k": 0.5054238643962315,
+        "total_hits": 19882,
+        "total_test_movies_count": 404151
+      },
+      "reranked_list": {
+        "n_users": 6031,
+        "macro_avg_precision": 0.22713756701487373,
+        "macro_avg_recall": 0.07227046303549019,
+        "micro_precision": 0.22713756701486762,
+        "micro_recall": 0.050842383168667155,
+        "hit_rate_at_k": 0.8588957055214724,
+        "mrr_at_k": 0.5396310762875189,
+        "ndcg_at_k": 0.545028061395444,
+        "total_hits": 20548,
+        "total_test_movies_count": 404151
+      },
+      "delta_reranked_minus_original_macro_avg_precision": 0.007361963190183091,
+      "delta_reranked_minus_original_macro_avg_recall": 0.002308907641161609,
+      "delta_reranked_minus_original_micro_precision": 0.007361963190184034,
+      "delta_reranked_minus_original_micro_recall": 0.0016478989288656945,
+      "delta_reranked_minus_original_hit_rate_at_k": 0.005969159343392483,
+      "delta_reranked_minus_original_mrr_at_k": 0.04892794432671782,
+      "delta_reranked_minus_original_ndcg_at_k": 0.03960419699921247
+    },
+    "cross": {
+      "original": {
+        "n_users": 6031,
+        "macro_avg_precision": 0.211496158735429,
+        "macro_avg_recall": 0.06750134927752972,
+        "micro_precision": 0.21149615873542255,
+        "micro_recall": 0.04734121652550655,
+        "hit_rate_at_k": 0.8501077764881446,
+        "mrr_at_k": 0.4775657267988558,
+        "ndcg_at_k": 0.49573387622553233,
+        "total_hits": 19133,
+        "total_test_movies_count": 404151
+      },
+      "reranked_list": {
+        "n_users": 6031,
+        "macro_avg_precision": 0.21999668380037127,
+        "macro_avg_recall": 0.07001312706102647,
+        "micro_precision": 0.21999668380036477,
+        "micro_recall": 0.04924397069412175,
+        "hit_rate_at_k": 0.8564085557950588,
+        "mrr_at_k": 0.5288000209779353,
+        "ndcg_at_k": 0.5389377180380374,
+        "total_hits": 19902,
+        "total_test_movies_count": 404151
+      },
+      "delta_reranked_minus_original_macro_avg_precision": 0.008500525064942255,
+      "delta_reranked_minus_original_macro_avg_recall": 0.0025117777834967464,
+      "delta_reranked_minus_original_micro_precision": 0.008500525064942227,
+      "delta_reranked_minus_original_micro_recall": 0.0019027541686151977,
+      "delta_reranked_minus_original_hit_rate_at_k": 0.006300779306914195,
+      "delta_reranked_minus_original_mrr_at_k": 0.05123429417907954,
+      "delta_reranked_minus_original_ndcg_at_k": 0.04320384181250503
+    },
+    "gender": {
+      "original": {
+        "n_users": 6031,
+        "macro_avg_precision": 0.21097662079257767,
+        "macro_avg_recall": 0.06723987126820515,
+        "micro_precision": 0.2109766207925717,
+        "micro_recall": 0.047224923357853874,
+        "hit_rate_at_k": 0.8423147073453822,
+        "mrr_at_k": 0.47399985881581,
+        "ndcg_at_k": 0.49359358623722027,
+        "total_hits": 19086,
+        "total_test_movies_count": 404151
+      },
+      "reranked_list": {
+        "n_users": 6031,
+        "macro_avg_precision": 0.21853755596087557,
+        "macro_avg_recall": 0.06966216416382515,
+        "micro_precision": 0.21853755596086885,
+        "micro_recall": 0.04891736009560783,
+        "hit_rate_at_k": 0.8476206267617311,
+        "mrr_at_k": 0.5268361269895022,
+        "ndcg_at_k": 0.5366629548300156,
+        "total_hits": 19770,
+        "total_test_movies_count": 404151
+      },
+      "delta_reranked_minus_original_macro_avg_precision": 0.007560935168297894,
+      "delta_reranked_minus_original_macro_avg_recall": 0.0024222928956200013,
+      "delta_reranked_minus_original_micro_precision": 0.007560935168297145,
+      "delta_reranked_minus_original_micro_recall": 0.0016924367377539537,
+      "delta_reranked_minus_original_hit_rate_at_k": 0.005305919416348948,
+      "delta_reranked_minus_original_mrr_at_k": 0.05283626817369219,
+      "delta_reranked_minus_original_ndcg_at_k": 0.04306936859279531
+    },
+    "neutral": {
+      "original": {
+        "n_users": 6031,
+        "macro_avg_precision": 0.21685734814569727,
+        "macro_avg_recall": 0.06998291468823771,
+        "micro_precision": 0.21685734814569171,
+        "micro_recall": 0.04854126304277362,
+        "hit_rate_at_k": 0.8572376057038634,
+        "mrr_at_k": 0.47640026198308283,
+        "ndcg_at_k": 0.4980293968821006,
+        "total_hits": 19618,
+        "total_test_movies_count": 404151
+      },
+      "reranked_list": {
+        "n_users": 6031,
+        "macro_avg_precision": 0.21685734814569727,
+        "macro_avg_recall": 0.06998291468823771,
+        "micro_precision": 0.21685734814569171,
+        "micro_recall": 0.04854126304277362,
+        "hit_rate_at_k": 0.8572376057038634,
+        "mrr_at_k": 0.47640026198308283,
+        "ndcg_at_k": 0.4980293968821006,
+        "total_hits": 19618,
+        "total_test_movies_count": 404151
+      },
+      "delta_reranked_minus_original_macro_avg_precision": 0.0,
+      "delta_reranked_minus_original_macro_avg_recall": 0.0,
+      "delta_reranked_minus_original_micro_precision": 0.0,
+      "delta_reranked_minus_original_micro_recall": 0.0,
+      "delta_reranked_minus_original_hit_rate_at_k": 0.0,
+      "delta_reranked_minus_original_mrr_at_k": 0.0,
+      "delta_reranked_minus_original_ndcg_at_k": 0.0
+    }
+  }
+}

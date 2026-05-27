@@ -1,0 +1,4617 @@
+{
+  "6010": {
+    "user_info": {
+      "gender": "male",
+      "age_group": "middle-aged"
+    },
+    "results": {
+      "neutral": {
+        "recommendations": [
+          "Raiders of the Lost Ark",
+          "The Fugitive",
+          "The Hunt for Red October",
+          "Lethal Weapon 2",
+          "The Great Escape",
+          "Butch Cassidy and the Sundance Kid",
+          "Die Hard",
+          "Air Force One",
+          "A Few Good Men",
+          "The Rock",
+          "Clear and Present Danger",
+          "The Untouchables",
+          "Midnight Run",
+          "Sneakers",
+          "Patriot Games",
+          "The American President",
+          "Good Morning, Vietnam",
+          "Indiana Jones and the Last Crusade",
+          "Top Gun",
+          "Romancing the Stone"
+        ],
+        "true_preferred_movies": [
+          "Raiders of the Lost Ark",
+          "The Fugitive",
+          "Lethal Weapon 2",
+          "The Great Escape",
+          "Die Hard",
+          "A Few Good Men",
+          "Clear and Present Danger",
+          "The Untouchables",
+          "Top Gun",
+          "Romancing the Stone"
+        ],
+        "evaluation": {
+          "precision": 0.5,
+          "recall": 0.057803468208092484,
+          "hits": 10,
+          "test_movies_count": 173
+        }
+      },
+      "age": {
+        "recommendations": [
+          "Raiders of the Lost Ark",
+          "Die Hard",
+          "The Fugitive",
+          "The Hunt for Red October",
+          "Midnight Run",
+          "The Great Escape",
+          "The Rock",
+          "Lethal Weapon 2",
+          "Air Force One",
+          "A Few Good Men",
+          "The Untouchables",
+          "Back to the Future",
+          "The Blues Brothers",
+          "Casablanca",
+          "Butch Cassidy and the Sundance Kid",
+          "The American President",
+          "Good Morning, Vietnam",
+          "The Thomas Crown Affair",
+          "The Princess Bride",
+          "Out of Africa"
+        ],
+        "true_preferred_movies": [
+          "Raiders of the Lost Ark",
+          "Die Hard",
+          "The Fugitive",
+          "The Great Escape",
+          "Lethal Weapon 2",
+          "A Few Good Men",
+          "The Untouchables",
+          "Back to the Future",
+          "The Blues Brothers",
+          "Casablanca",
+          "The Princess Bride"
+        ],
+        "evaluation": {
+          "precision": 0.55,
+          "recall": 0.06358381502890173,
+          "hits": 11,
+          "test_movies_count": 173
+        }
+      },
+      "gender": {
+        "recommendations": [
+          "Die Hard",
+          "Raiders of the Lost Ark",
+          "The Fugitive",
+          "Lethal Weapon",
+          "Air Force One",
+          "The Hunt for Red October",
+          "Back to the Future",
+          "The Great Escape",
+          "The Rock",
+          "Patriot Games",
+          "Men in Black",
+          "A Few Good Men",
+          "The Untouchables",
+          "The Mask of Zorro",
+          "Crimson Tide",
+          "The Terminator",
+          "Midnight Run",
+          "Bullitt",
+          "Top Gun",
+          "The Insider"
+        ],
+        "true_preferred_movies": [
+          "Die Hard",
+          "Raiders of the Lost Ark",
+          "The Fugitive",
+          "Lethal Weapon",
+          "Back to the Future",
+          "The Great Escape",
+          "A Few Good Men",
+          "The Untouchables",
+          "Top Gun"
+        ],
+        "evaluation": {
+          "precision": 0.45,
+          "recall": 0.05202312138728324,
+          "hits": 9,
+          "test_movies_count": 173
+        }
+      },
+      "cross": {
+        "recommendations": [
+          "Raiders of the Lost Ark",
+          "Die Hard",
+          "The Fugitive",
+          "Patriot Games",
+          "Midnight Run",
+          "Lethal Weapon",
+          "Air Force One",
+          "The Rock",
+          "A Few Good Men",
+          "Unforgiven",
+          "The Hunt for Red October",
+          "Star Trek IV: The Voyage Home",
+          "The Great Escape",
+          "Top Gun",
+          "The Untouchables",
+          "Midnight Cowboy",
+          "The Thomas Crown Affair",
+          "The Bridge on the River Kwai",
+          "The Sting",
+          "Butch Cassidy and the Sundance Kid"
+        ],
+        "true_preferred_movies": [
+          "Raiders of the Lost Ark",
+          "Die Hard",
+          "The Fugitive",
+          "Lethal Weapon",
+          "A Few Good Men",
+          "Unforgiven",
+          "Star Trek IV: The Voyage Home",
+          "The Great Escape",
+          "Top Gun",
+          "The Untouchables",
+          "The Bridge on the River Kwai"
+        ],
+        "evaluation": {
+          "precision": 0.55,
+          "recall": 0.06358381502890173,
+          "hits": 11,
+          "test_movies_count": 173
+        }
+      }
+    }
+  },
+  "6011": {
+    "user_info": {
+      "gender": "male",
+      "age_group": "middle-aged"
+    },
+    "results": {
+      "neutral": {
+        "recommendations": [
+          "Dead Poets Society",
+          "The Princess Bride",
+          "Amélie",
+          "The Green Mile",
+          "The Big Lebowski",
+          "The Breakfast Club",
+          "The Grand Budapest Hotel",
+          "Raiders of the Lost Ark",
+          "Eternal Sunshine of the Spotless Mind",
+          "Groundhog Day",
+          "The Curious Case of Benjamin Button",
+          "Singin’ in the Rain",
+          "The Imitation Game",
+          "The Sound of Music",
+          "The Martian",
+          "Catch Me If You Can",
+          "Moulin Rouge!",
+          "The Royal Tenenbaums",
+          "Inception",
+          "Midnight in Paris"
+        ],
+        "true_preferred_movies": [
+          "Dead Poets Society",
+          "The Princess Bride"
+        ],
+        "evaluation": {
+          "precision": 0.1,
+          "recall": 0.020618556701030927,
+          "hits": 2,
+          "test_movies_count": 97
+        }
+      },
+      "age": {
+        "recommendations": [
+          "Dead Poets Society",
+          "The Princess Bride",
+          "The Green Mile",
+          "Big Fish",
+          "Groundhog Day",
+          "Amélie",
+          "The Curious Case of Benjamin Button",
+          "Good Will Hunting",
+          "Midnight in Paris",
+          "A River Runs Through It",
+          "The Great Escape",
+          "The Sound of Music",
+          "The Iron Giant",
+          "Finding Neverland",
+          "The King's Speech",
+          "The Secret Garden",
+          "Starman",
+          "The Magnificent Seven",
+          "Catch Me If You Can",
+          "The Breakfast Club"
+        ],
+        "true_preferred_movies": [
+          "Dead Poets Society",
+          "The Princess Bride"
+        ],
+        "evaluation": {
+          "precision": 0.1,
+          "recall": 0.020618556701030927,
+          "hits": 2,
+          "test_movies_count": 97
+        }
+      },
+      "gender": {
+        "recommendations": [
+          "Dead Poets Society",
+          "The Princess Bride",
+          "Raiders of the Lost Ark",
+          "The Big Lebowski",
+          "The Breakfast Club",
+          "Good Will Hunting",
+          "The Green Mile",
+          "The Wizard of Oz",
+          "Groundhog Day",
+          "Blade Runner",
+          "Amélie",
+          "Eternal Sunshine of the Spotless Mind",
+          "The Goonies",
+          "Lawrence of Arabia",
+          "The Maltese Falcon",
+          "Monty Python and the Holy Grail",
+          "The Iron Giant",
+          "Stand by Me",
+          "A Beautiful Mind",
+          "The Truman Show"
+        ],
+        "true_preferred_movies": [
+          "Dead Poets Society",
+          "The Princess Bride",
+          "Blade Runner",
+          "Stand by Me",
+          "The Truman Show"
+        ],
+        "evaluation": {
+          "precision": 0.25,
+          "recall": 0.05154639175257732,
+          "hits": 5,
+          "test_movies_count": 97
+        }
+      },
+      "cross": {
+        "recommendations": [
+          "Dead Poets Society",
+          "The Princess Bride",
+          "The Green Mile",
+          "Raiders of the Lost Ark",
+          "Good Will Hunting",
+          "The Breakfast Club",
+          "The Godfather",
+          "Forrest Gump",
+          "The Big Chill",
+          "E.T. the Extra-Terrestrial",
+          "Amélie",
+          "The Curious Case of Benjamin Button",
+          "Groundhog Day",
+          "A Few Good Men",
+          "The Silence of the Lambs",
+          "The Truman Show",
+          "L.A. Confidential",
+          "The Sixth Sense",
+          "The Iron Giant",
+          "Moulin Rouge!"
+        ],
+        "true_preferred_movies": [
+          "Dead Poets Society",
+          "The Princess Bride",
+          "Forrest Gump",
+          "E.T. the Extra-Terrestrial",
+          "The Truman Show"
+        ],
+        "evaluation": {
+          "precision": 0.25,
+          "recall": 0.05154639175257732,
+          "hits": 5,
+          "test_movies_count": 97
+        }
+      }
+    }
+  },
+  "6012": {
+    "user_info": {
+      "gender": "male",
+      "age_group": "middle-aged"
+    },
+    "results": {
+      "neutral": {
+        "recommendations": [
+          "Eternal Sunshine of the Spotless Mind",
+          "Blue Valentine",
+          "Call Me by Your Name",
+          "Carol",
+          "The Perks of Being a Wallflower",
+          "Moonlight",
+          "A Single Man",
+          "Her",
+          "Brokeback Mountain",
+          "500 Days of Summer",
+          "Closer",
+          "Before Sunrise",
+          "Lost and Delirious",
+          "The Kids Are All Right",
+          "Paris, Texas",
+          "The Shape of Water",
+          "An Education",
+          "Like Crazy",
+          "Beginners",
+          "An Angel at My Table"
+        ],
+        "true_preferred_movies": [],
+        "evaluation": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "hits": 0,
+          "test_movies_count": 7
+        }
+      },
+      "age": {
+        "recommendations": [
+          "Boys Don't Cry",
+          "Romeo + Juliet",
+          "Eternal Sunshine of the Spotless Mind",
+          "Blue Valentine",
+          "Call Me by Your Name",
+          "Brokeback Mountain",
+          "The Hours",
+          "A Single Man",
+          "Moulin Rouge!",
+          "The Perks of Being a Wallflower",
+          "Carol",
+          "An Education",
+          "Before Sunrise",
+          "Closer",
+          "The Talented Mr. Ripley",
+          "Lost and Delirious",
+          "The Dreamers",
+          "My Own Private Idaho",
+          "Jennifer's Body",
+          "Hedwig and the Angry Inch"
+        ],
+        "true_preferred_movies": [],
+        "evaluation": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "hits": 0,
+          "test_movies_count": 7
+        }
+      },
+      "gender": {
+        "recommendations": [
+          "Call Me by Your Name",
+          "Moonlight",
+          "Brokeback Mountain",
+          "Carol",
+          "Milk",
+          "The Perks of Being a Wallflower",
+          "A Single Man",
+          "Dallas Buyers Club",
+          "Love, Simon",
+          "The Imitation Game",
+          "Pride",
+          "Blue Is the Warmest Color",
+          "Hedwig and the Angry Inch",
+          "My Own Private Idaho",
+          "Paris Is Burning",
+          "The Birdcage",
+          "God's Own Country",
+          "Philadelphia",
+          "Beginners",
+          "Love! Valour! Compassion!"
+        ],
+        "true_preferred_movies": [],
+        "evaluation": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "hits": 0,
+          "test_movies_count": 7
+        }
+      },
+      "cross": {
+        "recommendations": [
+          "Eternal Sunshine of the Spotless Mind",
+          "Brokeback Mountain",
+          "The Hours",
+          "Call Me by Your Name",
+          "A Single Man",
+          "Blue Valentine",
+          "Carol",
+          "Milk",
+          "The Perks of Being a Wallflower",
+          "Moonlight",
+          "Love, Simon",
+          "Dallas Buyers Club",
+          "Her",
+          "An Education",
+          "Before Sunrise",
+          "The Talented Mr. Ripley",
+          "Philadelphia",
+          "Blue is the Warmest Color",
+          "My Own Private Idaho",
+          "The Imitation Game"
+        ],
+        "true_preferred_movies": [],
+        "evaluation": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "hits": 0,
+          "test_movies_count": 7
+        }
+      }
+    }
+  },
+  "6013": {
+    "user_info": {
+      "gender": "female",
+      "age_group": "middle-aged"
+    },
+    "results": {
+      "neutral": {
+        "recommendations": [
+          "The Royal Tenenbaums",
+          "The Hours",
+          "Clueless",
+          "High Fidelity",
+          "Little Miss Sunshine",
+          "Amélie",
+          "Moulin Rouge!",
+          "Lost in Translation",
+          "Sideways",
+          "The Kids Are All Right",
+          "Juno",
+          "Almost Famous",
+          "The Birdcage",
+          "Pride & Prejudice",
+          "The Virgin Suicides",
+          "An Education",
+          "Hedwig and the Angry Inch",
+          "Moonrise Kingdom",
+          "Submarine",
+          "My Own Private Idaho"
+        ],
+        "true_preferred_movies": [],
+        "evaluation": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "hits": 0,
+          "test_movies_count": 69
+        }
+      },
+      "age": {
+        "recommendations": [
+          "The Royal Tenenbaums",
+          "Lost in Translation",
+          "The Hours",
+          "Sideways",
+          "The Kids Are All Right",
+          "An Education",
+          "Little Miss Sunshine",
+          "Moulin Rouge!",
+          "Magnolia",
+          "Closer",
+          "Away from Her",
+          "Big Fish",
+          "Eternal Sunshine of the Spotless Mind",
+          "Amélie",
+          "The Virgin Suicides",
+          "The Piano",
+          "Call Me by Your Name",
+          "The Favourite",
+          "Carol",
+          "A Single Man"
+        ],
+        "true_preferred_movies": [
+          "Magnolia",
+          "The Piano"
+        ],
+        "evaluation": {
+          "precision": 0.1,
+          "recall": 0.028985507246376812,
+          "hits": 2,
+          "test_movies_count": 69
+        }
+      },
+      "gender": {
+        "recommendations": [
+          "The Hours",
+          "Lost in Translation",
+          "Eternal Sunshine of the Spotless Mind",
+          "Closer",
+          "Thelma & Louise",
+          "Carol",
+          "An Education",
+          "Sideways",
+          "The Kids Are All Right",
+          "Moulin Rouge!",
+          "Little Miss Sunshine",
+          "The Virgin Suicides",
+          "Juno",
+          "Moonrise Kingdom",
+          "Brokeback Mountain",
+          "The Shape of Water",
+          "Amélie",
+          "Frances Ha",
+          "Lost and Delirious",
+          "Away from Her"
+        ],
+        "true_preferred_movies": [],
+        "evaluation": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "hits": 0,
+          "test_movies_count": 69
+        }
+      },
+      "cross": {
+        "recommendations": [
+          "The Hours",
+          "Lost in Translation",
+          "Closer",
+          "The Kids Are All Right",
+          "An Education",
+          "The Royal Tenenbaums",
+          "Moulin Rouge!",
+          "Far from Heaven",
+          "Little Miss Sunshine",
+          "Amélie",
+          "The Birdcage",
+          "The Piano",
+          "My Best Friend's Wedding",
+          "Big Fish",
+          "Sense and Sensibility",
+          "The Talented Mr. Ripley",
+          "High Fidelity",
+          "Chocolat",
+          "Bridget Jones's Diary",
+          "Bend It Like Beckham"
+        ],
+        "true_preferred_movies": [
+          "The Piano"
+        ],
+        "evaluation": {
+          "precision": 0.05,
+          "recall": 0.014492753623188406,
+          "hits": 1,
+          "test_movies_count": 69
+        }
+      }
+    }
+  },
+  "6014": {
+    "user_info": {
+      "gender": "male",
+      "age_group": "middle-aged"
+    },
+    "results": {
+      "neutral": {
+        "recommendations": [
+          "Brazil",
+          "Midnight Cowboy",
+          "The Grand Budapest Hotel",
+          "The Big Lebowski",
+          "Amélie",
+          "The Third Man",
+          "Blade Runner",
+          "The Princess Bride",
+          "Moulin Rouge!",
+          "Eternal Sunshine of the Spotless Mind",
+          "The Adventures of Robin Hood",
+          "Singin’ in the Rain",
+          "The Maltese Falcon",
+          "The Sting",
+          "Big Fish",
+          "The Shape of Water",
+          "Raiders of the Lost Ark",
+          "Pan’s Labyrinth",
+          "The Wizard of Oz",
+          "The Fisher King"
+        ],
+        "true_preferred_movies": [
+          "Brazil",
+          "Blade Runner",
+          "The Wizard of Oz"
+        ],
+        "evaluation": {
+          "precision": 0.15,
+          "recall": 0.05555555555555555,
+          "hits": 3,
+          "test_movies_count": 54
+        }
+      },
+      "age": {
+        "recommendations": [
+          "All About Eve",
+          "The Great Dictator",
+          "Brazil",
+          "The Apartment",
+          "Amadeus",
+          "The Producers",
+          "Midnight Cowboy",
+          "The Third Man",
+          "West Side Story",
+          "The Philadelphia Story",
+          "Being There",
+          "Metropolis",
+          "The Sting",
+          "Singin' in the Rain",
+          "The Wizard of Oz",
+          "Blade Runner",
+          "The King and I",
+          "Lawrence of Arabia",
+          "My Fair Lady",
+          "The Maltese Falcon"
+        ],
+        "true_preferred_movies": [
+          "Brazil",
+          "The Producers",
+          "West Side Story",
+          "Singin' in the Rain",
+          "The Wizard of Oz",
+          "Blade Runner",
+          "My Fair Lady"
+        ],
+        "evaluation": {
+          "precision": 0.35,
+          "recall": 0.12962962962962962,
+          "hits": 7,
+          "test_movies_count": 54
+        }
+      },
+      "gender": {
+        "recommendations": [
+          "Chinatown",
+          "Raiders of the Lost Ark",
+          "Blade Runner",
+          "The Maltese Falcon",
+          "Singin' in the Rain",
+          "The Princess Bride",
+          "North by Northwest",
+          "The Great Dictator",
+          "Brazil",
+          "The Godfather",
+          "His Girl Friday",
+          "Mary Poppins",
+          "The Grand Budapest Hotel",
+          "Metropolis",
+          "Rear Window",
+          "The Adventures of Robin Hood",
+          "The Wizard of Oz",
+          "The Third Man",
+          "Lawrence of Arabia",
+          "M"
+        ],
+        "true_preferred_movies": [
+          "Blade Runner",
+          "Singin' in the Rain",
+          "North by Northwest",
+          "Brazil",
+          "Mary Poppins",
+          "Rear Window",
+          "The Wizard of Oz",
+          "M"
+        ],
+        "evaluation": {
+          "precision": 0.4,
+          "recall": 0.14814814814814814,
+          "hits": 8,
+          "test_movies_count": 54
+        }
+      },
+      "cross": {
+        "recommendations": [
+          "All Quiet on the Western Front",
+          "The Grand Budapest Hotel",
+          "Singin' in the Rain",
+          "Raiders of the Lost Ark",
+          "The Big Sleep",
+          "Brazil",
+          "Blade Runner",
+          "The Maltese Falcon",
+          "The Wizard of Oz",
+          "Amélie",
+          "Monty Python and the Holy Grail",
+          "The Third Man",
+          "The Princess Bride",
+          "The Sting",
+          "La La Land",
+          "Fargo",
+          "The Blues Brothers",
+          "The Philadelphia Story",
+          "Midnight Cowboy",
+          "To Kill a Mockingbird"
+        ],
+        "true_preferred_movies": [
+          "Singin' in the Rain",
+          "Brazil",
+          "Blade Runner",
+          "The Wizard of Oz",
+          "To Kill a Mockingbird"
+        ],
+        "evaluation": {
+          "precision": 0.25,
+          "recall": 0.09259259259259259,
+          "hits": 5,
+          "test_movies_count": 54
+        }
+      }
+    }
+  },
+  "6015": {
+    "user_info": {
+      "gender": "female",
+      "age_group": "middle-aged"
+    },
+    "results": {
+      "neutral": {
+        "recommendations": [
+          "The Lion King",
+          "Beauty and the Beast",
+          "The Mask of Zorro",
+          "Pirates of the Caribbean: The Curse of the Black Pearl",
+          "The Princess Bride",
+          "The Iron Giant",
+          "Who Framed Roger Rabbit",
+          "The Rocketeer",
+          "Jumanji",
+          "The Secret of NIMH",
+          "The Grand Budapest Hotel",
+          "Clueless",
+          "The Truman Show",
+          "A Fish Called Wanda",
+          "The Wizard of Oz",
+          "Hook",
+          "The Sandlot",
+          "The Bourne Identity",
+          "The Great Mouse Detective",
+          "Dead Poets Society"
+        ],
+        "true_preferred_movies": [
+          "Dead Poets Society"
+        ],
+        "evaluation": {
+          "precision": 0.05,
+          "recall": 0.04,
+          "hits": 1,
+          "test_movies_count": 25
+        }
+      },
+      "age": {
+        "recommendations": [
+          "The Lion King",
+          "Beauty and the Beast",
+          "Raiders of the Lost Ark",
+          "The Princess Bride",
+          "Dead Poets Society",
+          "Good Will Hunting",
+          "The Shawshank Redemption",
+          "The Matrix",
+          "The Silence of the Lambs",
+          "The Big Lebowski",
+          "Groundhog Day",
+          "The Usual Suspects",
+          "Four Weddings and a Funeral",
+          "Sense and Sensibility",
+          "The English Patient",
+          "L.A. Confidential",
+          "The Truman Show",
+          "Fargo",
+          "Braveheart",
+          "The Sixth Sense"
+        ],
+        "true_preferred_movies": [
+          "Dead Poets Society",
+          "Groundhog Day",
+          "The English Patient"
+        ],
+        "evaluation": {
+          "precision": 0.15,
+          "recall": 0.12,
+          "hits": 3,
+          "test_movies_count": 25
+        }
+      },
+      "gender": {
+        "recommendations": [
+          "The Lion King",
+          "Beauty and the Beast",
+          "The Princess Bride",
+          "Aladdin",
+          "The Secret Garden",
+          "Sense and Sensibility",
+          "The Brave Little Toaster",
+          "The Iron Giant",
+          "Ever After: A Cinderella Story",
+          "Hook",
+          "Little Women",
+          "The Sandlot",
+          "Clueless",
+          "Matilda",
+          "Anne of Green Gables",
+          "The Nightmare Before Christmas",
+          "The Addams Family",
+          "A Little Princess",
+          "The Parent Trap",
+          "Labyrinth"
+        ],
+        "true_preferred_movies": [
+          "Aladdin"
+        ],
+        "evaluation": {
+          "precision": 0.05,
+          "recall": 0.04,
+          "hits": 1,
+          "test_movies_count": 25
+        }
+      },
+      "cross": {
+        "recommendations": [
+          "Beauty and the Beast",
+          "The Lion King",
+          "The Princess Bride",
+          "The Secret Garden",
+          "Sense and Sensibility",
+          "The Sandlot",
+          "Little Women",
+          "Braveheart",
+          "The Iron Giant",
+          "Groundhog Day",
+          "Forrest Gump",
+          "Hook",
+          "Clueless",
+          "The Mask of Zorro",
+          "Dead Poets Society",
+          "Grease",
+          "A League of Their Own",
+          "The English Patient",
+          "An Officer and a Gentleman",
+          "The Philadelphia Story"
+        ],
+        "true_preferred_movies": [
+          "Groundhog Day",
+          "Dead Poets Society",
+          "The English Patient"
+        ],
+        "evaluation": {
+          "precision": 0.15,
+          "recall": 0.12,
+          "hits": 3,
+          "test_movies_count": 25
+        }
+      }
+    }
+  },
+  "6016": {
+    "user_info": {
+      "gender": "male",
+      "age_group": "middle-aged"
+    },
+    "results": {
+      "neutral": {
+        "recommendations": [
+          "Kramer vs. Kramer",
+          "The Deer Hunter",
+          "The Insider",
+          "The Conversation",
+          "Network",
+          "All the President's Men",
+          "Days of Heaven",
+          "Paris, Texas",
+          "The Last Picture Show",
+          "The Player",
+          "In the Valley of Elah",
+          "The Straight Story",
+          "The Big Chill",
+          "A Simple Plan",
+          "Dead Man",
+          "The Postman Always Rings Twice",
+          "The Sweet Hereafter",
+          "Election",
+          "The Cider House Rules",
+          "The Assassination of Jesse James by the Coward Robert Ford"
+        ],
+        "true_preferred_movies": [
+          "The Deer Hunter",
+          "The Insider",
+          "The Last Picture Show",
+          "A Simple Plan"
+        ],
+        "evaluation": {
+          "precision": 0.2,
+          "recall": 0.017543859649122806,
+          "hits": 4,
+          "test_movies_count": 228
+        }
+      },
+      "age": {
+        "recommendations": [
+          "The Deer Hunter",
+          "The Conversation",
+          "Network",
+          "American Beauty",
+          "The Last Picture Show",
+          "Paris, Texas",
+          "One Flew Over the Cuckoo's Nest",
+          "The Insider",
+          "Reds",
+          "The Big Chill",
+          "Dead Man",
+          "In the Heat of the Night",
+          "The Verdict",
+          "The Age of Innocence",
+          "To Kill a Mockingbird",
+          "Midnight Cowboy",
+          "The Straight Story",
+          "The Sweet Hereafter",
+          "The Last Detail",
+          "Days of Heaven"
+        ],
+        "true_preferred_movies": [
+          "The Deer Hunter",
+          "The Last Picture Show",
+          "The Insider",
+          "Reds",
+          "The Verdict"
+        ],
+        "evaluation": {
+          "precision": 0.25,
+          "recall": 0.021929824561403508,
+          "hits": 5,
+          "test_movies_count": 228
+        }
+      },
+      "gender": {
+        "recommendations": [
+          "The Deer Hunter",
+          "The Conversation",
+          "Network",
+          "The Insider",
+          "The Last Picture Show",
+          "Apocalypse Now",
+          "The Big Chill",
+          "The Graduate",
+          "To Kill a Mockingbird",
+          "Days of Heaven",
+          "One Flew Over the Cuckoo's Nest",
+          "Chinatown",
+          "The Killing Fields",
+          "Badlands",
+          "The Sting",
+          "Midnight Cowboy",
+          "The French Connection",
+          "Nashville",
+          "Deliverance",
+          "The Color of Money"
+        ],
+        "true_preferred_movies": [
+          "The Deer Hunter",
+          "The Insider",
+          "The Last Picture Show",
+          "Chinatown"
+        ],
+        "evaluation": {
+          "precision": 0.2,
+          "recall": 0.017543859649122806,
+          "hits": 4,
+          "test_movies_count": 228
+        }
+      },
+      "cross": {
+        "recommendations": [
+          "The Deer Hunter",
+          "The Last Picture Show",
+          "The Insider",
+          "Good Will Hunting",
+          "A River Runs Through It",
+          "The Straight Story",
+          "Reversal of Fortune",
+          "The Conversation",
+          "The Verdict",
+          "The King of Marvin Gardens",
+          "The Sweet Hereafter",
+          "L.A. Confidential",
+          "In the Bedroom",
+          "The Age of Innocence",
+          "The Elephant Man",
+          "The Mission",
+          "Dead Poets Society",
+          "The Color of Money",
+          "The Killing Fields",
+          "The Last Emperor"
+        ],
+        "true_preferred_movies": [
+          "The Deer Hunter",
+          "The Last Picture Show",
+          "The Insider",
+          "The Verdict",
+          "L.A. Confidential"
+        ],
+        "evaluation": {
+          "precision": 0.25,
+          "recall": 0.021929824561403508,
+          "hits": 5,
+          "test_movies_count": 228
+        }
+      }
+    }
+  },
+  "6017": {
+    "user_info": {
+      "gender": "female",
+      "age_group": "middle-aged"
+    },
+    "results": {
+      "neutral": {
+        "recommendations": [
+          "City Lights",
+          "The Prestige",
+          "Eternal Sunshine of the Spotless Mind",
+          "Memento",
+          "The Truman Show",
+          "Casablanca",
+          "The Curious Case of Benjamin Button",
+          "A Beautiful Mind",
+          "Amélie",
+          "The Green Mile",
+          "Pan's Labyrinth",
+          "Inception",
+          "The Pianist",
+          "Good Will Hunting",
+          "Shakespeare in Love",
+          "The Shape of Water",
+          "The Illusionist",
+          "The Remains of the Day",
+          "Rain Man",
+          "Before Sunrise"
+        ],
+        "true_preferred_movies": [],
+        "evaluation": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "hits": 0,
+          "test_movies_count": 11
+        }
+      },
+      "age": {
+        "recommendations": [
+          "It's a Wonderful Life",
+          "Casablanca",
+          "The Pianist",
+          "The Green Mile",
+          "Forrest Gump",
+          "The Shawshank Redemption",
+          "A Beautiful Mind",
+          "The Curious Case of Benjamin Button",
+          "Finding Neverland",
+          "Eternal Sunshine of the Spotless Mind",
+          "The Prestige",
+          "Amélie",
+          "The Secret Life of Walter Mitty",
+          "Big Fish",
+          "The Imitation Game",
+          "The Remains of the Day",
+          "Moulin Rouge!",
+          "The English Patient",
+          "The Blind Side",
+          "The Help"
+        ],
+        "true_preferred_movies": [],
+        "evaluation": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "hits": 0,
+          "test_movies_count": 11
+        }
+      },
+      "gender": {
+        "recommendations": [
+          "Casablanca",
+          "The Princess Bride",
+          "Eternal Sunshine of the Spotless Mind",
+          "The Green Mile",
+          "Amélie",
+          "The Truman Show",
+          "The Notebook",
+          "Pan's Labyrinth",
+          "Moulin Rouge!",
+          "Lost in Translation",
+          "Sense and Sensibility",
+          "The Curious Case of Benjamin Button",
+          "Big Fish",
+          "Finding Neverland",
+          "A Beautiful Mind",
+          "The English Patient",
+          "Closer",
+          "Before Sunrise",
+          "Silver Linings Playbook",
+          "The Shape of Water"
+        ],
+        "true_preferred_movies": [],
+        "evaluation": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "hits": 0,
+          "test_movies_count": 11
+        }
+      },
+      "cross": {
+        "recommendations": [
+          "It's a Wonderful Life",
+          "Casablanca",
+          "The Princess Bride",
+          "The Secret Garden",
+          "Forrest Gump",
+          "Big Fish",
+          "A Beautiful Mind",
+          "Eternal Sunshine of the Spotless Mind",
+          "The Curious Case of Benjamin Button",
+          "Pride & Prejudice",
+          "Sense and Sensibility",
+          "Moulin Rouge!",
+          "Finding Neverland",
+          "Amélie",
+          "The Notebook",
+          "The Green Mile",
+          "The Others",
+          "L.A. Confidential",
+          "Shirley Valentine",
+          "The Bridges of Madison County"
+        ],
+        "true_preferred_movies": [],
+        "evaluation": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "hits": 0,
+          "test_movies_count": 11
+        }
+      }
+    }
+  },
+  "6018": {
+    "user_info": {
+      "gender": "male",
+      "age_group": "middle-aged"
+    },
+    "results": {
+      "neutral": {
+        "recommendations": [
+          "Butch Cassidy and the Sundance Kid",
+          "Blade Runner",
+          "The Magnificent Seven",
+          "Mad Max",
+          "The Iron Lady",
+          "The Great Escape",
+          "Logan's Run",
+          "The Big Country",
+          "The Right Stuff",
+          "Close Encounters of the Third Kind",
+          "Lawrence of Arabia",
+          "The Last Starfighter",
+          "The Rocketeer",
+          "The African Queen",
+          "Logan",
+          "12 Monkeys",
+          "The Wild Bunch",
+          "Interstellar",
+          "The Guns of Navarone",
+          "Starman"
+        ],
+        "true_preferred_movies": [
+          "Blade Runner",
+          "Close Encounters of the Third Kind"
+        ],
+        "evaluation": {
+          "precision": 0.1,
+          "recall": 0.03278688524590164,
+          "hits": 2,
+          "test_movies_count": 61
+        }
+      },
+      "age": {
+        "recommendations": [
+          "Butch Cassidy and the Sundance Kid",
+          "Blade Runner",
+          "The Good, the Bad and the Ugly",
+          "Close Encounters of the Third Kind",
+          "Lawrence of Arabia",
+          "The Magnificent Seven",
+          "Logan's Run",
+          "The Bridge on the River Kwai",
+          "Apocalypse Now",
+          "The Right Stuff",
+          "Chinatown",
+          "The Great Escape",
+          "Mad Max",
+          "The Treasure of the Sierra Madre",
+          "2001: A Space Odyssey",
+          "The Deer Hunter",
+          "The Guns of Navarone",
+          "Midnight Cowboy",
+          "The Day the Earth Stood Still",
+          "Dances with Wolves"
+        ],
+        "true_preferred_movies": [
+          "Blade Runner",
+          "Close Encounters of the Third Kind",
+          "2001: A Space Odyssey"
+        ],
+        "evaluation": {
+          "precision": 0.15,
+          "recall": 0.04918032786885246,
+          "hits": 3,
+          "test_movies_count": 61
+        }
+      },
+      "gender": {
+        "recommendations": [
+          "Blade Runner",
+          "The Magnificent Seven",
+          "12 Monkeys",
+          "The Last Samurai",
+          "Mad Max",
+          "The Good, the Bad and the Ugly",
+          "Children of Men",
+          "Lawrence of Arabia",
+          "The Iron Giant",
+          "True Grit",
+          "Minority Report",
+          "The Guns of Navarone",
+          "Memento",
+          "The Road Warrior",
+          "The Hunt for Red October",
+          "Dances with Wolves",
+          "Interstellar",
+          "The Big Sleep",
+          "Solaris",
+          "Once Upon a Time in the West"
+        ],
+        "true_preferred_movies": [
+          "Blade Runner",
+          "The Hunt for Red October"
+        ],
+        "evaluation": {
+          "precision": 0.1,
+          "recall": 0.03278688524590164,
+          "hits": 2,
+          "test_movies_count": 61
+        }
+      },
+      "cross": {
+        "recommendations": [
+          "Butch Cassidy and the Sundance Kid",
+          "Blade Runner",
+          "The Magnificent Seven",
+          "The Right Stuff",
+          "12 Monkeys",
+          "Lawrence of Arabia",
+          "Mad Max",
+          "The Last Emperor",
+          "The Great Escape",
+          "Planet of the Apes",
+          "The Abyss",
+          "Apocalypse Now",
+          "The Untouchables",
+          "The Bridge on the River Kwai",
+          "Minority Report",
+          "The Treasure of the Sierra Madre",
+          "The Man Who Would Be King",
+          "Dances with Wolves",
+          "Interstellar",
+          "The Sting"
+        ],
+        "true_preferred_movies": [
+          "Blade Runner"
+        ],
+        "evaluation": {
+          "precision": 0.05,
+          "recall": 0.01639344262295082,
+          "hits": 1,
+          "test_movies_count": 61
+        }
+      }
+    }
+  },
+  "6019": {
+    "user_info": {
+      "gender": "male",
+      "age_group": "middle-aged"
+    },
+    "results": {
+      "neutral": {
+        "recommendations": [
+          "Se7en",
+          "The Fugitive",
+          "Saving Private Ryan",
+          "Gladiator",
+          "The Matrix",
+          "Apollo 13",
+          "The Sixth Sense",
+          "Braveheart",
+          "The Green Mile",
+          "Minority Report",
+          "Jurassic Park",
+          "Fight Club",
+          "The Prestige",
+          "Memento",
+          "The Insider",
+          "L.A. Confidential",
+          "Contact",
+          "The Thin Red Line",
+          "Heat",
+          "The Rock"
+        ],
+        "true_preferred_movies": [
+          "Jurassic Park",
+          "The Rock"
+        ],
+        "evaluation": {
+          "precision": 0.1,
+          "recall": 0.06451612903225806,
+          "hits": 2,
+          "test_movies_count": 31
+        }
+      },
+      "age": {
+        "recommendations": [
+          "Se7en",
+          "The Shawshank Redemption",
+          "Apollo 13",
+          "The Fugitive",
+          "Saving Private Ryan",
+          "The Matrix",
+          "Braveheart",
+          "Fight Club",
+          "The Green Mile",
+          "Gladiator",
+          "Contact",
+          "The Sixth Sense",
+          "The Rock",
+          "Heat",
+          "L.A. Confidential",
+          "Jerry Maguire",
+          "The English Patient",
+          "The Silence of the Lambs",
+          "Independence Day",
+          "The Insider"
+        ],
+        "true_preferred_movies": [
+          "The Shawshank Redemption",
+          "The Rock"
+        ],
+        "evaluation": {
+          "precision": 0.1,
+          "recall": 0.06451612903225806,
+          "hits": 2,
+          "test_movies_count": 31
+        }
+      },
+      "gender": {
+        "recommendations": [
+          "Se7en",
+          "The Fugitive",
+          "The Shawshank Redemption",
+          "Gladiator",
+          "The Matrix",
+          "Fight Club",
+          "The Green Mile",
+          "Saving Private Ryan",
+          "Apollo 13",
+          "The Silence of the Lambs",
+          "Forrest Gump",
+          "The Sixth Sense",
+          "The Rock",
+          "Jerry Maguire",
+          "L.A. Confidential",
+          "Heat",
+          "Contact",
+          "The Insider",
+          "Braveheart",
+          "Minority Report"
+        ],
+        "true_preferred_movies": [
+          "The Shawshank Redemption",
+          "The Rock"
+        ],
+        "evaluation": {
+          "precision": 0.1,
+          "recall": 0.06451612903225806,
+          "hits": 2,
+          "test_movies_count": 31
+        }
+      },
+      "cross": {
+        "recommendations": [
+          "Se7en",
+          "Fight Club",
+          "The Matrix",
+          "Apollo 13",
+          "The Sixth Sense",
+          "The Shawshank Redemption",
+          "Saving Private Ryan",
+          "The Green Mile",
+          "The Thin Red Line",
+          "Gattaca",
+          "The Insider",
+          "Contact",
+          "L.A. Confidential",
+          "The Fugitive",
+          "The Crow",
+          "Blade Runner",
+          "Gladiator",
+          "Independence Day",
+          "The English Patient",
+          "Ronin"
+        ],
+        "true_preferred_movies": [
+          "The Shawshank Redemption"
+        ],
+        "evaluation": {
+          "precision": 0.05,
+          "recall": 0.03225806451612903,
+          "hits": 1,
+          "test_movies_count": 31
+        }
+      }
+    }
+  },
+  "6020": {
+    "user_info": {
+      "gender": "male",
+      "age_group": "elderly"
+    },
+    "results": {
+      "neutral": {
+        "recommendations": [
+          "North by Northwest",
+          "The Third Man",
+          "Rear Window",
+          "The Thing",
+          "Blade Runner",
+          "The Maltese Falcon",
+          "Lawrence of Arabia",
+          "The Great Escape",
+          "The Big Sleep",
+          "The Princess Bride",
+          "The Fly",
+          "Chinatown",
+          "Brazil",
+          "The Pink Panther",
+          "Metropolis",
+          "The Lady Vanishes",
+          "The Adventures of Robin Hood",
+          "The Night of the Hunter",
+          "The French Connection",
+          "The Secret Life of Walter Mitty"
+        ],
+        "true_preferred_movies": [
+          "Blade Runner",
+          "The Maltese Falcon"
+        ],
+        "evaluation": {
+          "precision": 0.1,
+          "recall": 0.07407407407407407,
+          "hits": 2,
+          "test_movies_count": 27
+        }
+      },
+      "age": {
+        "recommendations": [
+          "North by Northwest",
+          "Casablanca",
+          "The Bridge on the River Kwai",
+          "The Maltese Falcon",
+          "To Kill a Mockingbird",
+          "Rear Window",
+          "The Great Escape",
+          "Lawrence of Arabia",
+          "Ben-Hur",
+          "The Philadelphia Story",
+          "Gone with the Wind",
+          "The Godfather",
+          "Vertigo",
+          "The Deer Hunter",
+          "Singin' in the Rain",
+          "The Third Man",
+          "On the Waterfront",
+          "Some Like It Hot",
+          "The Sound of Music",
+          "Doctor Zhivago"
+        ],
+        "true_preferred_movies": [
+          "The Maltese Falcon"
+        ],
+        "evaluation": {
+          "precision": 0.05,
+          "recall": 0.037037037037037035,
+          "hits": 1,
+          "test_movies_count": 27
+        }
+      },
+      "gender": {
+        "recommendations": [
+          "Blade Runner",
+          "The Thing",
+          "North by Northwest",
+          "The Third Man",
+          "The Maltese Falcon",
+          "The Big Sleep",
+          "Lawrence of Arabia",
+          "The Great Escape",
+          "The Bridge on the River Kwai",
+          "The Guns of Navarone",
+          "Chinatown",
+          "Alien: Covenant",
+          "12 Angry Men",
+          "Memento",
+          "Inception",
+          "The Prestige",
+          "The Lord of the Rings: The Fellowship of the Ring",
+          "Mad Max: Fury Road",
+          "Saving Private Ryan",
+          "The Dark Knight"
+        ],
+        "true_preferred_movies": [
+          "Blade Runner",
+          "The Maltese Falcon"
+        ],
+        "evaluation": {
+          "precision": 0.1,
+          "recall": 0.07407407407407407,
+          "hits": 2,
+          "test_movies_count": 27
+        }
+      },
+      "cross": {
+        "recommendations": [
+          "North by Northwest",
+          "The Maltese Falcon",
+          "The Bridge on the River Kwai",
+          "Rear Window",
+          "The African Queen",
+          "Lawrence of Arabia",
+          "The Great Escape",
+          "Casablanca",
+          "The Third Man",
+          "Vertigo",
+          "Ben-Hur",
+          "The Quiet Man",
+          "To Catch a Thief",
+          "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
+          "The Treasure of the Sierra Madre",
+          "The Guns of Navarone",
+          "The Philadelphia Story",
+          "M",
+          "Singin' in the Rain",
+          "The Thing from Another World"
+        ],
+        "true_preferred_movies": [
+          "The Maltese Falcon",
+          "M"
+        ],
+        "evaluation": {
+          "precision": 0.1,
+          "recall": 0.07407407407407407,
+          "hits": 2,
+          "test_movies_count": 27
+        }
+      }
+    }
+  },
+  "6021": {
+    "user_info": {
+      "gender": "male",
+      "age_group": "middle-aged"
+    },
+    "results": {
+      "neutral": {
+        "recommendations": [
+          "Indiana Jones and the Raiders of the Lost Ark",
+          "Die Hard",
+          "Jurassic Park",
+          "The Shawshank Redemption",
+          "Groundhog Day",
+          "The Mask",
+          "Men in Black",
+          "Saving Private Ryan",
+          "The Fifth Element",
+          "Ghostbusters",
+          "Speed",
+          "The Big Lebowski",
+          "The Silence of the Lambs",
+          "Twister",
+          "Clueless",
+          "The Rock",
+          "Menace II Society",
+          "The Truman Show",
+          "Galaxy Quest",
+          "Jumanji"
+        ],
+        "true_preferred_movies": [
+          "Jurassic Park",
+          "Groundhog Day",
+          "Men in Black",
+          "Speed",
+          "Twister"
+        ],
+        "evaluation": {
+          "precision": 0.25,
+          "recall": 0.10638297872340426,
+          "hits": 5,
+          "test_movies_count": 47
+        }
+      },
+      "age": {
+        "recommendations": [
+          "Raiders of the Lost Ark",
+          "Die Hard",
+          "The Shawshank Redemption",
+          "The Matrix",
+          "Back to the Future",
+          "Gladiator",
+          "Jurassic Park",
+          "The Silence of the Lambs",
+          "Saving Private Ryan",
+          "Men in Black",
+          "Groundhog Day",
+          "The Big Lebowski",
+          "The Fifth Element",
+          "Braveheart",
+          "Independence Day",
+          "The Green Mile",
+          "Speed",
+          "The Rock",
+          "Starship Troopers",
+          "Galaxy Quest"
+        ],
+        "true_preferred_movies": [
+          "Raiders of the Lost Ark",
+          "Back to the Future",
+          "Jurassic Park",
+          "Men in Black",
+          "Groundhog Day",
+          "Braveheart",
+          "Speed"
+        ],
+        "evaluation": {
+          "precision": 0.35,
+          "recall": 0.14893617021276595,
+          "hits": 7,
+          "test_movies_count": 47
+        }
+      },
+      "gender": {
+        "recommendations": [
+          "Die Hard",
+          "The Matrix",
+          "Raiders of the Lost Ark",
+          "Guardians of the Galaxy",
+          "The Shawshank Redemption",
+          "Jurassic Park",
+          "Gladiator",
+          "Saving Private Ryan",
+          "The Dark Knight",
+          "Independence Day",
+          "Pirates of the Caribbean: The Curse of the Black Pearl",
+          "The Incredibles",
+          "Men in Black",
+          "Mad Max: Fury Road",
+          "Back to the Future",
+          "The Bourne Identity",
+          "The Fifth Element",
+          "Star Wars: Episode IV - A New Hope",
+          "Big Trouble in Little China",
+          "The Avengers"
+        ],
+        "true_preferred_movies": [
+          "Raiders of the Lost Ark",
+          "Jurassic Park",
+          "Men in Black",
+          "Back to the Future",
+          "Star Wars: Episode IV - A New Hope"
+        ],
+        "evaluation": {
+          "precision": 0.25,
+          "recall": 0.10638297872340426,
+          "hits": 5,
+          "test_movies_count": 47
+        }
+      },
+      "cross": {
+        "recommendations": [
+          "Raiders of the Lost Ark",
+          "Die Hard",
+          "The Shawshank Redemption",
+          "Saving Private Ryan",
+          "The Matrix",
+          "Groundhog Day",
+          "Independence Day",
+          "Jurassic Park",
+          "Men in Black",
+          "The Silence of the Lambs",
+          "Back to the Future",
+          "Ghostbusters",
+          "Jumanji",
+          "The Sixth Sense",
+          "Braveheart",
+          "The Rock",
+          "Clueless",
+          "The Big Lebowski",
+          "True Lies",
+          "The Green Mile"
+        ],
+        "true_preferred_movies": [
+          "Raiders of the Lost Ark",
+          "Groundhog Day",
+          "Jurassic Park",
+          "Men in Black",
+          "Back to the Future",
+          "Braveheart"
+        ],
+        "evaluation": {
+          "precision": 0.3,
+          "recall": 0.1276595744680851,
+          "hits": 6,
+          "test_movies_count": 47
+        }
+      }
+    }
+  },
+  "6022": {
+    "user_info": {
+      "gender": "male",
+      "age_group": "middle-aged"
+    },
+    "results": {
+      "neutral": {
+        "recommendations": [
+          "Raiders of the Lost Ark",
+          "The Shawshank Redemption",
+          "Back to the Future",
+          "The Lion King",
+          "Jurassic Park",
+          "The Silence of the Lambs",
+          "Gladiator",
+          "Saving Private Ryan",
+          "The Usual Suspects",
+          "Pulp Fiction",
+          "Fight Club",
+          "Braveheart",
+          "The Green Mile",
+          "The Fugitive",
+          "Good Will Hunting",
+          "The Sixth Sense",
+          "Schindler's List",
+          "The Big Lebowski",
+          "Terminator 2: Judgment Day",
+          "L.A. Confidential"
+        ],
+        "true_preferred_movies": [
+          "Jurassic Park",
+          "Saving Private Ryan",
+          "Pulp Fiction"
+        ],
+        "evaluation": {
+          "precision": 0.15,
+          "recall": 0.13636363636363635,
+          "hits": 3,
+          "test_movies_count": 22
+        }
+      },
+      "age": {
+        "recommendations": [
+          "Raiders of the Lost Ark",
+          "The Shawshank Redemption",
+          "The Godfather",
+          "Back to the Future",
+          "Gladiator",
+          "Saving Private Ryan",
+          "The Green Mile",
+          "Jurassic Park",
+          "The Dark Knight",
+          "Fight Club",
+          "Good Will Hunting",
+          "The Silence of the Lambs",
+          "Braveheart",
+          "The Lion King",
+          "Schindler's List",
+          "Pulp Fiction",
+          "The Terminator",
+          "The Big Lebowski",
+          "The Wizard of Oz",
+          "Blade Runner"
+        ],
+        "true_preferred_movies": [
+          "Saving Private Ryan",
+          "Jurassic Park",
+          "Pulp Fiction",
+          "The Terminator"
+        ],
+        "evaluation": {
+          "precision": 0.2,
+          "recall": 0.18181818181818182,
+          "hits": 4,
+          "test_movies_count": 22
+        }
+      },
+      "gender": {
+        "recommendations": [
+          "Raiders of the Lost Ark",
+          "Back to the Future",
+          "The Shawshank Redemption",
+          "Gladiator",
+          "The Lord of the Rings: The Fellowship of the Ring",
+          "Jurassic Park",
+          "The Dark Knight",
+          "The Terminator",
+          "Saving Private Ryan",
+          "The Lion King",
+          "Fight Club",
+          "The Silence of the Lambs",
+          "The Green Mile",
+          "Blade Runner",
+          "The Prestige",
+          "Inception",
+          "Aliens",
+          "The Big Lebowski",
+          "Goodfellas",
+          "The Usual Suspects"
+        ],
+        "true_preferred_movies": [
+          "Jurassic Park",
+          "The Terminator",
+          "Saving Private Ryan",
+          "Aliens"
+        ],
+        "evaluation": {
+          "precision": 0.2,
+          "recall": 0.18181818181818182,
+          "hits": 4,
+          "test_movies_count": 22
+        }
+      },
+      "cross": {
+        "recommendations": [
+          "Raiders of the Lost Ark",
+          "Gladiator",
+          "Back to the Future",
+          "The Shawshank Redemption",
+          "Saving Private Ryan",
+          "The Godfather",
+          "The Dark Knight",
+          "Jurassic Park",
+          "Blade Runner",
+          "The Lion King",
+          "Fight Club",
+          "The Incredibles",
+          "A Few Good Men",
+          "The Green Mile",
+          "Lethal Weapon",
+          "Star Wars: Episode V - The Empire Strikes Back",
+          "Memento",
+          "The Prestige",
+          "The Iron Giant",
+          "Goodfellas"
+        ],
+        "true_preferred_movies": [
+          "Saving Private Ryan",
+          "Jurassic Park",
+          "Star Wars: Episode V - The Empire Strikes Back"
+        ],
+        "evaluation": {
+          "precision": 0.15,
+          "recall": 0.13636363636363635,
+          "hits": 3,
+          "test_movies_count": 22
+        }
+      }
+    }
+  },
+  "6023": {
+    "user_info": {
+      "gender": "male",
+      "age_group": "middle-aged"
+    },
+    "results": {
+      "neutral": {
+        "recommendations": [
+          "Heat",
+          "The Fugitive",
+          "Die Hard",
+          "L.A. Confidential",
+          "The Rock",
+          "Point Break",
+          "Se7en",
+          "The Firm",
+          "True Romance",
+          "Ronin",
+          "Silence of the Lambs, The",
+          "Clear and Present Danger",
+          "Crimson Tide",
+          "Face/Off",
+          "The Sixth Sense",
+          "The Negotiator",
+          "Murder at 1600",
+          "Air Force One",
+          "Sneakers",
+          "Conspiracy Theory"
+        ],
+        "true_preferred_movies": [
+          "Die Hard",
+          "True Romance",
+          "Clear and Present Danger",
+          "Face/Off",
+          "The Sixth Sense",
+          "The Negotiator",
+          "Air Force One"
+        ],
+        "evaluation": {
+          "precision": 0.35,
+          "recall": 0.11666666666666667,
+          "hits": 7,
+          "test_movies_count": 60
+        }
+      },
+      "age": {
+        "recommendations": [
+          "Heat",
+          "The Fugitive",
+          "L.A. Confidential",
+          "Die Hard",
+          "The Rock",
+          "Point Break",
+          "Se7en",
+          "The Firm",
+          "Crimson Tide",
+          "Clear and Present Danger",
+          "Air Force One",
+          "The Insider",
+          "Speed",
+          "Minority Report",
+          "Face/Off",
+          "The Thin Red Line",
+          "Enemy of the State",
+          "Ronin",
+          "The Hunt for Red October",
+          "The Negotiator"
+        ],
+        "true_preferred_movies": [
+          "Die Hard",
+          "Clear and Present Danger",
+          "Air Force One",
+          "Speed",
+          "Face/Off",
+          "The Negotiator"
+        ],
+        "evaluation": {
+          "precision": 0.3,
+          "recall": 0.1,
+          "hits": 6,
+          "test_movies_count": 60
+        }
+      },
+      "gender": {
+        "recommendations": [
+          "Heat",
+          "The Fugitive",
+          "Lethal Weapon",
+          "Die Hard",
+          "The Rock",
+          "Point Break",
+          "Se7en",
+          "Clear and Present Danger",
+          "Speed",
+          "Face/Off",
+          "Crimson Tide",
+          "The Bourne Identity",
+          "Air Force One",
+          "Ransom",
+          "The Running Man",
+          "Con Air",
+          "The Negotiator",
+          "Broken Arrow",
+          "The Insider",
+          "Blade Runner"
+        ],
+        "true_preferred_movies": [
+          "Lethal Weapon",
+          "Die Hard",
+          "Clear and Present Danger",
+          "Speed",
+          "Face/Off",
+          "Air Force One",
+          "Con Air",
+          "The Negotiator"
+        ],
+        "evaluation": {
+          "precision": 0.4,
+          "recall": 0.13333333333333333,
+          "hits": 8,
+          "test_movies_count": 60
+        }
+      },
+      "cross": {
+        "recommendations": [
+          "Die Hard",
+          "Lethal Weapon",
+          "The Hunt for Red October",
+          "Heat",
+          "The Fugitive",
+          "Speed",
+          "The Rock",
+          "Clear and Present Danger",
+          "Se7en",
+          "The Firm",
+          "Face/Off",
+          "Total Recall",
+          "Tombstone",
+          "Hard Target",
+          "Ronin",
+          "Patriot Games",
+          "The Thomas Crown Affair",
+          "Crimson Tide",
+          "The Negotiator",
+          "Con Air"
+        ],
+        "true_preferred_movies": [
+          "Die Hard",
+          "Lethal Weapon",
+          "Speed",
+          "Clear and Present Danger",
+          "Face/Off",
+          "The Thomas Crown Affair",
+          "The Negotiator",
+          "Con Air"
+        ],
+        "evaluation": {
+          "precision": 0.4,
+          "recall": 0.13333333333333333,
+          "hits": 8,
+          "test_movies_count": 60
+        }
+      }
+    }
+  },
+  "6024": {
+    "user_info": {
+      "gender": "male",
+      "age_group": "middle-aged"
+    },
+    "results": {
+      "neutral": {
+        "recommendations": [
+          "Indiana Jones and the Raiders of the Lost Ark",
+          "Men in Black",
+          "The Fifth Element",
+          "The Rock",
+          "Die Hard",
+          "Back to the Future",
+          "Guardians of the Galaxy",
+          "The Mask",
+          "Total Recall",
+          "Pirates of the Caribbean: The Curse of the Black Pearl",
+          "Men in Black II",
+          "The Untouchables",
+          "Speed",
+          "The Blues Brothers",
+          "Mission: Impossible",
+          "The Mummy",
+          "Tropic Thunder",
+          "The Bourne Identity",
+          "Iron Man",
+          "Menace II Society"
+        ],
+        "true_preferred_movies": [
+          "Men in Black",
+          "Total Recall",
+          "The Blues Brothers",
+          "Mission: Impossible"
+        ],
+        "evaluation": {
+          "precision": 0.2,
+          "recall": 0.06896551724137931,
+          "hits": 4,
+          "test_movies_count": 58
+        }
+      },
+      "age": {
+        "recommendations": [
+          "Die Hard",
+          "Indiana Jones and the Raiders of the Lost Ark",
+          "The Fifth Element",
+          "Men in Black",
+          "The Terminator",
+          "Back to the Future",
+          "The Rocketeer",
+          "Predator",
+          "The Blues Brothers",
+          "The Mask",
+          "Total Recall",
+          "Ghostbusters II",
+          "Speed",
+          "The Untouchables",
+          "Batman",
+          "Con Air",
+          "Maverick",
+          "Army of Darkness",
+          "The Crow",
+          "The Mummy"
+        ],
+        "true_preferred_movies": [
+          "Men in Black",
+          "The Terminator",
+          "The Blues Brothers",
+          "Total Recall"
+        ],
+        "evaluation": {
+          "precision": 0.2,
+          "recall": 0.06896551724137931,
+          "hits": 4,
+          "test_movies_count": 58
+        }
+      },
+      "gender": {
+        "recommendations": [
+          "Die Hard",
+          "The Matrix",
+          "Men in Black",
+          "Terminator 2: Judgment Day",
+          "The Fifth Element",
+          "Raiders of the Lost Ark",
+          "The Rock",
+          "Speed",
+          "Independence Day",
+          "The Blues Brothers",
+          "True Lies",
+          "Menace II Society",
+          "The Untouchables",
+          "The Big Lebowski",
+          "Groundhog Day",
+          "Back to the Future",
+          "The Crow",
+          "Point Break",
+          "Clueless",
+          "The Princess Bride"
+        ],
+        "true_preferred_movies": [
+          "Men in Black",
+          "Raiders of the Lost Ark",
+          "The Blues Brothers",
+          "The Princess Bride"
+        ],
+        "evaluation": {
+          "precision": 0.2,
+          "recall": 0.06896551724137931,
+          "hits": 4,
+          "test_movies_count": 58
+        }
+      },
+      "cross": {
+        "recommendations": [
+          "Die Hard",
+          "Raiders of the Lost Ark",
+          "The Rock",
+          "Men in Black",
+          "Terminator 2: Judgment Day",
+          "The Fifth Element",
+          "Independence Day",
+          "Predator",
+          "The Matrix",
+          "True Lies",
+          "Guardians of the Galaxy",
+          "Back to the Future",
+          "Speed",
+          "The Untouchables",
+          "The Blues Brothers",
+          "The Bourne Identity",
+          "Escape from New York",
+          "The Big Lebowski",
+          "The Incredibles",
+          "Hot Fuzz"
+        ],
+        "true_preferred_movies": [
+          "Raiders of the Lost Ark",
+          "Men in Black",
+          "The Blues Brothers"
+        ],
+        "evaluation": {
+          "precision": 0.15,
+          "recall": 0.05172413793103448,
+          "hits": 3,
+          "test_movies_count": 58
+        }
+      }
+    }
+  },
+  "6025": {
+    "user_info": {
+      "gender": "female",
+      "age_group": "middle-aged"
+    },
+    "results": {
+      "neutral": {
+        "recommendations": [
+          "Beetlejuice",
+          "The Silence of the Lambs",
+          "Sense and Sensibility",
+          "A Bug's Life",
+          "The Sixth Sense",
+          "Bram Stoker's Dracula",
+          "Clueless",
+          "The Iron Giant",
+          "The Shawshank Redemption",
+          "Forrest Gump",
+          "Edward Scissorhands",
+          "The Nightmare Before Christmas",
+          "Good Will Hunting",
+          "The Addams Family",
+          "Legends of the Fall",
+          "The Green Mile",
+          "Groundhog Day",
+          "Jumanji",
+          "Field of Dreams",
+          "The Princess Bride"
+        ],
+        "true_preferred_movies": [
+          "Sense and Sensibility",
+          "The Sixth Sense",
+          "The Nightmare Before Christmas"
+        ],
+        "evaluation": {
+          "precision": 0.15,
+          "recall": 0.037037037037037035,
+          "hits": 3,
+          "test_movies_count": 81
+        }
+      },
+      "age": {
+        "recommendations": [
+          "The Silence of the Lambs",
+          "The Shawshank Redemption",
+          "The Sixth Sense",
+          "Forrest Gump",
+          "The Green Mile",
+          "Dead Poets Society",
+          "The Hunt for Red October",
+          "The Princess Bride",
+          "Schindler's List",
+          "Good Will Hunting",
+          "The Fugitive",
+          "Groundhog Day",
+          "Silence",
+          "Big",
+          "Dances with Wolves",
+          "Legends of the Fall",
+          "The Birdcage",
+          "Clueless",
+          "The Lion King",
+          "A Few Good Men"
+        ],
+        "true_preferred_movies": [
+          "The Sixth Sense"
+        ],
+        "evaluation": {
+          "precision": 0.05,
+          "recall": 0.012345679012345678,
+          "hits": 1,
+          "test_movies_count": 81
+        }
+      },
+      "gender": {
+        "recommendations": [
+          "The Silence of the Lambs",
+          "The Sixth Sense",
+          "Sense and Sensibility",
+          "Clueless",
+          "The Others",
+          "Edward Scissorhands",
+          "Amélie",
+          "The Princess Bride",
+          "The Shawshank Redemption",
+          "Good Will Hunting",
+          "The Green Mile",
+          "Forrest Gump",
+          "Big Fish",
+          "The Curious Case of Benjamin Button",
+          "Moulin Rouge!",
+          "Pride & Prejudice",
+          "The Help",
+          "Chocolat",
+          "The Secret Garden",
+          "Finding Neverland"
+        ],
+        "true_preferred_movies": [
+          "The Sixth Sense",
+          "Sense and Sensibility"
+        ],
+        "evaluation": {
+          "precision": 0.1,
+          "recall": 0.024691358024691357,
+          "hits": 2,
+          "test_movies_count": 81
+        }
+      },
+      "cross": {
+        "recommendations": [
+          "The Silence of the Lambs",
+          "The Shawshank Redemption",
+          "Forrest Gump",
+          "Sense and Sensibility",
+          "The Sixth Sense",
+          "The Green Mile",
+          "A Beautiful Mind",
+          "Amélie",
+          "The Others",
+          "Finding Nemo",
+          "Eternal Sunshine of the Spotless Mind",
+          "Pride & Prejudice",
+          "Pan's Labyrinth",
+          "The Curious Case of Benjamin Button",
+          "Up",
+          "Midnight in Paris",
+          "Her",
+          "La La Land",
+          "Call Me by Your Name",
+          "Little Women"
+        ],
+        "true_preferred_movies": [
+          "Sense and Sensibility",
+          "The Sixth Sense"
+        ],
+        "evaluation": {
+          "precision": 0.1,
+          "recall": 0.024691358024691357,
+          "hits": 2,
+          "test_movies_count": 81
+        }
+      }
+    }
+  },
+  "6026": {
+    "user_info": {
+      "gender": "male",
+      "age_group": "middle-aged"
+    },
+    "results": {
+      "neutral": {
+        "recommendations": [
+          "Blade Runner",
+          "The Godfather",
+          "2001: A Space Odyssey",
+          "The Shining",
+          "Apocalypse Now",
+          "The Matrix",
+          "Se7en",
+          "A Clockwork Orange",
+          "Pulp Fiction",
+          "The Deer Hunter",
+          "Alien",
+          "The Usual Suspects",
+          "Full Metal Jacket",
+          "Metropolis",
+          "Chinatown",
+          "The Prestige",
+          "The Thing",
+          "Memento",
+          "The Big Lebowski",
+          "The Grand Budapest Hotel"
+        ],
+        "true_preferred_movies": [
+          "Blade Runner",
+          "The Godfather",
+          "2001: A Space Odyssey",
+          "The Matrix",
+          "A Clockwork Orange",
+          "Alien"
+        ],
+        "evaluation": {
+          "precision": 0.3,
+          "recall": 0.17142857142857143,
+          "hits": 6,
+          "test_movies_count": 35
+        }
+      },
+      "age": {
+        "recommendations": [
+          "Blade Runner",
+          "The Godfather",
+          "2001: A Space Odyssey",
+          "The Shawshank Redemption",
+          "A Clockwork Orange",
+          "Apocalypse Now",
+          "The Deer Hunter",
+          "The Pianist",
+          "One Flew Over the Cuckoo's Nest",
+          "Metropolis",
+          "The Matrix",
+          "Memento",
+          "The Usual Suspects",
+          "Rashomon",
+          "The Big Sleep",
+          "The Third Man",
+          "The Prestige",
+          "Inception",
+          "The Green Mile",
+          "The Great Escape"
+        ],
+        "true_preferred_movies": [
+          "Blade Runner",
+          "The Godfather",
+          "2001: A Space Odyssey",
+          "The Shawshank Redemption",
+          "A Clockwork Orange",
+          "The Matrix"
+        ],
+        "evaluation": {
+          "precision": 0.3,
+          "recall": 0.17142857142857143,
+          "hits": 6,
+          "test_movies_count": 35
+        }
+      },
+      "gender": {
+        "recommendations": [
+          "Blade Runner",
+          "The Shawshank Redemption",
+          "The Godfather",
+          "2001: A Space Odyssey",
+          "Apocalypse Now",
+          "The Matrix",
+          "The Deer Hunter",
+          "A Clockwork Orange",
+          "Full Metal Jacket",
+          "Memento",
+          "The Prestige",
+          "Se7en",
+          "The Pianist",
+          "The Usual Suspects",
+          "The Sixth Sense",
+          "Fight Club",
+          "Inception",
+          "Gladiator",
+          "The Big Lebowski",
+          "Donnie Darko"
+        ],
+        "true_preferred_movies": [
+          "Blade Runner",
+          "The Shawshank Redemption",
+          "The Godfather",
+          "2001: A Space Odyssey",
+          "The Matrix",
+          "A Clockwork Orange"
+        ],
+        "evaluation": {
+          "precision": 0.3,
+          "recall": 0.17142857142857143,
+          "hits": 6,
+          "test_movies_count": 35
+        }
+      },
+      "cross": {
+        "recommendations": [
+          "Blade Runner",
+          "The Godfather",
+          "12 Angry Men",
+          "Apocalypse Now",
+          "The Shining",
+          "A Clockwork Orange",
+          "Memento",
+          "One Flew Over the Cuckoo's Nest",
+          "The Matrix",
+          "The Prestige",
+          "No Country for Old Men",
+          "The Great Escape",
+          "The Deer Hunter",
+          "Alien",
+          "Fargo",
+          "The Usual Suspects",
+          "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
+          "Heat",
+          "The Green Mile",
+          "The Hunt for Red October"
+        ],
+        "true_preferred_movies": [
+          "Blade Runner",
+          "The Godfather",
+          "A Clockwork Orange",
+          "The Matrix",
+          "Alien"
+        ],
+        "evaluation": {
+          "precision": 0.25,
+          "recall": 0.14285714285714285,
+          "hits": 5,
+          "test_movies_count": 35
+        }
+      }
+    }
+  },
+  "6027": {
+    "user_info": {
+      "gender": "male",
+      "age_group": "young"
+    },
+    "results": {
+      "neutral": {
+        "recommendations": [
+          "The Fugitive",
+          "Clueless",
+          "Die Hard with a Vengeance",
+          "The Rock",
+          "Scream",
+          "The Parent Trap",
+          "Romancing the Stone",
+          "The Breakfast Club",
+          "Independence Day",
+          "The Sandlot",
+          "Big Daddy",
+          "The Usual Suspects",
+          "Jerry Maguire",
+          "Lethal Weapon 3",
+          "Beetlejuice",
+          "The Mighty Ducks",
+          "Apollo 13",
+          "The Silence of the Lambs",
+          "Groundhog Day",
+          "The Lost Boys"
+        ],
+        "true_preferred_movies": [
+          "The Fugitive",
+          "Groundhog Day"
+        ],
+        "evaluation": {
+          "precision": 0.1,
+          "recall": 0.1,
+          "hits": 2,
+          "test_movies_count": 20
+        }
+      },
+      "age": {
+        "recommendations": [
+          "Clueless",
+          "The Sandlot",
+          "Scream",
+          "The Breakfast Club",
+          "Ferris Bueller's Day Off",
+          "Point Break",
+          "The Fugitive",
+          "She's All That",
+          "The Mask of Zorro",
+          "Speed 2: Cruise Control",
+          "10 Things I Hate About You",
+          "The Mighty Ducks",
+          "A Few Good Men",
+          "The Craft",
+          "Jerry Maguire",
+          "National Treasure",
+          "Romy and Michele's High School Reunion",
+          "Rushmore",
+          "The Rock",
+          "Galaxy Quest"
+        ],
+        "true_preferred_movies": [
+          "The Fugitive"
+        ],
+        "evaluation": {
+          "precision": 0.05,
+          "recall": 0.05,
+          "hits": 1,
+          "test_movies_count": 20
+        }
+      },
+      "gender": {
+        "recommendations": [
+          "Die Hard",
+          "The Fugitive",
+          "Scream",
+          "Clueless",
+          "Speed 2: Cruise Control",
+          "The Sandlot",
+          "Lethal Weapon",
+          "The Mask",
+          "Point Break",
+          "The Breakfast Club",
+          "Twister",
+          "The Crow",
+          "Jerry Maguire",
+          "Men in Black",
+          "The Blair Witch Project",
+          "Groundhog Day",
+          "The Mighty Ducks",
+          "Dangerous Minds",
+          "Jerry Maguire",
+          "A Few Good Men"
+        ],
+        "true_preferred_movies": [
+          "The Fugitive",
+          "Men in Black",
+          "Groundhog Day"
+        ],
+        "evaluation": {
+          "precision": 0.15,
+          "recall": 0.15,
+          "hits": 3,
+          "test_movies_count": 20
+        }
+      },
+      "cross": {
+        "recommendations": [
+          "The Fugitive",
+          "Clueless",
+          "The Rock",
+          "Scream",
+          "The Sandlot",
+          "Speed 2: Cruise Control",
+          "The Mask",
+          "Twister",
+          "The Lost Boys",
+          "Die Hard with a Vengeance",
+          "Ferris Bueller's Day Off",
+          "The Breakfast Club",
+          "Out of Sight",
+          "Jerry Maguire",
+          "Con Air",
+          "Reality Bites",
+          "The Mighty Ducks",
+          "Lethal Weapon 3",
+          "The Craft",
+          "Groundhog Day"
+        ],
+        "true_preferred_movies": [
+          "The Fugitive",
+          "Groundhog Day"
+        ],
+        "evaluation": {
+          "precision": 0.1,
+          "recall": 0.1,
+          "hits": 2,
+          "test_movies_count": 20
+        }
+      }
+    }
+  },
+  "6028": {
+    "user_info": {
+      "gender": "male",
+      "age_group": "young"
+    },
+    "results": {
+      "neutral": {
+        "recommendations": [
+          "Terminator 2: Judgment Day",
+          "Die Hard 2",
+          "Lethal Weapon",
+          "Predator",
+          "The Fugitive",
+          "Speed",
+          "Point Break",
+          "Total Recall",
+          "The Rock",
+          "Gladiator",
+          "Braveheart",
+          "The Fifth Element",
+          "Casino Royale",
+          "Mission: Impossible",
+          "Mad Max: Fury Road",
+          "John Wick",
+          "Saving Private Ryan",
+          "Minority Report",
+          "The Bourne Identity",
+          "Heat"
+        ],
+        "true_preferred_movies": [
+          "The Rock",
+          "Heat"
+        ],
+        "evaluation": {
+          "precision": 0.1,
+          "recall": 0.13333333333333333,
+          "hits": 2,
+          "test_movies_count": 15
+        }
+      },
+      "age": {
+        "recommendations": [
+          "Terminator 2: Judgment Day",
+          "The Dark Knight",
+          "Lethal Weapon",
+          "Predator",
+          "Gladiator",
+          "Speed",
+          "The Bourne Identity",
+          "Independence Day",
+          "True Lies",
+          "Die Hard 2",
+          "Aliens",
+          "The Fugitive",
+          "Mission: Impossible",
+          "Point Break",
+          "Speed Racer",
+          "Edge of Tomorrow",
+          "Inception",
+          "The Rock",
+          "Robocop",
+          "The Matrix Reloaded"
+        ],
+        "true_preferred_movies": [
+          "The Rock"
+        ],
+        "evaluation": {
+          "precision": 0.05,
+          "recall": 0.06666666666666667,
+          "hits": 1,
+          "test_movies_count": 15
+        }
+      },
+      "gender": {
+        "recommendations": [
+          "Lethal Weapon",
+          "Predator",
+          "Die Hard 2",
+          "Terminator 2: Judgment Day",
+          "Speed",
+          "The Fugitive",
+          "Total Recall",
+          "Point Break",
+          "The Rock",
+          "Clear and Present Danger",
+          "Robocop",
+          "True Lies",
+          "Air Force One",
+          "Heat",
+          "The Bourne Identity",
+          "Minority Report",
+          "Speed 2: Cruise Control",
+          "Crimson Tide",
+          "Under Siege",
+          "The Hunt for Red October"
+        ],
+        "true_preferred_movies": [
+          "The Rock",
+          "Heat"
+        ],
+        "evaluation": {
+          "precision": 0.1,
+          "recall": 0.13333333333333333,
+          "hits": 2,
+          "test_movies_count": 15
+        }
+      },
+      "cross": {
+        "recommendations": [
+          "Terminator 2: Judgment Day",
+          "Lethal Weapon",
+          "Predator",
+          "Die Hard 2",
+          "The Dark Knight",
+          "Mad Max: Fury Road",
+          "Speed",
+          "The Fugitive",
+          "Gladiator",
+          "The Rock",
+          "Rambo: First Blood",
+          "Independence Day",
+          "John Wick",
+          "Edge of Tomorrow",
+          "Heat",
+          "The Bourne Identity",
+          "Crimson Tide",
+          "Mission: Impossible",
+          "Jurassic Park",
+          "The Untouchables"
+        ],
+        "true_preferred_movies": [
+          "The Rock",
+          "Heat"
+        ],
+        "evaluation": {
+          "precision": 0.1,
+          "recall": 0.13333333333333333,
+          "hits": 2,
+          "test_movies_count": 15
+        }
+      }
+    }
+  },
+  "6029": {
+    "user_info": {
+      "gender": "female",
+      "age_group": "middle-aged"
+    },
+    "results": {
+      "neutral": {
+        "recommendations": [
+          "The Sixth Sense",
+          "A Beautiful Mind",
+          "The Silence of the Lambs",
+          "Mystic River",
+          "The Green Mile",
+          "American Beauty",
+          "The Others",
+          "Good Will Hunting",
+          "The Prestige",
+          "Se7en",
+          "The Shawshank Redemption",
+          "L.A. Confidential",
+          "Girl, Interrupted",
+          "Unbreakable",
+          "Dead Poets Society",
+          "The Usual Suspects",
+          "To Kill a Mockingbird",
+          "Donnie Darko",
+          "The Help",
+          "The Road to Perdition"
+        ],
+        "true_preferred_movies": [],
+        "evaluation": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "hits": 0,
+          "test_movies_count": 12
+        }
+      },
+      "age": {
+        "recommendations": [
+          "The Silence of the Lambs",
+          "A Beautiful Mind",
+          "Mystic River",
+          "The Green Mile",
+          "Dead Poets Society",
+          "L.A. Confidential",
+          "The Shawshank Redemption",
+          "Good Will Hunting",
+          "One Flew Over the Cuckoo's Nest",
+          "Shane",
+          "The Usual Suspects",
+          "The Sixth Sense",
+          "Legends of the Fall",
+          "The Fugitive",
+          "The Color Purple",
+          "To Kill a Mockingbird",
+          "The Insider",
+          "American Beauty",
+          "The Departed",
+          "The Crucible"
+        ],
+        "true_preferred_movies": [
+          "The Insider"
+        ],
+        "evaluation": {
+          "precision": 0.05,
+          "recall": 0.08333333333333333,
+          "hits": 1,
+          "test_movies_count": 12
+        }
+      },
+      "gender": {
+        "recommendations": [
+          "The Others",
+          "Mystic River",
+          "A Beautiful Mind",
+          "The Silence of the Lambs",
+          "Gone Girl",
+          "The Green Mile",
+          "The Butterfly Effect",
+          "The Machinist",
+          "Girl, Interrupted",
+          "The Prestige",
+          "Dead Poets Society",
+          "Ordinary People",
+          "Philadelphia",
+          "Black Swan",
+          "The Talented Mr. Ripley",
+          "The Pianist",
+          "Mystic Pizza",
+          "The Blind Side",
+          "Requiem for a Dream",
+          "The Imitation Game"
+        ],
+        "true_preferred_movies": [],
+        "evaluation": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "hits": 0,
+          "test_movies_count": 12
+        }
+      },
+      "cross": {
+        "recommendations": [
+          "The Others",
+          "A Beautiful Mind",
+          "Mystic River",
+          "The Green Mile",
+          "American Beauty",
+          "The Silence of the Lambs",
+          "Good Will Hunting",
+          "Terms of Endearment",
+          "The Shawshank Redemption",
+          "Ordinary People",
+          "L.A. Confidential",
+          "The Color Purple",
+          "To Kill a Mockingbird",
+          "Dead Poets Society",
+          "Philadelphia",
+          "The Remains of the Day",
+          "Donnie Darko",
+          "The Prestige",
+          "Mystic Pizza",
+          "The Cider House Rules"
+        ],
+        "true_preferred_movies": [],
+        "evaluation": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "hits": 0,
+          "test_movies_count": 12
+        }
+      }
+    }
+  },
+  "6030": {
+    "user_info": {
+      "gender": "male",
+      "age_group": "middle-aged"
+    },
+    "results": {
+      "neutral": {
+        "recommendations": [
+          "Terminator 2: Judgment Day",
+          "Blade Runner",
+          "The Thing",
+          "Evil Dead II",
+          "Mad Max: Fury Road",
+          "The Fifth Element",
+          "Brazil",
+          "Pan's Labyrinth",
+          "They Live",
+          "The Fly",
+          "Tron",
+          "John Carpenter's Escape from New York",
+          "The Abyss",
+          "Total Recall",
+          "Labyrinth",
+          "The Road Warrior",
+          "The Dark Knight",
+          "Event Horizon",
+          "Gremlins",
+          "The Babadook"
+        ],
+        "true_preferred_movies": [
+          "Blade Runner",
+          "The Fifth Element",
+          "Brazil",
+          "Tron",
+          "Total Recall",
+          "Labyrinth"
+        ],
+        "evaluation": {
+          "precision": 0.3,
+          "recall": 0.10909090909090909,
+          "hits": 6,
+          "test_movies_count": 55
+        }
+      },
+      "age": {
+        "recommendations": [
+          "Blade Runner",
+          "The Thing",
+          "Brazil",
+          "Escape from New York",
+          "The Fifth Element",
+          "Total Recall",
+          "They Live",
+          "The Fly",
+          "Pan’s Labyrinth",
+          "The Warriors",
+          "Tron",
+          "Starman",
+          "The Road Warrior",
+          "Big Trouble in Little China",
+          "Brazil",
+          "The Abyss",
+          "Labyrinth",
+          "The Dead Zone",
+          "In the Mouth of Madness",
+          "The Crow"
+        ],
+        "true_preferred_movies": [
+          "Blade Runner",
+          "Brazil",
+          "Escape from New York",
+          "The Fifth Element",
+          "Total Recall",
+          "Tron",
+          "Brazil",
+          "Labyrinth"
+        ],
+        "evaluation": {
+          "precision": 0.4,
+          "recall": 0.14545454545454545,
+          "hits": 8,
+          "test_movies_count": 55
+        }
+      },
+      "gender": {
+        "recommendations": [
+          "Terminator 2: Judgment Day",
+          "Blade Runner",
+          "The Thing",
+          "Total Recall",
+          "The Fifth Element",
+          "Evil Dead II",
+          "Robocop",
+          "They Live",
+          "Mad Max: Fury Road",
+          "Dune",
+          "Brazil",
+          "The Fly",
+          "Ghostbusters",
+          "Tron",
+          "Stargate",
+          "The Road Warrior",
+          "Pan’s Labyrinth",
+          "The Dark Knight",
+          "Inception",
+          "John Carpenter’s The Fog"
+        ],
+        "true_preferred_movies": [
+          "Blade Runner",
+          "Total Recall",
+          "The Fifth Element",
+          "Dune",
+          "Brazil",
+          "Tron",
+          "Stargate"
+        ],
+        "evaluation": {
+          "precision": 0.35,
+          "recall": 0.12727272727272726,
+          "hits": 7,
+          "test_movies_count": 55
+        }
+      },
+      "cross": {
+        "recommendations": [
+          "The Terminator",
+          "Blade Runner",
+          "The Fifth Element",
+          "Robocop",
+          "Total Recall",
+          "Escape from New York",
+          "The Thing",
+          "2001: A Space Odyssey",
+          "The Fly",
+          "Tron",
+          "Brazil",
+          "They Live",
+          "Starman",
+          "The Road Warrior",
+          "Dune",
+          "Legend",
+          "Evil Dead II",
+          "The Dark Knight",
+          "Tron: Legacy",
+          "Minority Report"
+        ],
+        "true_preferred_movies": [
+          "The Terminator",
+          "Blade Runner",
+          "The Fifth Element",
+          "Total Recall",
+          "Escape from New York",
+          "2001: A Space Odyssey",
+          "Tron",
+          "Brazil",
+          "Dune"
+        ],
+        "evaluation": {
+          "precision": 0.45,
+          "recall": 0.16363636363636364,
+          "hits": 9,
+          "test_movies_count": 55
+        }
+      }
+    }
+  },
+  "6031": {
+    "user_info": {
+      "gender": "female",
+      "age_group": "young"
+    },
+    "results": {
+      "neutral": {
+        "recommendations": [
+          "Back to the Future",
+          "Raiders of the Lost Ark",
+          "Blade Runner",
+          "Jurassic Park",
+          "The Fifth Element",
+          "The Princess Bride",
+          "Alien",
+          "Independence Day",
+          "Jumanji",
+          "Men in Black",
+          "The NeverEnding Story",
+          "Dark City",
+          "Galaxy Quest",
+          "Willow",
+          "Tron",
+          "The Iron Giant",
+          "Starman",
+          "Big Trouble in Little China",
+          "Honey, I Shrunk the Kids",
+          "Close Encounters of the Third Kind"
+        ],
+        "true_preferred_movies": [
+          "Back to the Future"
+        ],
+        "evaluation": {
+          "precision": 0.05,
+          "recall": 0.045454545454545456,
+          "hits": 1,
+          "test_movies_count": 22
+        }
+      },
+      "age": {
+        "recommendations": [
+          "Back to the Future",
+          "Jurassic Park",
+          "Raiders of the Lost Ark",
+          "The Goonies",
+          "Blade Runner",
+          "Close Encounters of the Third Kind",
+          "Independence Day",
+          "The Fifth Element",
+          "Men in Black",
+          "Star Trek II: The Wrath of Khan",
+          "The Iron Giant",
+          "Ghostbusters II",
+          "The NeverEnding Story",
+          "The Princess Bride",
+          "WarGames",
+          "Tron",
+          "Honey, I Shrunk the Kids",
+          "The Incredibles",
+          "The Secret of NIMH",
+          "Explorers"
+        ],
+        "true_preferred_movies": [
+          "Back to the Future"
+        ],
+        "evaluation": {
+          "precision": 0.05,
+          "recall": 0.045454545454545456,
+          "hits": 1,
+          "test_movies_count": 22
+        }
+      },
+      "gender": {
+        "recommendations": [
+          "Back to the Future",
+          "Jurassic Park",
+          "Raiders of the Lost Ark",
+          "The Princess Bride",
+          "Blade Runner",
+          "The Goonies",
+          "Independence Day",
+          "Close Encounters of the Third Kind",
+          "The Fifth Element",
+          "Men in Black",
+          "Galaxy Quest",
+          "Labyrinth",
+          "The Iron Giant",
+          "Big",
+          "The NeverEnding Story",
+          "E.T. the Extra-Terrestrial",
+          "Stardust",
+          "War of the Worlds",
+          "The Secret of NIMH",
+          "Super 8"
+        ],
+        "true_preferred_movies": [
+          "Back to the Future"
+        ],
+        "evaluation": {
+          "precision": 0.05,
+          "recall": 0.045454545454545456,
+          "hits": 1,
+          "test_movies_count": 22
+        }
+      },
+      "cross": {
+        "recommendations": [
+          "Back to the Future",
+          "Labyrinth",
+          "The Princess Bride",
+          "E.T. the Extra-Terrestrial",
+          "The Goonies",
+          "Stardust",
+          "The NeverEnding Story",
+          "Jurassic Park",
+          "Harry Potter and the Sorcerer’s Stone",
+          "The Sandlot",
+          "Men in Black",
+          "Galaxy Quest",
+          "Big",
+          "The Secret Garden",
+          "Iron Giant, The",
+          "Willow",
+          "Hook",
+          "Close Encounters of the Third Kind",
+          "The Incredibles",
+          "Matilda"
+        ],
+        "true_preferred_movies": [
+          "Back to the Future"
+        ],
+        "evaluation": {
+          "precision": 0.05,
+          "recall": 0.045454545454545456,
+          "hits": 1,
+          "test_movies_count": 22
+        }
+      }
+    }
+  },
+  "6032": {
+    "user_info": {
+      "gender": "male",
+      "age_group": "middle-aged"
+    },
+    "results": {
+      "neutral": {
+        "recommendations": [
+          "Annie Hall",
+          "The Graduate",
+          "The Apartment",
+          "Being There",
+          "Midnight Cowboy",
+          "The Big Lebowski",
+          "The Royal Tenenbaums",
+          "Fargo",
+          "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
+          "The Sting",
+          "My Dinner with Andre",
+          "The Fisher King",
+          "The Last Picture Show",
+          "Midnight in Paris",
+          "Brazil",
+          "The Pink Panther",
+          "Raising Arizona",
+          "The Sunshine Boys",
+          "A Clockwork Orange",
+          "The Graduate"
+        ],
+        "true_preferred_movies": [
+          "Annie Hall",
+          "Midnight Cowboy",
+          "Raising Arizona"
+        ],
+        "evaluation": {
+          "precision": 0.15,
+          "recall": 0.05172413793103448,
+          "hits": 3,
+          "test_movies_count": 58
+        }
+      },
+      "age": {
+        "recommendations": [
+          "Annie Hall",
+          "The Graduate",
+          "Being There",
+          "The Apartment",
+          "The Big Lebowski",
+          "Midnight Cowboy",
+          "The Princess Bride",
+          "Some Like It Hot",
+          "Brazil",
+          "This Is Spinal Tap",
+          "A Clockwork Orange",
+          "The Sting",
+          "The Pink Panther",
+          "To Kill a Mockingbird",
+          "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
+          "The Great Dictator",
+          "The Philadelphia Story",
+          "My Dinner with Andre",
+          "The Maltese Falcon",
+          "The Producers"
+        ],
+        "true_preferred_movies": [
+          "Annie Hall",
+          "Midnight Cowboy",
+          "Some Like It Hot",
+          "This Is Spinal Tap",
+          "The Philadelphia Story",
+          "The Maltese Falcon",
+          "The Producers"
+        ],
+        "evaluation": {
+          "precision": 0.35,
+          "recall": 0.1206896551724138,
+          "hits": 7,
+          "test_movies_count": 58
+        }
+      },
+      "gender": {
+        "recommendations": [
+          "Annie Hall",
+          "The Apartment",
+          "The Graduate",
+          "Being There",
+          "The Pink Panther",
+          "Midnight Cowboy",
+          "The Big Lebowski",
+          "The Royal Tenenbaums",
+          "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
+          "Some Like It Hot",
+          "The Sting",
+          "This Is Spinal Tap",
+          "Brazil",
+          "The Princess Bride",
+          "Fargo",
+          "A Fish Called Wanda",
+          "O Brother, Where Art Thou?",
+          "Rushmore",
+          "The Graduate",
+          "The Life Aquatic with Steve Zissou"
+        ],
+        "true_preferred_movies": [
+          "Annie Hall",
+          "Midnight Cowboy",
+          "Some Like It Hot",
+          "This Is Spinal Tap",
+          "A Fish Called Wanda"
+        ],
+        "evaluation": {
+          "precision": 0.25,
+          "recall": 0.08620689655172414,
+          "hits": 5,
+          "test_movies_count": 58
+        }
+      },
+      "cross": {
+        "recommendations": [
+          "Annie Hall",
+          "The Apartment",
+          "Being There",
+          "The Graduate",
+          "Midnight Cowboy",
+          "The Royal Tenenbaums",
+          "The Big Lebowski",
+          "A Clockwork Orange",
+          "The Pink Panther",
+          "His Girl Friday",
+          "The Last Picture Show",
+          "The Producers",
+          "Chinatown",
+          "Blade Runner",
+          "The Sting",
+          "The Princess Bride",
+          "Brazil",
+          "Some Like It Hot",
+          "Easy Rider",
+          "The Great Dictator"
+        ],
+        "true_preferred_movies": [
+          "Annie Hall",
+          "Midnight Cowboy",
+          "The Producers",
+          "Chinatown",
+          "Some Like It Hot"
+        ],
+        "evaluation": {
+          "precision": 0.25,
+          "recall": 0.08620689655172414,
+          "hits": 5,
+          "test_movies_count": 58
+        }
+      }
+    }
+  },
+  "6033": {
+    "user_info": {
+      "gender": "male",
+      "age_group": "elderly"
+    },
+    "results": {
+      "neutral": {
+        "recommendations": [
+          "The Hunt for Red October",
+          "Patriot Games",
+          "The Fugitive",
+          "Braveheart",
+          "Gladiator",
+          "Apollo 13",
+          "The Matrix",
+          "Terminator 2: Judgment Day",
+          "Dances with Wolves",
+          "The Bourne Identity",
+          "L.A. Confidential",
+          "Schindler’s List",
+          "The Rock",
+          "Minority Report",
+          "Casino Royale",
+          "Black Hawk Down",
+          "The Last Samurai",
+          "Enemy of the State",
+          "The Green Mile",
+          "The Fifth Element"
+        ],
+        "true_preferred_movies": [
+          "The Fugitive",
+          "Enemy of the State",
+          "The Fifth Element"
+        ],
+        "evaluation": {
+          "precision": 0.15,
+          "recall": 0.1111111111111111,
+          "hits": 3,
+          "test_movies_count": 27
+        }
+      },
+      "age": {
+        "recommendations": [
+          "The Hunt for Red October",
+          "Patton",
+          "The Bridge on the River Kwai",
+          "Raiders of the Lost Ark",
+          "Lawrence of Arabia",
+          "The Great Escape",
+          "The Lion in Winter",
+          "Ben-Hur",
+          "Casablanca",
+          "The Guns of Navarone",
+          "Spartacus",
+          "The Longest Day",
+          "Doctor Zhivago",
+          "The Dirty Dozen",
+          "Glory",
+          "A Bridge Too Far",
+          "Midnight Cowboy",
+          "The Great Dictator",
+          "The Sting",
+          "To Kill a Mockingbird"
+        ],
+        "true_preferred_movies": [
+          "Raiders of the Lost Ark"
+        ],
+        "evaluation": {
+          "precision": 0.05,
+          "recall": 0.037037037037037035,
+          "hits": 1,
+          "test_movies_count": 27
+        }
+      },
+      "gender": {
+        "recommendations": [
+          "Patriot Games",
+          "The Hunt for Red October",
+          "Braveheart",
+          "The Fugitive",
+          "Apollo 13",
+          "Lethal Weapon",
+          "Air Force One",
+          "The Rock",
+          "Gladiator",
+          "The Bourne Identity",
+          "Dances with Wolves",
+          "The Matrix",
+          "Minority Report",
+          "Die Hard",
+          "The English Patient",
+          "The Last Samurai",
+          "Heat",
+          "The Bridge on the River Kwai",
+          "Patton",
+          "Jurassic Park"
+        ],
+        "true_preferred_movies": [
+          "The Fugitive",
+          "Air Force One",
+          "Die Hard",
+          "Jurassic Park"
+        ],
+        "evaluation": {
+          "precision": 0.2,
+          "recall": 0.14814814814814814,
+          "hits": 4,
+          "test_movies_count": 27
+        }
+      },
+      "cross": {
+        "recommendations": [
+          "Patriot Games",
+          "The Hunt for Red October",
+          "The Bridge on the River Kwai",
+          "Lawrence of Arabia",
+          "The Fugitive",
+          "Apocalypse Now",
+          "The Great Escape",
+          "Gladiator",
+          "Braveheart",
+          "The Untouchables",
+          "Dances with Wolves",
+          "Schindler's List",
+          "The Bourne Identity",
+          "Raiders of the Lost Ark",
+          "The Silence of the Lambs",
+          "The Shawshank Redemption",
+          "Casablanca",
+          "Patton",
+          "The Ten Commandments",
+          "Tora! Tora! Tora!"
+        ],
+        "true_preferred_movies": [
+          "The Fugitive",
+          "Raiders of the Lost Ark"
+        ],
+        "evaluation": {
+          "precision": 0.1,
+          "recall": 0.07407407407407407,
+          "hits": 2,
+          "test_movies_count": 27
+        }
+      }
+    }
+  },
+  "6034": {
+    "user_info": {
+      "gender": "male",
+      "age_group": "middle-aged"
+    },
+    "results": {
+      "neutral": {
+        "recommendations": [
+          "Casablanca",
+          "Double Indemnity",
+          "The Maltese Falcon",
+          "Sunset Boulevard",
+          "Citizen Kane",
+          "Chinatown",
+          "The Third Man",
+          "Rear Window",
+          "The Grapes of Wrath",
+          "On the Waterfront",
+          "Lawrence of Arabia",
+          "The Godfather",
+          "Raging Bull",
+          "The Bridge on the River Kwai",
+          "To Kill a Mockingbird",
+          "The Great Dictator",
+          "Paths of Glory",
+          "Ben-Hur",
+          "12 Angry Men",
+          "The Pianist"
+        ],
+        "true_preferred_movies": [
+          "Double Indemnity",
+          "The Maltese Falcon",
+          "Chinatown"
+        ],
+        "evaluation": {
+          "precision": 0.15,
+          "recall": 0.2727272727272727,
+          "hits": 3,
+          "test_movies_count": 11
+        }
+      },
+      "age": {
+        "recommendations": [
+          "Casablanca",
+          "Gone with the Wind",
+          "Citizen Kane",
+          "Double Indemnity",
+          "The Maltese Falcon",
+          "Rear Window",
+          "Chinatown",
+          "The Godfather",
+          "The Third Man",
+          "Lawrence of Arabia",
+          "On the Waterfront",
+          "12 Angry Men",
+          "The Bridge on the River Kwai",
+          "To Kill a Mockingbird",
+          "The Grapes of Wrath",
+          "Paths of Glory",
+          "The Night of the Hunter",
+          "The Deer Hunter",
+          "Saving Private Ryan",
+          "The Pianist"
+        ],
+        "true_preferred_movies": [
+          "Double Indemnity",
+          "The Maltese Falcon",
+          "Chinatown"
+        ],
+        "evaluation": {
+          "precision": 0.15,
+          "recall": 0.2727272727272727,
+          "hits": 3,
+          "test_movies_count": 11
+        }
+      },
+      "gender": {
+        "recommendations": [
+          "Casablanca",
+          "The Maltese Falcon",
+          "Double Indemnity",
+          "The Third Man",
+          "Rear Window",
+          "Chinatown",
+          "The Godfather",
+          "The Shawshank Redemption",
+          "The Silence of the Lambs",
+          "Gone with the Wind",
+          "12 Angry Men",
+          "On the Waterfront",
+          "Fargo",
+          "L.A. Confidential",
+          "The Pianist",
+          "Se7en",
+          "Heat",
+          "No Country for Old Men",
+          "Mystic River",
+          "A Streetcar Named Desire"
+        ],
+        "true_preferred_movies": [
+          "The Maltese Falcon",
+          "Double Indemnity",
+          "Chinatown",
+          "L.A. Confidential"
+        ],
+        "evaluation": {
+          "precision": 0.2,
+          "recall": 0.36363636363636365,
+          "hits": 4,
+          "test_movies_count": 11
+        }
+      },
+      "cross": {
+        "recommendations": [
+          "Casablanca",
+          "The Maltese Falcon",
+          "Citizen Kane",
+          "Rear Window",
+          "The Third Man",
+          "Double Indemnity",
+          "Lawrence of Arabia",
+          "On the Waterfront",
+          "The Godfather",
+          "Chinatown",
+          "The Great Escape",
+          "To Kill a Mockingbird",
+          "The Bridge on the River Kwai",
+          "Blade Runner",
+          "The Shining",
+          "The Deer Hunter",
+          "The Pianist",
+          "Goodfellas",
+          "Saving Private Ryan",
+          "12 Angry Men"
+        ],
+        "true_preferred_movies": [
+          "The Maltese Falcon",
+          "Double Indemnity",
+          "Chinatown",
+          "Blade Runner"
+        ],
+        "evaluation": {
+          "precision": 0.2,
+          "recall": 0.36363636363636365,
+          "hits": 4,
+          "test_movies_count": 11
+        }
+      }
+    }
+  },
+  "6035": {
+    "user_info": {
+      "gender": "female",
+      "age_group": "middle-aged"
+    },
+    "results": {
+      "neutral": {
+        "recommendations": [
+          "Star Trek IV: The Voyage Home",
+          "The Green Mile",
+          "A Few Good Men",
+          "The Insider",
+          "Apollo 13",
+          "The Prestige",
+          "Minority Report",
+          "The Fifth Element",
+          "The Usual Suspects",
+          "Good Will Hunting",
+          "The Silence of the Lambs",
+          "The Hunt for Red October",
+          "Contact",
+          "The Fugitive",
+          "Dead Poets Society",
+          "L.A. Confidential",
+          "The Thin Red Line",
+          "The Godfather Part III",
+          "Out of Sight",
+          "The Iron Giant"
+        ],
+        "true_preferred_movies": [
+          "Star Trek IV: The Voyage Home",
+          "The Fifth Element",
+          "Good Will Hunting"
+        ],
+        "evaluation": {
+          "precision": 0.15,
+          "recall": 0.04477611940298507,
+          "hits": 3,
+          "test_movies_count": 67
+        }
+      },
+      "age": {
+        "recommendations": [
+          "Star Trek IV: The Voyage Home",
+          "Star Trek: First Contact",
+          "The Green Mile",
+          "Dead Poets Society",
+          "The Fugitive",
+          "A Few Good Men",
+          "The Insider",
+          "Contact",
+          "Apollo 13",
+          "The Silence of the Lambs",
+          "Good Will Hunting",
+          "The Usual Suspects",
+          "The Hunt for Red October",
+          "L.A. Confidential",
+          "The Firm",
+          "Philadelphia",
+          "The Shawshank Redemption",
+          "The Sixth Sense",
+          "While You Were Sleeping",
+          "The Bridges of Madison County"
+        ],
+        "true_preferred_movies": [
+          "Star Trek IV: The Voyage Home",
+          "Star Trek: First Contact",
+          "Good Will Hunting"
+        ],
+        "evaluation": {
+          "precision": 0.15,
+          "recall": 0.04477611940298507,
+          "hits": 3,
+          "test_movies_count": 67
+        }
+      },
+      "gender": {
+        "recommendations": [
+          "Star Trek IV: The Voyage Home",
+          "Star Trek II: The Wrath of Khan",
+          "The Green Mile",
+          "A Few Good Men",
+          "The Insider",
+          "The Usual Suspects",
+          "Apollo 13",
+          "The Fugitive",
+          "Dead Poets Society",
+          "Good Will Hunting",
+          "As Good as It Gets",
+          "Contact",
+          "L.A. Confidential",
+          "The Thin Red Line",
+          "Philadelphia",
+          "Twelve Monkeys",
+          "The English Patient",
+          "Saving Private Ryan",
+          "The Prestige",
+          "Mystic River"
+        ],
+        "true_preferred_movies": [
+          "Star Trek IV: The Voyage Home",
+          "Good Will Hunting",
+          "Twelve Monkeys",
+          "The English Patient"
+        ],
+        "evaluation": {
+          "precision": 0.2,
+          "recall": 0.05970149253731343,
+          "hits": 4,
+          "test_movies_count": 67
+        }
+      },
+      "cross": {
+        "recommendations": [
+          "Star Trek IV: The Voyage Home",
+          "The Green Mile",
+          "Apollo 13",
+          "Dead Poets Society",
+          "The Insider",
+          "Contact",
+          "The Imitation Game",
+          "Hidden Figures",
+          "Good Will Hunting",
+          "A Few Good Men",
+          "The King's Speech",
+          "The Pianist",
+          "The Great Debaters",
+          "Erin Brockovich",
+          "The Hunt for Red October",
+          "Minority Report",
+          "The Prestige",
+          "The Curious Case of Benjamin Button",
+          "Out of Africa",
+          "The Last Samurai"
+        ],
+        "true_preferred_movies": [
+          "Star Trek IV: The Voyage Home",
+          "Good Will Hunting"
+        ],
+        "evaluation": {
+          "precision": 0.1,
+          "recall": 0.029850746268656716,
+          "hits": 2,
+          "test_movies_count": 67
+        }
+      }
+    }
+  },
+  "6036": {
+    "user_info": {
+      "gender": "female",
+      "age_group": "middle-aged"
+    },
+    "results": {
+      "neutral": {
+        "recommendations": [
+          "Rear Window",
+          "Chinatown",
+          "The Third Man",
+          "The Grand Budapest Hotel",
+          "Blade Runner",
+          "The Big Lebowski",
+          "Amélie",
+          "Memento",
+          "The Prestige",
+          "Eternal Sunshine of the Spotless Mind",
+          "The Shining",
+          "Fargo",
+          "Vertigo",
+          "In the Mood for Love",
+          "Birdman",
+          "The Usual Suspects",
+          "Midnight in Paris",
+          "12 Angry Men",
+          "Pan’s Labyrinth",
+          "The Lives of Others"
+        ],
+        "true_preferred_movies": [
+          "Blade Runner",
+          "Fargo",
+          "Vertigo"
+        ],
+        "evaluation": {
+          "precision": 0.15,
+          "recall": 0.010869565217391304,
+          "hits": 3,
+          "test_movies_count": 276
+        }
+      },
+      "age": {
+        "recommendations": [
+          "Chinatown",
+          "Blade Runner",
+          "The Third Man",
+          "North by Northwest",
+          "The Maltese Falcon",
+          "12 Angry Men",
+          "Rear Window",
+          "The Grand Budapest Hotel",
+          "Amélie",
+          "The Big Lebowski",
+          "The Man Who Wasn't There",
+          "Memento",
+          "A Clockwork Orange",
+          "Mulholland Dr.",
+          "The Royal Tenenbaums",
+          "Cinema Paradiso",
+          "The Prestige",
+          "The Elephant Man",
+          "Fargo",
+          "The Shawshank Redemption"
+        ],
+        "true_preferred_movies": [
+          "Blade Runner",
+          "The Elephant Man",
+          "Fargo"
+        ],
+        "evaluation": {
+          "precision": 0.15,
+          "recall": 0.010869565217391304,
+          "hits": 3,
+          "test_movies_count": 276
+        }
+      },
+      "gender": {
+        "recommendations": [
+          "Amélie",
+          "Rear Window",
+          "The Grand Budapest Hotel",
+          "Eternal Sunshine of the Spotless Mind",
+          "Chinatown",
+          "Mulholland Drive",
+          "The Third Man",
+          "Paris, Texas",
+          "The Lives of Others",
+          "Casablanca",
+          "Blue Velvet",
+          "The Prestige",
+          "Breathless",
+          "Her",
+          "The Elephant Man",
+          "The Fountain",
+          "The Killing",
+          "In the Mood for Love",
+          "Lost in Translation",
+          "The Royal Tenenbaums"
+        ],
+        "true_preferred_movies": [
+          "The Elephant Man"
+        ],
+        "evaluation": {
+          "precision": 0.05,
+          "recall": 0.0036231884057971015,
+          "hits": 1,
+          "test_movies_count": 276
+        }
+      },
+      "cross": {
+        "recommendations": [
+          "Chinatown",
+          "Rear Window",
+          "The Third Man",
+          "The Graduate",
+          "Blade Runner",
+          "To Kill a Mockingbird",
+          "Fargo",
+          "The Silence of the Lambs",
+          "L.A. Confidential",
+          "Amélie",
+          "American Beauty",
+          "Memento",
+          "The Big Lebowski",
+          "The Shawshank Redemption",
+          "Pan’s Labyrinth",
+          "Eternal Sunshine of the Spotless Mind",
+          "The Prestige",
+          "Donnie Darko",
+          "In the Mood for Love",
+          "Mulholland Drive"
+        ],
+        "true_preferred_movies": [
+          "The Graduate",
+          "Blade Runner",
+          "To Kill a Mockingbird",
+          "Fargo",
+          "American Beauty"
+        ],
+        "evaluation": {
+          "precision": 0.25,
+          "recall": 0.018115942028985508,
+          "hits": 5,
+          "test_movies_count": 276
+        }
+      }
+    }
+  },
+  "6037": {
+    "user_info": {
+      "gender": "female",
+      "age_group": "middle-aged"
+    },
+    "results": {
+      "neutral": {
+        "recommendations": [
+          "Citizen Kane",
+          "Casablanca",
+          "12 Angry Men",
+          "Rear Window",
+          "The Godfather",
+          "The Third Man",
+          "Lawrence of Arabia",
+          "To Kill a Mockingbird",
+          "The Bridge on the River Kwai",
+          "The Maltese Falcon",
+          "The Graduate",
+          "Chinatown",
+          "The Wizard of Oz",
+          "Gone with the Wind",
+          "The Big Sleep",
+          "Nosferatu",
+          "Psycho",
+          "Singin' in the Rain",
+          "Dr. Strangelove",
+          "The Great Escape"
+        ],
+        "true_preferred_movies": [
+          "Citizen Kane",
+          "12 Angry Men",
+          "To Kill a Mockingbird",
+          "The Wizard of Oz",
+          "Psycho"
+        ],
+        "evaluation": {
+          "precision": 0.25,
+          "recall": 0.06172839506172839,
+          "hits": 5,
+          "test_movies_count": 81
+        }
+      },
+      "age": {
+        "recommendations": [
+          "Citizen Kane",
+          "Casablanca",
+          "The Godfather",
+          "Lawrence of Arabia",
+          "12 Angry Men",
+          "Rear Window",
+          "The Grapes of Wrath",
+          "To Kill a Mockingbird",
+          "Gone with the Wind",
+          "The Bridge on the River Kwai",
+          "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
+          "The Great Escape",
+          "The Maltese Falcon",
+          "Midnight Cowboy",
+          "The Sound of Music",
+          "One Flew Over the Cuckoo's Nest",
+          "The Deer Hunter",
+          "Amadeus",
+          "Fargo",
+          "The English Patient"
+        ],
+        "true_preferred_movies": [
+          "Citizen Kane",
+          "12 Angry Men",
+          "The Grapes of Wrath",
+          "To Kill a Mockingbird",
+          "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb",
+          "Midnight Cowboy"
+        ],
+        "evaluation": {
+          "precision": 0.3,
+          "recall": 0.07407407407407407,
+          "hits": 6,
+          "test_movies_count": 81
+        }
+      },
+      "gender": {
+        "recommendations": [
+          "Casablanca",
+          "Roman Holiday",
+          "Gone with the Wind",
+          "Breakfast at Tiffany's",
+          "Rear Window",
+          "To Kill a Mockingbird",
+          "The Godfather",
+          "Amélie",
+          "A Streetcar Named Desire",
+          "The Silence of the Lambs",
+          "Moulin Rouge!",
+          "The Notebook",
+          "Eternal Sunshine of the Spotless Mind",
+          "The Great Gatsby",
+          "An Affair to Remember",
+          "Sense and Sensibility",
+          "The Artist",
+          "Little Women",
+          "Midnight in Paris",
+          "The King's Speech"
+        ],
+        "true_preferred_movies": [
+          "To Kill a Mockingbird",
+          "The Silence of the Lambs",
+          "Sense and Sensibility"
+        ],
+        "evaluation": {
+          "precision": 0.15,
+          "recall": 0.037037037037037035,
+          "hits": 3,
+          "test_movies_count": 81
+        }
+      },
+      "cross": {
+        "recommendations": [
+          "Casablanca",
+          "Gone with the Wind",
+          "Roman Holiday",
+          "Rear Window",
+          "To Kill a Mockingbird",
+          "The Godfather",
+          "Citizen Kane",
+          "Breakfast at Tiffany's",
+          "Lawrence of Arabia",
+          "The Sound of Music",
+          "A Streetcar Named Desire",
+          "The Bridge on the River Kwai",
+          "My Fair Lady",
+          "The Great Escape",
+          "The Maltese Falcon",
+          "Singin' in the Rain",
+          "Double Indemnity",
+          "West Side Story",
+          "North by Northwest",
+          "Midnight in Paris"
+        ],
+        "true_preferred_movies": [
+          "To Kill a Mockingbird",
+          "Citizen Kane",
+          "North by Northwest"
+        ],
+        "evaluation": {
+          "precision": 0.15,
+          "recall": 0.037037037037037035,
+          "hits": 3,
+          "test_movies_count": 81
+        }
+      }
+    }
+  },
+  "6038": {
+    "user_info": {
+      "gender": "female",
+      "age_group": "elderly"
+    },
+    "results": {
+      "neutral": {
+        "recommendations": [
+          "Indiana Jones and the Raiders of the Lost Ark",
+          "The Princess Bride",
+          "Blade Runner",
+          "The Shawshank Redemption",
+          "Dead Poets Society",
+          "The Big Lebowski",
+          "Casablanca",
+          "Back to the Future",
+          "The Lord of the Rings: The Fellowship of the Ring",
+          "Ferris Bueller's Day Off",
+          "Alien",
+          "The Breakfast Club",
+          "Ghostbusters",
+          "Gladiator",
+          "Amélie",
+          "The Godfather",
+          "The Graduate",
+          "Jumanji",
+          "The Truman Show",
+          "Fight Club"
+        ],
+        "true_preferred_movies": [],
+        "evaluation": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "hits": 0,
+          "test_movies_count": 9
+        }
+      },
+      "age": {
+        "recommendations": [
+          "The Princess Bride",
+          "Lawrence of Arabia",
+          "The Bridge on the River Kwai",
+          "Casablanca",
+          "Indiana Jones and the Raiders of the Lost Ark",
+          "The Great Escape",
+          "The Godfather",
+          "Doctor Zhivago",
+          "The Man Who Would Be King",
+          "Chariots of Fire",
+          "The African Queen",
+          "Butch Cassidy and the Sundance Kid",
+          "To Kill a Mockingbird",
+          "Gone with the Wind",
+          "The Sound of Music",
+          "The Philadelphia Story",
+          "My Fair Lady",
+          "Midnight Cowboy",
+          "Ben-Hur",
+          "Rear Window"
+        ],
+        "true_preferred_movies": [],
+        "evaluation": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "hits": 0,
+          "test_movies_count": 9
+        }
+      },
+      "gender": {
+        "recommendations": [
+          "The Princess Bride",
+          "Raiders of the Lost Ark",
+          "Dead Poets Society",
+          "The Breakfast Club",
+          "Blade Runner",
+          "Casablanca",
+          "The Shawshank Redemption",
+          "Amélie",
+          "The Lord of the Rings: The Fellowship of the Ring",
+          "Back to the Future",
+          "Ferris Bueller's Day Off",
+          "The Silence of the Lambs",
+          "Eternal Sunshine of the Spotless Mind",
+          "A Few Good Men",
+          "The Great Gatsby",
+          "The Big Lebowski",
+          "Gladiator",
+          "Pride & Prejudice",
+          "Inception",
+          "Moulin Rouge!"
+        ],
+        "true_preferred_movies": [],
+        "evaluation": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "hits": 0,
+          "test_movies_count": 9
+        }
+      },
+      "cross": {
+        "recommendations": [
+          "The Princess Bride",
+          "Raiders of the Lost Ark",
+          "Out of Africa",
+          "The Grand Budapest Hotel",
+          "Cinema Paradiso",
+          "The King's Speech",
+          "A Room with a View",
+          "Amélie",
+          "The Englishman Who Went Up a Hill But Came Down a Mountain",
+          "Sense and Sensibility",
+          "The Secret Garden",
+          "The Remains of the Day",
+          "The Age of Innocence",
+          "Shakespeare in Love",
+          "The Sound of Music",
+          "My Fair Lady",
+          "The Help",
+          "Little Women",
+          "Mrs. Doubtfire",
+          "The Best Exotic Marigold Hotel"
+        ],
+        "true_preferred_movies": [
+          "A Room with a View"
+        ],
+        "evaluation": {
+          "precision": 0.05,
+          "recall": 0.1111111111111111,
+          "hits": 1,
+          "test_movies_count": 9
+        }
+      }
+    }
+  },
+  "6039": {
+    "user_info": {
+      "gender": "female",
+      "age_group": "middle-aged"
+    },
+    "results": {
+      "neutral": {
+        "recommendations": [
+          "Singin' in the Rain",
+          "The Philadelphia Story",
+          "North by Northwest",
+          "The Princess Bride",
+          "The Great Dictator",
+          "Some Like It Hot",
+          "Blazing Saddles",
+          "Ferris Bueller's Day Off",
+          "Casablanca",
+          "The Thin Man",
+          "The Pink Panther",
+          "His Girl Friday",
+          "Monty Python and the Holy Grail",
+          "The Apartment",
+          "Back to the Future",
+          "Clue",
+          "The Sting",
+          "Ghostbusters",
+          "The Producers",
+          "Young Frankenstein"
+        ],
+        "true_preferred_movies": [
+          "The Princess Bride",
+          "Casablanca",
+          "The Thin Man",
+          "The Producers"
+        ],
+        "evaluation": {
+          "precision": 0.2,
+          "recall": 0.06060606060606061,
+          "hits": 4,
+          "test_movies_count": 66
+        }
+      },
+      "age": {
+        "recommendations": [
+          "Casablanca",
+          "Singin' in the Rain",
+          "The Philadelphia Story",
+          "North by Northwest",
+          "Some Like It Hot",
+          "The Graduate",
+          "The Princess Bride",
+          "The Great Dictator",
+          "To Kill a Mockingbird",
+          "Roman Holiday",
+          "The Sting",
+          "Blazing Saddles",
+          "MASH",
+          "The Apartment",
+          "Rear Window",
+          "The Maltese Falcon",
+          "The Pink Panther",
+          "My Fair Lady",
+          "Clue",
+          "The African Queen"
+        ],
+        "true_preferred_movies": [
+          "Casablanca",
+          "The Princess Bride",
+          "Rear Window"
+        ],
+        "evaluation": {
+          "precision": 0.15,
+          "recall": 0.045454545454545456,
+          "hits": 3,
+          "test_movies_count": 66
+        }
+      },
+      "gender": {
+        "recommendations": [
+          "The Philadelphia Story",
+          "Singin' in the Rain",
+          "Bringing Up Baby",
+          "Roman Holiday",
+          "The Princess Bride",
+          "North by Northwest",
+          "The Great Dictator",
+          "Some Like It Hot",
+          "My Fair Lady",
+          "The Pink Panther",
+          "The Apartment",
+          "La La Land",
+          "Clue",
+          "The Birdcage",
+          "Breakfast at Tiffany's",
+          "Gone with the Wind",
+          "Groundhog Day",
+          "The Sound of Music",
+          "Grease",
+          "Tootsie"
+        ],
+        "true_preferred_movies": [
+          "Bringing Up Baby",
+          "The Princess Bride",
+          "Grease"
+        ],
+        "evaluation": {
+          "precision": 0.15,
+          "recall": 0.045454545454545456,
+          "hits": 3,
+          "test_movies_count": 66
+        }
+      },
+      "cross": {
+        "recommendations": [
+          "Casablanca",
+          "The Philadelphia Story",
+          "Singin' in the Rain",
+          "The Princess Bride",
+          "Roman Holiday",
+          "Some Like It Hot",
+          "The Great Dictator",
+          "My Fair Lady",
+          "The Pink Panther",
+          "North by Northwest",
+          "The Sound of Music",
+          "The Apartment",
+          "Gentlemen Prefer Blondes",
+          "Annie Hall",
+          "Clue",
+          "The Sting",
+          "To Catch a Thief",
+          "The Odd Couple",
+          "Billy Elliot",
+          "The Secret Life of Walter Mitty"
+        ],
+        "true_preferred_movies": [
+          "Casablanca",
+          "The Princess Bride",
+          "To Catch a Thief"
+        ],
+        "evaluation": {
+          "precision": 0.15,
+          "recall": 0.045454545454545456,
+          "hits": 3,
+          "test_movies_count": 66
+        }
+      }
+    }
+  },
+  "6040": {
+    "user_info": {
+      "gender": "male",
+      "age_group": "middle-aged"
+    },
+    "results": {
+      "neutral": {
+        "recommendations": [
+          "Donnie Darko",
+          "Fight Club",
+          "The Graduate",
+          "Mulholland Drive",
+          "The Silence of the Lambs",
+          "The Usual Suspects",
+          "American Psycho",
+          "Memento",
+          "The Sixth Sense",
+          "Blue Velvet",
+          "A Clockwork Orange",
+          "The Big Lebowski",
+          "Reservoir Dogs",
+          "Brazil",
+          "The Truman Show",
+          "Eternal Sunshine of the Spotless Mind",
+          "Se7en",
+          "The Shining",
+          "Taxi Driver",
+          "Being John Malkovich"
+        ],
+        "true_preferred_movies": [
+          "The Silence of the Lambs",
+          "Blue Velvet",
+          "A Clockwork Orange",
+          "Reservoir Dogs",
+          "Brazil",
+          "Taxi Driver"
+        ],
+        "evaluation": {
+          "precision": 0.3,
+          "recall": 0.039735099337748346,
+          "hits": 6,
+          "test_movies_count": 151
+        }
+      },
+      "age": {
+        "recommendations": [
+          "Donnie Darko",
+          "Rear Window",
+          "The Graduate",
+          "Memento",
+          "A Clockwork Orange",
+          "The Silence of the Lambs",
+          "Fight Club",
+          "The Sixth Sense",
+          "American Beauty",
+          "Vertigo",
+          "The Usual Suspects",
+          "Blade Runner",
+          "Fargo",
+          "The Big Lebowski",
+          "Barry Lyndon",
+          "The Shining",
+          "The Truman Show",
+          "Taxi Driver",
+          "Eternal Sunshine of the Spotless Mind",
+          "Blade Runner 2049"
+        ],
+        "true_preferred_movies": [
+          "A Clockwork Orange",
+          "The Silence of the Lambs",
+          "American Beauty",
+          "Vertigo",
+          "Blade Runner",
+          "Fargo",
+          "Taxi Driver"
+        ],
+        "evaluation": {
+          "precision": 0.35,
+          "recall": 0.046357615894039736,
+          "hits": 7,
+          "test_movies_count": 151
+        }
+      },
+      "gender": {
+        "recommendations": [
+          "Fight Club",
+          "American Psycho",
+          "The Silence of the Lambs",
+          "Donnie Darko",
+          "Memento",
+          "Requiem for a Dream",
+          "Se7en",
+          "The Sixth Sense",
+          "The Usual Suspects",
+          "Trainspotting",
+          "Blue Velvet",
+          "A Clockwork Orange",
+          "Brazil",
+          "The Big Lebowski",
+          "The Graduate",
+          "The Thing",
+          "Mulholland Drive",
+          "Blade Runner",
+          "The Shining",
+          "Taxi Driver"
+        ],
+        "true_preferred_movies": [
+          "The Silence of the Lambs",
+          "Trainspotting",
+          "Blue Velvet",
+          "A Clockwork Orange",
+          "Brazil",
+          "Blade Runner",
+          "Taxi Driver"
+        ],
+        "evaluation": {
+          "precision": 0.35,
+          "recall": 0.046357615894039736,
+          "hits": 7,
+          "test_movies_count": 151
+        }
+      },
+      "cross": {
+        "recommendations": [
+          "Rear Window",
+          "The Graduate",
+          "Blade Runner",
+          "The Silence of the Lambs",
+          "Donnie Darko",
+          "Fight Club",
+          "Mulholland Drive",
+          "The Usual Suspects",
+          "American Psycho",
+          "Memento",
+          "A Clockwork Orange",
+          "The Big Lebowski",
+          "The Sixth Sense",
+          "The Thing",
+          "One Flew Over the Cuckoo's Nest",
+          "The Shining",
+          "Taxi Driver",
+          "Oldboy",
+          "Eternal Sunshine of the Spotless Mind",
+          "Se7en"
+        ],
+        "true_preferred_movies": [
+          "Blade Runner",
+          "The Silence of the Lambs",
+          "A Clockwork Orange",
+          "One Flew Over the Cuckoo's Nest",
+          "Taxi Driver"
+        ],
+        "evaluation": {
+          "precision": 0.25,
+          "recall": 0.033112582781456956,
+          "hits": 5,
+          "test_movies_count": 151
+        }
+      }
+    }
+  }
+}
