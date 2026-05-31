@@ -1,0 +1,82 @@
+============================================================
+ML-1M PILOT
+============================================================
+  experiment_id : pilot_gpt41mini_ml1m
+  dataset       : ml1m
+  model         : gpt-4.1-mini  (provider=openai)
+  sample size   : 1 users
+  scenarios     : 8
+  total calls   : 8
+  est tokens    : ~4,800 in / ~2,400 out
+  est cost      : $0.006 (gpt-4.1-mini, may vary)
+  cache         : data/cache/llm_cache.sqlite (cached calls cost $0)
+============================================================
+
+Running... (cached prompts cost $0)
+Traceback (most recent call last):
+  File "E:\Reranker\reranker\src\llm_adapters\openai_adapter.py", line 98, in _do_call
+    return self._client.chat.completions.create(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        model=self.model,
+        ^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        max_tokens=max_tokens,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ganzhuoxiong\AppData\Roaming\Python\Python314\site-packages\openai\_utils\_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\ganzhuoxiong\AppData\Roaming\Python\Python314\site-packages\openai\resources\chat\completions\completions.py", line 1215, in create
+    return self._post(
+           ~~~~~~~~~~^
+        "/chat/completions",
+        ^^^^^^^^^^^^^^^^^^^^
+    ...<51 lines>...
+        stream_cls=Stream[ChatCompletionChunk],
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\ganzhuoxiong\AppData\Roaming\Python\Python314\site-packages\openai\_base_client.py", line 1332, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ganzhuoxiong\AppData\Roaming\Python\Python314\site-packages\openai\_base_client.py", line 1105, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.AuthenticationError: Error code: 401 - {'error': {'message': '[xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx]无效的令牌 (request id: 2026052800321334349249474518545)', 'type': 'shell_api_error'}}
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "e:\Reranker\reranker\scripts\run_pilot_ml1m.py", line 275, in <module>
+    main()
+    ~~~~^^
+  File "e:\Reranker\reranker\scripts\run_pilot_ml1m.py", line 268, in main
+    meta = run(cfg)
+  File "E:\Reranker\reranker\src\experiment\runner.py", line 209, in run
+    response = llm.generate(
+        prompt.text,
+    ...<4 lines>...
+        experiment_id=cfg.experiment_id,
+    )
+  File "E:\Reranker\reranker\src\llm_adapters\base.py", line 106, in generate
+    response = self._call_provider(prompt, **gen_kwargs)
+  File "E:\Reranker\reranker\src\llm_adapters\openai_adapter.py", line 120, in _call_provider
+    response = _do_call()
+  File "C:\Users\ganzhuoxiong\AppData\Roaming\Python\Python314\site-packages\tenacity\__init__.py", line 331, in wrapped_f
+    return copy(f, *args, **kw)
+  File "C:\Users\ganzhuoxiong\AppData\Roaming\Python\Python314\site-packages\tenacity\__init__.py", line 470, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "C:\Users\ganzhuoxiong\AppData\Roaming\Python\Python314\site-packages\tenacity\__init__.py", line 371, in iter
+    result = action(retry_state)
+  File "C:\Users\ganzhuoxiong\AppData\Roaming\Python\Python314\site-packages\tenacity\__init__.py", line 393, in <lambda>
+    self._add_action_func(lambda rs: rs.outcome.result())
+                                     ~~~~~~~~~~~~~~~~~^^
+  File "C:\Python314\Lib\concurrent\futures\_base.py", line 443, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Python314\Lib\concurrent\futures\_base.py", line 395, in __get_result
+    raise self._exception
+  File "C:\Users\ganzhuoxiong\AppData\Roaming\Python\Python314\site-packages\tenacity\__init__.py", line 473, in __call__
+    result = fn(*args, **kwargs)
+  File "E:\Reranker\reranker\src\llm_adapters\openai_adapter.py", line 106, in _do_call
+    raise AuthError(str(e)) from e
+src.llm_adapters.base.AuthError: Error code: 401 - {'error': {'message': '[xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx]无效的令牌 (request id: 2026052800321334349249474518545)', 'type': 'shell_api_error'}}

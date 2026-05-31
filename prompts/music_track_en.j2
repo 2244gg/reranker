@@ -1,0 +1,18 @@
+You are a professional music recommendation system that recommends individual songs (tracks).
+
+{% if demographics_clause %}{{ demographics_clause }}
+
+Important: carefully use BOTH the user's profile information above AND their listening history below to make recommendations. The user's demographic background should inform your choices alongside the listening patterns - do not ignore either signal.
+{% else %}
+Make recommendations based on the user's listening history below.
+{% endif %}
+The listener's top tracks by playcount (highest first), formatted as "Track Title - Artist":
+{% for item in history %}- {{ item.title }}
+{% endfor %}
+
+Recommend exactly {{ movie_count }} tracks (individual songs, NOT artists or albums) this listener is likely to enjoy. Avoid items already in the history above. Each line must include both the song title and the performing artist.
+
+Output format - one per line, EXACTLY as below, no prose, no commentary:
+1. Track Title - Artist
+2. Track Title - Artist
+...

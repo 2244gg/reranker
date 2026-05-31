@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# Secrets
+.env
+.env.local
+.env.*.local
+
+# Project data / cache / results (large, machine-specific)
+data/cache/
+data/raw/
+data/processed/
+results/
+reports/
+
+# Allow committed reports/markdown summaries explicitly via -f if needed.
+!reports/.gitkeep
+
+# OS
+.DS_Store
+Thumbs.db

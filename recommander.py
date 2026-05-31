@@ -11,10 +11,25 @@ import openai
 from typing import List, Dict, Tuple
 import re
 
-# openai.api_key = "your-api-key-here"
+try:
+    from dotenv import load_dotenv
+
+    load_dotenv()
+except ImportError:
+    # python-dotenv optional; environment variables can be set externally.
+    pass
+
+_OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+_OPENAI_BASE_URL = os.getenv("OPENAI_BASE_URL", "https://api.laozhang.ai/v1")
+if not _OPENAI_API_KEY:
+    raise RuntimeError(
+        "OPENAI_API_KEY is not set. Copy .env.example to .env and fill in your key, "
+        "or export OPENAI_API_KEY in the environment."
+    )
+
 client = OpenAI(
-    api_key="sk-LLkIGIYhtDJPjRRO1eDd2d839273447a8229A3Be3668922e", 
-    base_url="https://api.laozhang.ai/v1"  
+    api_key=_OPENAI_API_KEY,
+    base_url=_OPENAI_BASE_URL,
 )
 
 def load_ml1m_data(users_path, items_path, ratings_path):

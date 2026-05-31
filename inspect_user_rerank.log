@@ -1,0 +1,107 @@
+=== user user_000317 ===
+demographics: {'gender': 'male', 'age_group': 'middle-aged', 'user_id': 'user_000317'}
+
+--- scenario=neutral ---
+pop_col=neutral_All  alpha=None
+  rank   ORIG title (B)                                      |  RER title (B)
+    1  Headhunter - Front 242                          (-)  |  Headhunter - Front 242                          (-)
+    2  Stalker - Klinik                                (-)  |  Stalker - Klinik                                (-)
+    3  Dissolved Girl - Massive Attack                 (-)  |  Dissolved Girl - Massive Attack                 (-)
+    4  Dead Stars - Covenant                           (-)  |  Dead Stars - Covenant                           (-)
+    5  Enjoy The Silence - Depeche Mode                (-)  |  Enjoy The Silence - Depeche Mode                (-)
+    6  Nothing But You - 32Crash                       (-)  |  Nothing But You - 32Crash                       (-)
+    7  Brutal Introspection - Front Line Assembly      (-)  |  Brutal Introspection - Front Line Assembly      (-)
+    8  The Third Man - Rome                            (-)  |  The Third Man - Rome                            (-)
+    9  I Am The One - Klinik                           (-)  |  I Am The One - Klinik                           (-)
+   10  Shock - KMFDM                                   (-)  |  Shock - KMFDM                                   (-)
+   11  Schrei X - Wumpscut                             (-)  |  Schrei X - Wumpscut                             (-)
+   12  Nemesis - Front Line Assembly                   (-)  |  Nemesis - Front Line Assembly                   (-)
+   13  Black Celebration - Depeche Mode                (-)  |  Black Celebration - Depeche Mode                (-)
+   14  The Great Commandment - Camouflage              (-)  |  The Great Commandment - Camouflage              (-)
+   15  Starsign - Covenant                             (-)  |  Starsign - Covenant                             (-)
+   16  All My Sins Remembered - Asmodeus X             (-)  |  All My Sins Remembered - Asmodeus X             (-)
+   17  Tears - Ministry                                (-)  |  Tears - Ministry                                (-)
+   18  Deadlock - Front Line Assembly                  (-)  |  Deadlock - Front Line Assembly                  (-)
+   19  Shine On - Klinik                               (-)  |  Shine On - Klinik                               (-)
+   20  Newborn - Covenant                              (-)  |  Newborn - Covenant                              (-)
+  dropped from top20 (0): []
+  added to top20  (0): []
+
+--- scenario=gender ---
+pop_col=gender_M  alpha=0.5678402240945908
+  rank   ORIG title (B)                                      |  RER title (B)
+    1  Silent Shout - The Knife                        (0.396)  |  Enjoy the Silence - Depeche Mode                (0.000)
+    2  Enjoy the Silence - Depeche Mode                (0.000)  |  The Great Commandment - Camouflage              (0.066)
+    3  The Great Commandment - Camouflage              (0.066)  |  Deadlock - Front Line Assembly                  (0.000)
+    4  Deadlock - Front Line Assembly                  (0.000)  |  Stalker 2.0 - VNV Nation                        (0.000)
+    5  Stalker 2.0 - VNV Nation                        (0.000)  |  Silent Shout - The Knife                        (0.396)
+    6  Chrome - Covenant                               (0.000)  |  Chrome - Covenant                               (0.000)
+    7  Tainted Love - Soft Cell                        (0.302)  |  Tears Run Rings - Tones on Tail                 (0.000)
+    8  Tears Run Rings - Tones on Tail                 (0.000)  |  Fade to Grey - Visage                           (0.000)
+    9  Fade to Grey - Visage                           (0.000)  |  I’m Not in Love - Will to Power                 (0.000)
+   10  I’m Not in Love - Will to Power                 (0.000)  |  Control - Tricky                                (0.000)
+   11  The Perfect Drug - Nine Inch Nails              (0.255)  |  Burn - The Cure                                 (0.047)
+   12  Headhunter - Front 242                          (0.085)  |  Headhunter - Front 242                          (0.085)
+   13  Burn - The Cure                                 (0.047)  |  Tainted Love - Soft Cell                        (0.302)
+   14  Control - Tricky                                (0.000)  |  Oblivion - Grimes                               (0.000)
+   15  Smalltown Boy - Bronski Beat                    (0.075)  |  Strength of Youth - Covenant                    (0.000)
+   16  Oblivion - Grimes                               (0.000)  |  Smalltown Boy - Bronski Beat                    (0.075)
+   17  Blue Monday - New Order                         (0.462)  |  Love Will Tear Us Apart - Joy Division          (0.000)
+   18  Strength of Youth - Covenant                    (0.000)  |  Dead Man’s Party - Oingo Boingo                 (0.000)
+   19  Love Will Tear Us Apart - Joy Division          (0.000)  |  Enjoy the Silence 04 - Depeche Mode             (0.000)
+   20  The Killing Moon - Echo & The Bunnymen          (0.491)  |  The Perfect Drug - Nine Inch Nails              (0.255)
+  dropped from top20 (2): ['Blue Monday - New Order', 'The Killing Moon - Echo & The Bunnymen']
+  added to top20  (2): ['Dead Man’s Party - Oingo Boingo', 'Enjoy the Silence 04 - Depeche Mode']
+
+--- scenario=age_group ---
+pop_col=age_Middle  alpha=0.5788202190860552
+  rank   ORIG title (B)                                      |  RER title (B)
+    1  Never Let Me Down Again - Depeche Mode          (0.387)  |  I Want You - Front 242                          (0.000)
+    2  I Want You - Front 242                          (0.000)  |  Stalker - Klinik                                (0.000)
+    3  Stalker - Klinik                                (0.000)  |  Underneath The Skin - Rome                      (0.000)
+    4  Call The Ships To Port - Covenant               (0.129)  |  Never Let Me Down Again - Depeche Mode          (0.387)
+    5  Underneath The Skin - Rome                      (0.000)  |  Call The Ships To Port - Covenant               (0.129)
+    6  Headhunter - Front 242                          (0.097)  |  Headhunter - Front 242                          (0.097)
+    7  The Great Commandment - Camouflage              (0.065)  |  The Gift - Seabound                             (0.000)
+    8  The Gift - Seabound                             (0.000)  |  The Great Commandment - Camouflage              (0.065)
+    9  Stripped - Depeche Mode                         (0.290)  |  Love Will Tear Us Apart - Joy Division          (0.000)
+   10  Black Celebration - Depeche Mode                (0.129)  |  Sleepwalking - Covenant                         (0.000)
+   11  Love Will Tear Us Apart - Joy Division          (0.000)  |  Polarize - VNV Nation                           (0.000)
+   12  Sleepwalking - Covenant                         (0.000)  |  Black Celebration - Depeche Mode                (0.129)
+   13  Polarize - VNV Nation                           (0.000)  |  The Last One - Apoptygma Berzerk                (0.000)
+   14  The Last One - Apoptygma Berzerk                (0.000)  |  Joy - Front 242                                 (0.000)
+   15  Joy - Front 242                                 (0.000)  |  Sadeness (Part I) - Enigma                      (0.000)
+   16  Fade To Grey - Visage                           (0.129)  |  Soul On Fire - HIM                              (0.000)
+   17  Sadeness (Part I) - Enigma                      (0.000)  |  The Sun Always Shines On TV - a-ha              (0.000)
+   18  Soul On Fire - HIM                              (0.000)  |  Stripped - Depeche Mode                         (0.290)
+   19  The Sun Always Shines On TV - a-ha              (0.000)  |  Heaven's A Lie - Lacuna Coil                    (0.000)
+   20  A Forest - The Cure                             (0.613)  |  In The Dark - Camouflage                        (0.000)
+  dropped from top20 (2): ['Fade To Grey - Visage', 'A Forest - The Cure']
+  added to top20  (2): ["Heaven's A Lie - Lacuna Coil", 'In The Dark - Camouflage']
+
+--- scenario=gender+age_group ---
+pop_col=cross_M_Middle  alpha=0.6210793983619185
+  rank   ORIG title (B)                                      |  RER title (B)
+    1  Stigmata - Ministry                             (0.062)  |  Stigmata - Ministry                             (0.062)
+    2  Fade to Grey - Visage                           (0.000)  |  Fade to Grey - Visage                           (0.000)
+    3  Dead Souls - Nine Inch Nails                    (0.250)  |  I Want You - Front 242                          (0.000)
+    4  Everything Counts - Depeche Mode                (0.375)  |  Dead Souls - Nine Inch Nails                    (0.250)
+    5  I Want You - Front 242                          (0.000)  |  Nothing - Laibach                               (0.000)
+    6  Nothing - Laibach                               (0.000)  |  The Great Commandment - Camouflage              (0.062)
+    7  The Great Commandment - Camouflage              (0.062)  |  Lament - Covenant                               (0.000)
+    8  Lament - Covenant                               (0.000)  |  Everything Counts - Depeche Mode                (0.375)
+    9  Join In The Chant - Nitzer Ebb                  (0.062)  |  The Killing Game - Skinny Puppy                 (0.000)
+   10  The Killing Game - Skinny Puppy                 (0.000)  |  Join In The Chant - Nitzer Ebb                  (0.062)
+   11  Shining - Die Form                              (0.000)  |  Shining - Die Form                              (0.000)
+   12  Suffer Well - Depeche Mode                      (0.438)  |  A Question of Time - Depeche Mode               (0.000)
+   13  A Question of Time - Depeche Mode               (0.000)  |  Heaven - Psyche                                 (0.000)
+   14  Firestarter - The Prodigy                       (0.375)  |  Stalker - X Marks the Pedwalk                   (0.000)
+   15  Black Celebration - Depeche Mode                (0.188)  |  Antimatter - The Future Sound of London         (0.000)
+   16  Heaven - Psyche                                 (0.000)  |  Messiah - VNV Nation                            (0.000)
+   17  Stalker - X Marks the Pedwalk                   (0.000)  |  Plasticity - Front Line Assembly                (0.000)
+   18  Wish - Nine Inch Nails                          (0.312)  |  The Sun Rising - The Beloved                    (0.000)
+   19  Antimatter - The Future Sound of London         (0.000)  |  Black Celebration - Depeche Mode                (0.188)
+   20  Messiah - VNV Nation                            (0.000)  |  Strength of Youth - Covenant                    (0.000)
+  dropped from top20 (3): ['Suffer Well - Depeche Mode', 'Firestarter - The Prodigy', 'Wish - Nine Inch Nails']
+  added to top20  (3): ['Plasticity - Front Line Assembly', 'The Sun Rising - The Beloved', 'Strength of Youth - Covenant']
+

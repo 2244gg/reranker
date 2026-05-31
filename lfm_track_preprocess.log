@@ -1,0 +1,84 @@
+=== LFM-1K 单曲流行度预处理 ===
+raw_dir   = data\raw\lastfm-1k\lastfm-dataset-1K
+output    = data\processed\lastfm1k_track\items_with_popularity.csv
+
+[1/6] 加载用户画像...
+  users in profile: 993
+
+[2/6] 创建用户分组...
+  gender_M: 502 users
+  gender_F: 382 users
+  gender_U: 109 users
+  age_Youth: 162 users
+  age_Middle: 123 users
+  age_Unknown: 708 users
+  cross_M_Youth: 82 users
+  cross_F_Youth: 74 users
+  cross_U_Youth: 6 users
+  cross_M_Middle: 75 users
+  cross_F_Middle: 40 users
+  cross_U_Middle: 8 users
+  cross_M_Unknown: 345 users
+  cross_F_Unknown: 268 users
+  cross_U_Unknown: 95 users
+  neutral_All: 993 users
+
+[3/6] 流式聚合 (用户, 单曲) 播放次数 (耗时 5-15 分钟)...
+  ... chunk 5, valid rows so far: 4,999,970
+  ... chunk 10, valid rows so far: 9,999,958
+  ... chunk 15, valid rows so far: 14,999,955
+  ... chunk 20, valid rows so far: 19,150,659
+  events aggregation done. valid rows: 19,150,659, users with plays: 992
+
+[4/6] 计算阳性反馈分组流行度...
+  cold-track filter: keep 313,678 / 1,500,651 tracks (min_listeners=3)
+  positive-feedback items: 272,769
+
+[5/6] 归一化 (raw / column_max)...
+  max[neutral_All] = 224
+  max[gender_M] = 106
+  max[gender_F] = 97
+  max[gender_U] = 26
+  max[age_Youth] = 39
+  max[age_Middle] = 31
+  max[age_Unknown] = 155
+  max[cross_M_Youth] = 22
+  max[cross_F_Youth] = 22
+  max[cross_U_Youth] = 4
+  max[cross_M_Middle] = 16
+  max[cross_F_Middle] = 15
+  max[cross_U_Middle] = 6
+  max[cross_M_Unknown] = 75
+  max[cross_F_Unknown] = 69
+  max[cross_U_Unknown] = 19
+
+[6/6] 写出 CSV...
+  rows  = 272,769
+  cols  = ['item_id', 'title', 'neutral_All', 'gender_M', 'gender_F', 'gender_U', 'age_Youth', 'age_Middle', 'age_Unknown', 'cross_M_Youth', 'cross_F_Youth', 'cross_U_Youth', 'cross_M_Middle', 'cross_F_Middle', 'cross_U_Middle', 'cross_M_Unknown', 'cross_F_Unknown', 'cross_U_Unknown']
+  saved → data\processed\lastfm1k_track\items_with_popularity.csv
+
+抽样前 5 行:
+                                             item_id                                              title  neutral_All  gender_M  gender_F
+                                  !!! ||| A New Name                                   A New Name - !!!     0.107143  0.113208  0.082474
+                   !!! ||| All My Heroes Are Weirdos                    All My Heroes Are Weirdos - !!!     0.156250  0.179245  0.113402
+                         !!! ||| Bend Over Beethoven                          Bend Over Beethoven - !!!     0.093750  0.103774  0.072165
+!!! ||| Bend Over Beethoven (Original Nashville Jam) Bend Over Beethoven (Original Nashville Jam) - !!!     0.013393  0.018868  0.010309
+                   !!! ||| Break In Case Of Anything                    Break In Case Of Anything - !!!     0.084821  0.084906  0.061856
+
+各分组流行度统计 (非零):
+  neutral_All: nonzero=272,769, mean=0.0217, max=1.0000, min=0.0045
+  gender_M: nonzero=228,377, mean=0.0307, max=1.0000, min=0.0094
+  gender_F: nonzero=152,520, mean=0.0300, max=1.0000, min=0.0103
+  gender_U: nonzero=85,064, mean=0.0619, max=1.0000, min=0.0385
+  age_Youth: nonzero=96,716, mean=0.0508, max=1.0000, min=0.0256
+  age_Middle: nonzero=102,918, mean=0.0592, max=1.0000, min=0.0323
+  age_Unknown: nonzero=246,564, mean=0.0247, max=1.0000, min=0.0065
+  cross_M_Youth: nonzero=65,577, mean=0.0739, max=1.0000, min=0.0455
+  cross_F_Youth: nonzero=50,789, mean=0.0694, max=1.0000, min=0.0455
+  cross_U_Youth: nonzero=7,120, mean=0.2699, max=1.0000, min=0.2500
+  cross_M_Middle: nonzero=75,287, mean=0.0915, max=1.0000, min=0.0625
+  cross_F_Middle: nonzero=39,574, mean=0.0956, max=1.0000, min=0.0667
+  cross_U_Middle: nonzero=18,334, mean=0.1993, max=1.0000, min=0.1667
+  cross_M_Unknown: nonzero=197,229, mean=0.0356, max=1.0000, min=0.0133
+  cross_F_Unknown: nonzero=124,912, mean=0.0359, max=1.0000, min=0.0145
+  cross_U_Unknown: nonzero=73,506, mean=0.0768, max=1.0000, min=0.0526

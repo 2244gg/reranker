@@ -1,0 +1,20 @@
+[diag] building adapter...
+[diag] adapter: <LastFm1KAdapter name='lastfm1k'>
+[diag] domain: music_track schema: ['gender', 'age_group']
+[diag] loading users (3-5 min)...
+[diag] users passing min_interactions=20: 942
+[diag] splitting...
+[diag] users with test_set: 942 / 942
+[diag] sampling 30...
+[diag] sampled: 30
+  (('age_group', 'unknown'), ('gender', 'female')): 4
+  (('age_group', 'middle-aged'), ('gender', 'male')): 4
+  (('age_group', 'unknown'), ('gender', 'unknown')): 4
+  (('age_group', 'unknown'), ('gender', 'male')): 3
+  (('age_group', 'middle-aged'), ('gender', 'unknown')): 3
+  (('age_group', 'young'), ('gender', 'male')): 3
+  (('age_group', 'middle-aged'), ('gender', 'female')): 3
+  (('age_group', 'young'), ('gender', 'female')): 3
+  (('age_group', 'young'), ('gender', 'unknown')): 3
+[diag] first user history len: 3666 test_set len: 1112
+[diag] first user history sample title: Wheelpusher - Anni Rossi

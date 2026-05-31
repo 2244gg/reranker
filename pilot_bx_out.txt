@@ -1,0 +1,55 @@
+============================================================
+BOOKCROSSING PILOT
+============================================================
+  experiment_id : pilot_gpt41mini_bookcrossing
+  dataset       : bookcrossing  (implicit=False)
+  model         : gpt-4.1-mini  (provider=openai)
+  sample size   : 10 users
+  scenarios     : 4
+  total calls   : 40
+  est tokens    : ~24,000 in / ~12,000 out
+  est cost      : $0.029 (gpt-4.1-mini, may vary)
+  cache         : data/cache/llm_cache.sqlite
+============================================================
+
+Loading BookCrossing (this can take 30-60s on first load)...
+  loaded in 71.7s
+
+--- Sample user ---
+  user_id       : 233889
+  demographics  : {'age_group': 'middle-aged', 'country': 'australia'}
+  history (top 5):
+    - The Joy Luck Club  (Amy Tan)
+    - Two-Story Frame: A Schuyler Ridgway Mystery  (Tierney McClellan)
+    - 4 Blondes  (Candace Bushnell)
+    - Maggie Needs an Alibi  (Kasey Michaels)
+    - Candy  (Mian Mian)
+
+--- Sample prompt: cross scenario (age + country) ---
+You are a professional book recommendation system.
+
+The user's profile: middle-aged, Australia.
+The reader's recent favorably-rated books:
+- The Joy Luck Club by Amy Tan
+- Two-Story Frame: A Schuyler Ridgway Mystery by Tierney McClellan
+- 4 Blondes by Candace Bushnell
+- Maggie Needs an Alibi by Kasey Michaels
+- Candy by Mian Mian
+- The Vampire Armand (The Vampire Chronicles, Book 6) by Anne Rice
+- Dog Handling by CLARE NAYLOR
+- Smart Vs. Pretty by Valerie Frankel
+- Words for the Wedding: Creative Ideas for Choosing and Using Hundreds of Quotations to Personalize Your Vows, Toasts, Invitations, &amp; More by Wendy Paris
+- Isle of Dogs by Patricia Cornwell
+
+
+Recommend exactly 20 books this reader is likely to enjoy. Avoid titles already in the history.
+
+Output format - one per line, EXACTLY as below, no prose:
+1. Book Title - Author
+2. Book Title - Author
+...
+
+
+  prompt sha256 = abd1836d3ec7efc2...
+
+[dry-run] No API calls were made.

@@ -3,8 +3,15 @@ import argparse
 import csv
 import json
 import math
+import sys as _sys
 from pathlib import Path
 from typing import Dict, List, Tuple, Any
+
+# Ensure project root is importable so the wrapper functions below can
+# delegate to ``src.experiment.rerank`` (single source of truth for formulas).
+_PROJECT_ROOT = Path(__file__).resolve().parent
+if str(_PROJECT_ROOT) not in _sys.path:
+    _sys.path.insert(0, str(_PROJECT_ROOT))
 
 
 SCENARIOS = ("neutral", "age", "gender", "cross")
@@ -112,16 +119,9 @@ def resolve_popularity_column(scenario: str, user_info: Dict[str, str]) -> str:
 
 
 def preference_probability(rank_n: int, candidate_n: int, base: float, decay_rate: float) -> float:
-    if candidate_n <= 1:
-        return 1.0
-    denom = 1 - (decay_rate ** candidate_n)
-    if math.isclose(denom, 0.0):
-        # Fallback to linear interpolation when decay_rate is effectively 1.
-        progress = (candidate_n - rank_n) / (candidate_n - 1)
-        return base + (1 - base) * progress
-
-    numer = (decay_rate ** rank_n) - (decay_rate ** candidate_n)
-    return base + (1 - base) * (numer / denom)
+    # Implementation lives in src.experiment.rerank; re-exported via top-of-file import.
+    from src.experiment.rerank import preference_probability as _impl
+    return _impl(rank_n, candidate_n, base, decay_rate)
 
 
 def lookup_popularity(
@@ -141,7 +141,8 @@ def lookup_popularity(
 
 
 def safe_clip(value: float, low: float, high: float) -> float:
-    return max(low, min(high, value))
+    from src.experiment.rerank import safe_clip as _impl
+    return _impl(value, low, high)
 
 
 def get_history_titles(results: Dict[str, Any], scenario: str, fallback_limit: int = 10) -> List[str]:
@@ -184,10 +185,15 @@ def compute_dynamic_alpha(
     alpha_max: float,
     alpha_gain: float,
 ) -> float:
-    eps = 1e-12
-    centered_ratio = (user_score - scene_mean_score) / max(scene_mean_score, eps)
-    alpha_value = alpha_base - alpha_gain * centered_ratio
-    return safe_clip(alpha_value, alpha_min, alpha_max)
+    from src.experiment.rerank import compute_dynamic_alpha as _impl
+    return _impl(
+        user_score,
+        scene_mean_score,
+        alpha_base,
+        alpha_min,
+        alpha_max,
+        alpha_gain,
+    )
 
 
 def collect_scene_history_scores(
@@ -255,7 +261,9 @@ def rerank_one_list(
         b_norm, found = lookup_popularity(title, exact_map, normalized_map, pop_col)
         if not found:
             missing_titles.append(title)
-        score = alpha * p_norm - (1 - alpha) * (1 - b_norm)
+        # Popularity-debiasing formula: reward niche items (low B_i_norm).
+        # See src/experiment/rerank.py for the full derivation.
+        score = alpha * p_norm + (1 - alpha) * (1 - b_norm)
         scored_items.append(
             {
                 "title": title,
@@ -363,7 +371,7 @@ def process_file(
                 "alpha_base": alpha,
                 "base": base,
                 "decay_rate": decay_rate,
-                "formula": "S_i = alpha * P_i_norm - (1-alpha) * (1-B_i_norm)",
+                "formula": "S_i = alpha * P_i_norm + (1-alpha) * (1-B_i_norm)",
             }
             results[scenario]["reranked_recommendations"] = rerank_result["reranked_recommendations"]
             results[scenario]["rerank_scores"] = rerank_result["rerank_scores"]

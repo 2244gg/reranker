@@ -1,0 +1,43 @@
+experiment_id: gpt41mini_lfm1k_track_v2
+dataset: lastfm1k
+granularity: track
+include_country: false
+min_track_listeners: 3
+
+popularity_csv: data/processed/lastfm1k_track/items_with_popularity.csv
+
+# Separate output root keeps this side-by-side with the alpha=0.7 baseline.
+output_root: results_v2
+
+sample_size: 600
+sample_seed: 42
+test_split: 0.7
+top_k: 20
+candidate_pool_size: 30
+history_limit: 25
+rank_weight: 0.2
+
+llm:
+  provider: openai
+  model: gpt-4.1-mini
+  temperature: 0.7
+  max_tokens: 1500
+  system_prompt: "You are a professional music recommendation system that recommends individual songs."
+
+# Combined upgrade A + C:
+#   * b_transform: rank      -> turns B into a percentile rank in each
+#     popularity column. Spreads (1-B) uniformly so the long-tail bonus
+#     actually discriminates between mid-tier and tail items.
+#   * protect_top: 5         -> first 5 LLM picks (precision-critical) are
+#     never reordered. Only positions 6-30 are reranked among themselves.
+# alpha returned to 0.7 since the percentile B already amplifies the
+# bonus signal — going more aggressive would over-correct.
+rerank:
+  alpha_base: 0.7
+  alpha_min: 0.5
+  alpha_max: 0.9
+  alpha_gain: 0.2
+  base: 0.2
+  decay_rate: 0.9
+  b_transform: rank
+  protect_top: 5

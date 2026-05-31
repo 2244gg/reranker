@@ -1,0 +1,5 @@
+Selected 1 config(s):
+  - gpt41mini_lfm1k_track_v2  model=gpt-4.1-mini  dataset=lastfm1k  n=600
+
+=== Running gpt41mini_lfm1k_track_v2 ===
+Done gpt41mini_lfm1k_track_v2: users=30 calls=0 tokens=0+0

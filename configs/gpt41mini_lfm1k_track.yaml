@@ -1,0 +1,34 @@
+experiment_id: gpt41mini_lfm1k_track
+dataset: lastfm1k
+granularity: track          # forwarded to LastFm1KAdapter via cfg.extra
+include_country: false
+# Drop tracks listened by fewer than 3 distinct users in the corpus to
+# combat the long-tail collapse where almost every B_norm == 0 at song
+# granularity. Tune up if popularity slices remain too dense.
+min_track_listeners: 3
+
+popularity_csv: data/processed/lastfm1k_track/items_with_popularity.csv
+
+sample_size: 600
+sample_seed: 42
+test_split: 0.7
+top_k: 20
+candidate_pool_size: 30
+# Songs are weaker individual signals than artists, so feed more context.
+history_limit: 25
+rank_weight: 0.2
+
+llm:
+  provider: openai
+  model: gpt-4.1-mini
+  temperature: 0.7
+  max_tokens: 1500
+  system_prompt: "You are a professional music recommendation system that recommends individual songs."
+
+rerank:
+  alpha_base: 0.7
+  alpha_min: 0.5
+  alpha_max: 0.9
+  alpha_gain: 0.2
+  base: 0.2
+  decay_rate: 0.9

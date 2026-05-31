@@ -1,0 +1,60 @@
+......sss.F...FF...............                                          [100%]
+================================== FAILURES ===================================
+_________________________ test_openai_adapter_success _________________________
+tests\test_llm_adapters_smoke.py:70: in test_openai_adapter_success
+    fake_client = _FakeOpenAIClient(_FakeOpenAIResponse("hello world"))
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_llm_adapters_smoke.py:39: in __init__
+    self.choices = [_FakeOpenAIChoice(text)]
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_llm_adapters_smoke.py:32: in __init__
+    self.message = mock.SimpleNamespace(content=text)
+                   ^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: module 'unittest.mock' has no attribute 'SimpleNamespace'
+_________________________ test_factory_infers_openai __________________________
+tests\test_llm_adapters_smoke.py:148: in test_factory_infers_openai
+    adapter = build_adapter(model="gpt-4.1-mini")
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\llm_adapters\factory.py:69: in build_adapter
+    return OpenAIAdapter(**common)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+src\llm_adapters\openai_adapter.py:65: in __init__
+    self._client = OpenAI(**client_kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_llm_adapters_smoke.py:147: in <lambda>
+    monkeypatch.setattr(oa, "OpenAI", lambda **kw: _FakeOpenAIClient(_FakeOpenAIResponse()))
+                                                                     ^^^^^^^^^^^^^^^^^^^^^
+tests\test_llm_adapters_smoke.py:39: in __init__
+    self.choices = [_FakeOpenAIChoice(text)]
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_llm_adapters_smoke.py:32: in __init__
+    self.message = mock.SimpleNamespace(content=text)
+                   ^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: module 'unittest.mock' has no attribute 'SimpleNamespace'
+___________________ test_factory_routes_qwen_to_siliconflow ___________________
+tests\test_llm_adapters_smoke.py:158: in test_factory_routes_qwen_to_siliconflow
+    adapter = build_adapter(model="Qwen/Qwen2.5-72B-Instruct")
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src\llm_adapters\factory.py:77: in build_adapter
+    return TogetherAdapter(**common)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+src\llm_adapters\together_adapter.py:40: in __init__
+    super().__init__(
+src\llm_adapters\openai_adapter.py:65: in __init__
+    self._client = OpenAI(**client_kwargs)
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_llm_adapters_smoke.py:157: in <lambda>
+    monkeypatch.setattr(oa, "OpenAI", lambda **kw: _FakeOpenAIClient(_FakeOpenAIResponse()))
+                                                                     ^^^^^^^^^^^^^^^^^^^^^
+tests\test_llm_adapters_smoke.py:39: in __init__
+    self.choices = [_FakeOpenAIChoice(text)]
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_llm_adapters_smoke.py:32: in __init__
+    self.message = mock.SimpleNamespace(content=text)
+                   ^^^^^^^^^^^^^^^^^^^^
+E   AttributeError: module 'unittest.mock' has no attribute 'SimpleNamespace'
+=========================== short test summary info ===========================
+FAILED tests/test_llm_adapters_smoke.py::test_openai_adapter_success - Attrib...
+FAILED tests/test_llm_adapters_smoke.py::test_factory_infers_openai - Attribu...
+FAILED tests/test_llm_adapters_smoke.py::test_factory_routes_qwen_to_siliconflow
+3 failed, 25 passed, 3 skipped in 210.96s (0:03:30)

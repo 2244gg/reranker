@@ -1,0 +1,23 @@
+experiment_id: claude35sonnet_tenrec
+dataset: tenrec
+sample_size: 1500
+sample_seed: 42
+test_split: 0.7
+top_k: 20
+history_limit: 10
+rank_weight: 0.2
+
+llm:
+  provider: anthropic
+  model: claude-3-5-sonnet-20241022
+  temperature: 0.7
+  max_tokens: 1000
+  system_prompt: "你是一个专业的推荐系统。"
+
+rerank:
+  alpha_base: 0.7
+  alpha_min: 0.5
+  alpha_max: 0.9
+  alpha_gain: 0.2
+  base: 0.2
+  decay_rate: 0.9

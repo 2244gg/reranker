@@ -1,0 +1,21 @@
+[generate_all] loading dataset 'lastfm1k' to count eligible users...
+[generate_all]   loaded in 50.8s  ->  957 users
+
+================================================================
+FULL-POPULATION RAW RECOMMENDATION GENERATION
+================================================================
+  experiment_id    : full_gpt-4.1-mini_lastfm1k
+  dataset          : lastfm1k
+  model            : gpt-4.1-mini  (provider=openai)
+  eligible users   : 957
+  target users     : 957 (all)
+  scenarios        : 4
+  candidate pool   : 30 (M+N) -> truncate to top_k=20
+  total LLM calls  : 3828  (cached calls cost $0)
+  est. tokens      : ~3,062,400 in / ~3,062,400 out
+  est. cost        : $6.12  (assumes 0% cache hit; less if resuming)
+  est. wall time   : ~5.3 hours sequential @ 5.0s/call
+  output           : results/gpt-4.1-mini/lastfm1k/raw/
+================================================================
+
+[dry-run] Nothing executed.

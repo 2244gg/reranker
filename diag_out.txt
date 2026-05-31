@@ -1,0 +1,62 @@
+user_000282 demographics: {'gender': 'male', 'age_group': 'elderly', 'user_id': 'user_000282'}
+
+--- LLM recs for neutral (30 items, dedup):
+  1. Tool
+  2. The Cure
+  3. Radiohead
+  4. David Bowie
+  5. The Mars Volta
+  6. Massive Attack
+  7. Dead Can Dance
+  8. Porcupine Tree
+  9. Depeche Mode
+  10. The Smashing Pumpkins
+  11. The Velvet Underground
+  12. Alice in Chains
+  13. Faith No More
+  14. Beck
+  15. The Chemical Brothers
+  16. Sigur Rós
+  17. Queens of the Stone Age
+  18. The Police
+  19. A Perfect Circle
+  20. The Doors
+  21. Moby
+  22. The National
+  23. Gary Numan
+  24. LCD Soundsystem
+  25. The xx
+  30 total, 25 unique
+
+--- Loading user_000282's actual test set...
+  test_set size: 14
+  history (top 10 by playcount):
+    - King Crimson  (rating=12.0)
+    - Pink Floyd  (rating=4.0)
+    - Nine Inch Nails  (rating=2.0)
+    - Massive Attack  (rating=2.0)
+    - U2  (rating=2.0)
+    - Edgar Froese  (rating=2.0)
+    - Complicity  (rating=1.0)
+    - Guns N' Roses  (rating=1.0)
+    - Cream  (rating=1.0)
+    - Portishead  (rating=1.0)
+
+  test_set top 20 (sorted by playcount):
+    - Ernst'S Nec Plus Ultra  (rating=98.0)
+    - Brant Bjork  (rating=15.0)
+    - Kenny Håkansson  (rating=9.0)
+    - Ernst'S Non Plus Ultra  (rating=8.0)
+    - Boot  (rating=8.0)
+    - Deep Purple  (rating=4.0)
+    - Cornelis Vreeswijk  (rating=4.0)
+    - Vinnie Moore  (rating=3.0)
+    - Robin Trower  (rating=2.0)
+    - Fripp & Eno  (rating=2.0)
+    - Totta & Wiehe  (rating=2.0)
+    - Butthole Surfers  (rating=2.0)
+    - Sex Pistols  (rating=2.0)
+    - Sofia Talvik  (rating=2.0)
+
+--- Overlap check (LLM recs vs test set):
+  matches: []

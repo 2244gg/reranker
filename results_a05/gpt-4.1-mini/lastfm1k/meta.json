@@ -1,0 +1,38 @@
+{
+  "experiment_id": "gpt41mini_lfm1k_track_a05",
+  "model": "gpt-4.1-mini",
+  "dataset": "lastfm1k",
+  "sample_size": 30,
+  "sample_seed": 42,
+  "test_split": 0.7,
+  "top_k": 20,
+  "candidate_pool_size": 30,
+  "scenarios": [
+    [],
+    [
+      "gender"
+    ],
+    [
+      "age_group"
+    ],
+    [
+      "gender",
+      "age_group"
+    ]
+  ],
+  "rerank": {
+    "alpha_base": 0.5,
+    "alpha_min": 0.3,
+    "alpha_max": 0.7,
+    "alpha_gain": 0.2,
+    "base": 0.2,
+    "decay_rate": 0.9,
+    "disable_dynamic_alpha": false
+  },
+  "started_at": "2026-05-31T06:19:56.490359+00:00",
+  "finished_at": "2026-05-31T06:26:27.569410+00:00",
+  "total_api_calls": 0,
+  "total_prompt_tokens": 0,
+  "total_completion_tokens": 0,
+  "prompt_template_hash": "19d16b5596f3e4f2323e3f82c99522d0843eb5be0d0828805da6e2d902d171e4"
+}

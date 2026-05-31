@@ -1,0 +1,62 @@
+# Glossary used by prompt templates to render demographic descriptors
+# in a domain-appropriate language.
+
+zh:
+  gender:
+    male: "男性"
+    female: "女性"
+    unknown: "未指定性别"
+  age_group:
+    young: "青年"
+    young-adult: "青年"
+    middle-aged: "中年"
+    elderly: "老年"
+    unknown: "未指定年龄段"
+  occupation_group:
+    student: "学生"
+    professional: "脑力工作者"
+    service: "服务/体力工作者"
+    other: "其他职业"
+  country:
+    usa: "美国"
+    canada: "加拿大"
+    germany: "德国"
+    united kingdom: "英国"
+    spain: "西班牙"
+    france: "法国"
+    italy: "意大利"
+    russia: "俄罗斯"
+    portugal: "葡萄牙"
+    australia: "澳大利亚"
+    other: "其他国家"
+    unknown: "未指定国家"
+
+en:
+  gender:
+    male: "male"
+    female: "female"
+    unknown: "unspecified gender"
+  age_group:
+    young: "young"
+    young-adult: "young adult"
+    middle-aged: "middle-aged"
+    elderly: "older"
+    unknown: "unspecified age"
+  occupation_group:
+    student: "student"
+    professional: "knowledge professional"
+    service: "service or manual worker"
+    other: "miscellaneous occupation"
+  country:
+    usa: "the United States"
+    canada: "Canada"
+    germany: "Germany"
+    united kingdom: "the United Kingdom"
+    spain: "Spain"
+    france: "France"
+    italy: "Italy"
+    russia: "Russia"
+    portugal: "Portugal"
+    australia: "Australia"
+    other: "another country"
+    unknown: "an unspecified country"
