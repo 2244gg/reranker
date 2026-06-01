@@ -1,0 +1,7 @@
+[t0] start
+[t1] CSV loaded in 0.7s, shape=(272769, 18)
+[t2] rank transform in 0.2s
+[t3] PopularityTable build in 20.9s, rows=272769
+[t4] ItemScoreTable build in 23.5s
+[t5] 300 lookups in 0.001s
+[total] 45.4s elapsed

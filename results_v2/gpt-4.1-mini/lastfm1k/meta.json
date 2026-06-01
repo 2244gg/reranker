@@ -2,7 +2,7 @@
   "experiment_id": "gpt41mini_lfm1k_track_v2",
   "model": "gpt-4.1-mini",
   "dataset": "lastfm1k",
-  "sample_size": 30,
+  "sample_size": 600,
   "sample_seed": 42,
   "test_split": 0.7,
   "top_k": 20,
@@ -32,10 +32,10 @@
     "b_saturate_at": 0.3,
     "protect_top": 5
   },
-  "started_at": "2026-05-31T07:11:52.039264+00:00",
-  "finished_at": "2026-05-31T07:13:28.597785+00:00",
-  "total_api_calls": 0,
-  "total_prompt_tokens": 0,
-  "total_completion_tokens": 0,
+  "started_at": "2026-06-01T10:14:07.328251+00:00",
+  "finished_at": "2026-06-01T10:28:26.914319+00:00",
+  "total_api_calls": 2280,
+  "total_prompt_tokens": 939642,
+  "total_completion_tokens": 695244,
   "prompt_template_hash": "19d16b5596f3e4f2323e3f82c99522d0843eb5be0d0828805da6e2d902d171e4"
 }

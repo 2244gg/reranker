@@ -314,8 +314,11 @@ def unpopularity_score(
                 break
         if not is_hit:
             continue
-        norm = normalize_title(title)
-        pop = float(popularity_lookup(norm, pop_col) or 0.5)
+        # Pass the raw title; the popularity lookup is responsible for trying
+        # exact / title_key / normalize_title in order. This keeps hit
+        # detection (title_key based) consistent with B-value retrieval.
+        pop_raw = popularity_lookup(title, pop_col)
+        pop = float(pop_raw if pop_raw else 0.5)
         pop = max(0.0, min(1.0, pop))
         unpop = (1.0 - pop) * 10.0
         rank_score = (list_size - r0) / list_size if list_size else 0.0

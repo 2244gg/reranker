@@ -24,6 +24,7 @@
 - MRR@15：original=`0.490703`，reranked=`0.539631`，delta=`+0.048928`
 - NDCG@15：original=`0.505424`，reranked=`0.545028`，delta=`+0.039604`
 - Total Hits：original=`19882`，reranked=`20548`
+- Average Difficulty Score：original=`21.220`，reranked=`24.238`,delta=`+3.018`
 - Total Test Movies Count：`404151`
 
 结论：**增强**。
@@ -39,6 +40,7 @@
 - MRR@15：original=`0.474000`，reranked=`0.526836`，delta=`+0.052836`
 - NDCG@15：original=`0.493594`，reranked=`0.536663`，delta=`+0.043069`
 - Total Hits：original=`19086`，reranked=`19770`
+- Average Difficulty Score：original=`23.846`，reranked=`25.960`,delta=`+2.114`
 - Total Test Movies Count：`404151`
 
 结论：**增强**。
@@ -54,6 +56,7 @@
 - MRR@15：original=`0.477566`，reranked=`0.528800`，delta=`+0.051234`
 - NDCG@15：original=`0.495734`，reranked=`0.538938`，delta=`+0.043204`
 - Total Hits：original=`19133`，reranked=`19902`
+- Average Difficulty Score：original=`22.458`，reranked=`25.363`,delta=`+2.905`
 - Total Test Movies Count：`404151`
 
 结论：**增强**。

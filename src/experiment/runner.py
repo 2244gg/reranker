@@ -128,29 +128,56 @@ def _scenario_to_pop_column_name(scenario: Sequence[str], demographics: Dict[str
 
 
 class PopularityTable:
-    """Wraps the popularity DataFrame with a normalized-title lookup."""
+    """Wraps the popularity DataFrame with a normalized-title lookup.
+
+    Lookup uses the aggressive ``title_key`` normalizer (lowercase, strip
+    punctuation/HTML/parentheticals, collapse whitespace) so that LLM-emitted
+    titles with cosmetic decoration ("Remastered", "(Live)", "feat.",
+    em-dash vs hyphen, ...) still resolve to the underlying catalog row.
+
+    A legacy ``normalize_title`` index is kept as a secondary fallback for
+    back-compat with the original ML-1M pipeline.
+    """
 
     def __init__(self, df: pd.DataFrame) -> None:
+        from src.experiment.metrics import title_key
+
         title_col = "title" if "title" in df.columns else "Title"
         id_col = "item_id" if "item_id" in df.columns else "MovieID"
         self._df = df
         self._exact: Dict[str, Dict[str, float]] = {}
-        self._norm: Dict[str, Dict[str, float]] = {}
+        self._norm: Dict[str, Dict[str, float]] = {}    # legacy: normalize_title
+        self._key:  Dict[str, Dict[str, float]] = {}    # primary: title_key
         non_meta = {c for c in df.columns if c not in {title_col, id_col, "Genres"}}
         for _, row in df.iterrows():
             title = str(row[title_col])
             payload = {c: float(row[c]) for c in non_meta if c in row}
             self._exact[title] = payload
             self._norm[normalize_title(title)] = payload
+            k = title_key(title)
+            if k:
+                self._key[k] = payload
 
     def lookup(self, title: str, column: str) -> float:
-        row = self._exact.get(title) or self._norm.get(normalize_title(title))
+        from src.experiment.metrics import title_key
+
+        row = (
+            self._exact.get(title)
+            or self._key.get(title_key(title))
+            or self._norm.get(normalize_title(title))
+        )
         if row is None:
             return 0.0
         return float(row.get(column, 0.0))
 
     def lookup_with_found(self, title: str, column: str) -> Tuple[float, bool]:
-        row = self._exact.get(title) or self._norm.get(normalize_title(title))
+        from src.experiment.metrics import title_key
+
+        row = (
+            self._exact.get(title)
+            or self._key.get(title_key(title))
+            or self._norm.get(normalize_title(title))
+        )
         if row is None:
             return 0.0, False
         return float(row.get(column, 0.0)), True

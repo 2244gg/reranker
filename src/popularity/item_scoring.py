@@ -146,7 +146,7 @@ class ItemScoreTable:
     """
 
     def __init__(self, df: pd.DataFrame) -> None:
-        from src.experiment.metrics import normalize_title
+        from src.experiment.metrics import normalize_title, title_key
 
         title_col = "title" if "title" in df.columns else "Title"
         id_col = "item_id" if "item_id" in df.columns else "MovieID"
@@ -155,7 +155,8 @@ class ItemScoreTable:
             df["_score_scheme"].iloc[0] if "_score_scheme" in df.columns else DEFAULT_SCHEME
         )
         self._exact: Dict[str, Dict[str, float]] = {}
-        self._norm: Dict[str, Dict[str, float]] = {}
+        self._norm: Dict[str, Dict[str, float]] = {}    # legacy
+        self._key:  Dict[str, Dict[str, float]] = {}    # primary
         slice_cols = [
             c for c in df.columns
             if c not in _META_COLS and c != "_score_scheme"
@@ -165,6 +166,9 @@ class ItemScoreTable:
             payload = {c: float(row[c]) for c in slice_cols if c in row}
             self._exact[title] = payload
             self._norm[normalize_title(title)] = payload
+            k = title_key(title)
+            if k:
+                self._key[k] = payload
 
     @classmethod
     def from_csv(cls, path: str | Path) -> "ItemScoreTable":
@@ -179,9 +183,13 @@ class ItemScoreTable:
         return cls(build_score_table(popularity_df, scheme=scheme))
 
     def lookup(self, title: str, slice_column: str) -> float:
-        from src.experiment.metrics import normalize_title
+        from src.experiment.metrics import normalize_title, title_key
 
-        row = self._exact.get(title) or self._norm.get(normalize_title(title))
+        row = (
+            self._exact.get(title)
+            or self._key.get(title_key(title))
+            or self._norm.get(normalize_title(title))
+        )
         if row is None:
             return 0.0
         return float(row.get(slice_column, 0.0))
