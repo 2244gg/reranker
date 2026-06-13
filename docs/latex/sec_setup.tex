@@ -1,0 +1,75 @@
+\section{Experimental Setup}
+\label{sec:setup}
+
+\subsection{Datasets}
+
+\begin{table}[h]
+\caption{Dataset summary.}
+\label{tab:datasets}
+\begin{tabular}{lcccc}
+\toprule
+Dataset & Domain & Users & Items & Demographics \\
+\midrule
+MovieLens-1M~\cite{harper2016movielens} & movie & 6{,}031 & 3{,}883 & gender $\times$ age \\
+LastFM-1K~\cite{celma2010longtail} & music track & 942 & 272{,}769 & gender $\times$ age \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+ML-1M provides explicit 1--5 ratings with complete demographic fields. LFM-1K provides per-track listening counts; demographic fields are partial (gender $89\%$, age $29\%$); we treat missing as \textsf{Unknown} slice.
+
+For LFM-1K, item granularity is \textbf{track-level} (not artist-level): each item key is \texttt{Artist|||Track}. This is a more demanding setup than artist-level due to extreme sparsity (max popularity count of 224 over 992 users).
+
+\subsection{LLM Recommender}
+
+We use \textbf{GPT-4.1-mini} as the underlying LLM recommender. The same prompt format is used for both datasets, with domain-specific templates (movie / music\_track) injected at render time. Demographic descriptors are added per scenario:
+\begin{itemize}
+\item $g = \emptyset$: no descriptor (neutral)
+\item $g = \textsf{gender}$: e.g., \emph{``the user is female''}
+\item $g = \textsf{age}$: e.g., \emph{``the user is in the young adult bracket''}
+\item $g = \textsf{cross}$: combined
+\end{itemize}
+
+For each (user, scenario) we issue one LLM call, parse the numbered list, and obtain $N=30$ candidate items. Cache hits are $100\%$ on subsequent reranking-config experiments, removing API cost from ablations.
+
+\subsection{Reranker Configuration}
+
+Default v2 configuration (all formulas in Section~\ref{sec:method}):
+
+\begin{table}[h]
+\caption{Default reranker hyperparameters.}
+\label{tab:hyperparams}
+\begin{tabular}{ll}
+\toprule
+Parameter & Value \\
+\midrule
+$K$ (output length) & 15 (ML-1M), 20 (LFM-1K) \\
+$N$ (candidate pool) & 30 \\
+$L$ (history limit fed to LLM) & 25 \\
+$\text{base}$ (preference floor) & 0.2 \\
+$r$ (decay rate) & 0.9 \\
+$\alpha_{\text{base}}, \alpha_{\min}, \alpha_{\max}$ & 0.7, 0.5, 0.9 \\
+$\alpha_{\text{gain}}$ & 0.2 \\
+$B$-transform & \texttt{rank} \\
+$K'$ (head protection) & 5 \\
+$\rho$ (rank-bonus weight) & 0.2 \\
+$\theta$ (APLT threshold) & 0.2 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Statistical Inference}
+
+Per-user paired differences are computed and analyzed via:
+\begin{itemize}
+\item Paired $t$-statistic $t = \bar{d} / (s_d / \sqrt{n})$
+\item Two-sided $p$-value via normal approximation (justified by $n \geq 600$)
+\item $95\%$ confidence interval $\bar{d} \pm 1.96 \cdot \text{SE}(\bar{d})$
+\item Cohen's $d = \bar{d} / s_d$ for effect size
+\end{itemize}
+
+Bonferroni correction is applied for multiple comparisons across (scenarios $\times$ metrics).
+
+\subsection{Reproducibility}
+
+All code, configurations, and intermediate artifacts (popularity tables, adapter pickle caches, LLM response caches) are released. Random seed is fixed at 42 for sampling, splitting, and prompt rendering. End-to-end pipeline reproducibility is ensured through three commands documented in the supplementary repository.

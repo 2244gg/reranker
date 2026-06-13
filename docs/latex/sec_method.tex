@@ -1,0 +1,162 @@
+\section{Methodology}
+\label{sec:method}
+
+We split the methodology into four logical components: (\ref{subsec:preprocess}) data preprocessing, (\ref{subsec:diffscore}) slice-conditional stereotype quantification, (\ref{subsec:mainstream}) user mainstream-ness and adaptive reranking, (\ref{subsec:evalmetrics}) evaluation metrics.
+
+\subsection{Data Preprocessing}
+\label{subsec:preprocess}
+
+\paragraph{Positive feedback definition.} A user's positive feedback is an interaction strong enough to indicate genuine preference. The exact threshold depends on dataset modality:
+\begin{itemize}
+\item \textbf{MovieLens-1M (ratings)}: $\text{positive}(u, i) = \mathbb{1}[r_{u,i} > 3]$.
+\item \textbf{LastFM-1K (playcounts)}: $\text{positive}(u, i) = \mathbb{1}[c_{u,i} \geq 2 \land c_{u,i} > m_u]$ where $c_{u,i}$ is the play count and $m_u = \text{median}\{c_{u,j} : j \in \mathcal{I}_u\}$. The first conjunct removes one-off impressions; the second requires the play count to exceed the user's median listening intensity.
+\end{itemize}
+
+\paragraph{Train/test split.} Per-user positive items are randomly split into a training set $\mathcal{H}_u$ ($30\%$, fed as in-prompt history) and a test set $\mathcal{T}_u$ ($70\%$, withheld for evaluation):
+\begin{equation}
+\mathcal{T}_u = \text{Sample}_{\text{rng}}(\mathcal{P}_u, \lfloor 0.7 \cdot |\mathcal{P}_u| \rfloor), \quad \mathcal{H}_u = \mathcal{P}_u \setminus \mathcal{T}_u
+\end{equation}
+with a fixed seed for reproducibility.
+
+\paragraph{Demographic slicing and sparse-slice protection.} For slices with $n_g < 30$ users, we blend with neutral:
+\begin{equation}
+B_{\text{blended}}(i, g) = w \cdot B_{\text{raw}}(i, g) + (1 - w) \cdot B_{\text{raw}}(i, \emptyset),\ \ w = \min(1, n_g / 30)
+\end{equation}
+
+For LFM-1K, we additionally treat \textsf{Unknown} demographic values as a first-class slice (rather than discarding users with missing fields), motivated by the fact that $71\%$ of LFM-1K users have unreported age.
+
+\subsection{Slice-Conditional Stereotype Quantification (DiffScore)}
+\label{subsec:diffscore}
+
+The core insight is that an item which is \emph{uniformly popular across slices} is not a stereotype carrier; an item whose slice popularity differs sharply \emph{is}. We quantify the stereotype carried by an item under a given slice as \textbf{inverse popularity within that slice}.
+
+\subsubsection{Long-tail Collapse and Rank-Percentile Fix}
+
+The naive transform $B_{\text{raw}}$ suffers from severe right-skew on long-tail-heavy datasets: in LFM-1K the median $B_{\text{raw}}$ is ${\approx}\,0.005$ across most slices, leaving the unpopularity bonus $1 - B$ approximately constant ($\approx 1$) and devoid of discriminating signal. We propose a \textbf{rank-percentile transform}:
+\begin{equation}
+B'(i, g) = 
+\begin{cases}
+\dfrac{\text{rank}_g(i)}{|\{j : B_{\text{raw}}(j, g) > 0\}|} & \text{if } B_{\text{raw}}(i, g) > 0 \\[6pt]
+0 & \text{otherwise}
+\end{cases}
+\label{eq:rank-percentile}
+\end{equation}
+where $\text{rank}_g(i)$ is the ascending rank of $i$ in column $g$ among non-zero entries (ties broken with method=\texttt{average}).
+
+Under $B'$:
+\begin{itemize}
+\item the most popular item per slice attains $B' = 1$;
+\item the rarest non-zero item attains $B' \approx 1/n_{\text{pos}}$;
+\item items with zero positive feedback in the slice retain $B' = 0$, encoding ``never engaged with'' as maximum-difficulty.
+\end{itemize}
+
+The unpopularity bonus $1 - B'$ is now uniformly distributed over the slice's positive-feedback support, restoring discriminative signal.
+
+\subsubsection{Difficulty Score}
+
+We map slice popularity to a per-item, per-slice difficulty using:
+\begin{equation}
+\text{score}(i, g) = (1 - B'(i, g)) \cdot 10 \in [0, 10]
+\label{eq:linear-x10}
+\end{equation}
+(linear-x10 scheme; we also explore $\log_2$ and bucket schemes in ablation). Higher score = harder to recommend = greater stereotype-defying value when surfaced.
+
+\subsubsection{List-Level DiffScore}
+
+Given a recommendation list $\text{Rec}_u^{(K)}$, the \textbf{per-user weighted hit difficulty} under scenario $g$ is:
+\begin{equation}
+\text{DiffTotal}_u(g) = \sum_{i \in \text{Rec}_u^{(K)} \cap \mathcal{T}_u} \text{score}(i, g) \cdot \!\left(1 + \rho \cdot \frac{K - r_i^{(0)}}{K}\right)
+\label{eq:difftotal}
+\end{equation}
+where $r_i^{(0)}$ is the 0-indexed rank in the list and $\rho = 0.2$ is a rank-bonus weight giving early hits slightly more credit. The averaged variant:
+\begin{equation}
+\text{DiffAvg}_u(g) = \frac{\text{DiffTotal}_u(g)}{|\text{Rec}_u^{(K)} \cap \mathcal{T}_u|}
+\end{equation}
+
+DiffTotal answers ``how much stereotype-defying mass did we surface?''; DiffAvg answers ``how stereotype-defying is each retained hit?''.
+
+\subsection{User Mainstream-ness and Adaptive Reranking}
+\label{subsec:mainstream}
+
+Beyond per-item stereotype, the same query yields an \textbf{operational measure of how mainstream each user is} within their own demographic slice:
+\begin{equation}
+s_u(g) = \sum_{i \in \mathcal{H}_u^{\text{top-}L}} B'(i, g)
+\label{eq:user-mainstream}
+\end{equation}
+where $\mathcal{H}_u^{\text{top-}L}$ is the user's top-$L$ historical items by interaction strength ($L = 25$). High $s_u$ means user's revealed taste lies near the slice mode; low $s_u$ means user is niche within their own demographic. The slice mean $\bar{s}_g = |\mathcal{U}_g|^{-1} \sum_{u \in \mathcal{U}_g} s_u(g)$ provides a pivot.
+
+\subsubsection{Preference Probability}
+
+The LLM-supplied rank is encoded as a smooth, base-clipped exponentially-decaying preference score:
+\begin{equation}
+P_i^{\text{norm}} = \text{base} + (1 - \text{base}) \cdot \frac{r^{\,\text{rank}_i} - r^{\,N}}{1 - r^{\,N}}
+\label{eq:p-norm}
+\end{equation}
+with $\text{base} = 0.2$ and decay $r = 0.9$. Score lies in $[\text{base}, 1]$ with rank-1 receiving 1 and rank-$N$ receiving $\text{base}$.
+
+\subsubsection{Adaptive $\alpha$}
+
+The reranking intensity is user-adaptive:
+\begin{equation}
+\alpha_u = \mathrm{clip}\!\left(\alpha_{\text{base}} + \alpha_{\text{gain}} \cdot \frac{s_u(g_u) - \bar{s}_{g_u}}{\max(\bar{s}_{g_u},\, \varepsilon)},\, \alpha_{\min},\, \alpha_{\max}\right)
+\label{eq:alpha-adaptive}
+\end{equation}
+with $\alpha_{\text{base}} = 0.7$, $\alpha_{\text{gain}} = 0.2$, clip range $[0.5, 0.9]$. Semantically:
+\begin{itemize}
+\item Mainstream user ($s_u > \bar{s}_g$): $\alpha_u$ rises toward $0.9$ → trust LLM order; minimal long-tail injection.
+\item Niche user ($s_u < \bar{s}_g$): $\alpha_u$ falls toward $0.5$ → aggressive long-tail bonus.
+\end{itemize}
+
+This realizes a \textbf{personalization-preserving philosophy}: niche users in mainstream demographics are protected from stereotype collapse; mainstream users are not coerced toward unfamiliar items they did not signal taste for.
+
+\subsubsection{Score and Ordering}
+
+For each candidate $i \in \{1, \dots, N\}$:
+\begin{equation}
+S_i = \alpha_u \cdot P_i^{\text{norm}} + (1 - \alpha_u) \cdot (1 - B'(i, g_u))
+\label{eq:rerank-score}
+\end{equation}
+
+The first term encodes the LLM's confidence; the second injects unpopularity-driven exposure bonus.
+
+\subsubsection{Top-$K'$ Protection}
+
+Naïve sorting by $S_i$ destroys the LLM's high-confidence early-rank picks. We propose a \textbf{head-protect} mechanism:
+\begin{align*}
+\text{ordered\_head} &= \text{LLM\_rec}[1{:}K'] \quad (K' = 5)\\
+\text{ordered\_tail} &= \text{sort}(\text{LLM\_rec}[K'{+}1{:}N],\, \text{key}{=}S_i,\, \downarrow)\\
+\text{final\_top\_K} &= (\text{ordered\_head} + \text{ordered\_tail})[1{:}K]
+\end{align*}
+
+The first $K'$ ranks are preserved verbatim; only positions $[K'{+}1, N]$ are rebalanced. This trades a small reduction in long-tail exposure for substantial early-rank stability (MRR loss reduced from ${\approx} -10\%$ without protection to $\leq -2\%$ with $K'=5$).
+
+\subsection{Evaluation Metrics}
+\label{subsec:evalmetrics}
+
+\paragraph{Classical accuracy.}
+\begin{align}
+\text{Precision@K}_u &= \frac{|\text{Rec}_u^{(K)} \cap \mathcal{T}_u|}{\min(K, |\text{Rec}_u|)} \\
+\text{Recall@K}_u &= \frac{|\text{Rec}_u^{(K)} \cap \mathcal{T}_u|}{|\mathcal{T}_u|} \\
+\text{HitRate@K}_u &= \mathbb{1}\big[|\text{Rec}_u^{(K)} \cap \mathcal{T}_u| > 0\big] \\
+\text{MRR}_u &= \begin{cases} 1/r^*_u & \text{if hit exists} \\ 0 & \text{otherwise} \end{cases} \\
+\text{NDCG@K}_u &= \frac{\sum_{r=1}^{K} \mathbb{1}[\text{Rec}_u[r] \in \mathcal{T}_u] / \log_2(r+1)}{\sum_{r=1}^{\min(K,|\mathcal{T}_u|)} 1 / \log_2(r+1)}
+\end{align}
+
+\paragraph{Popularity-debias / exposure-fairness (our focus).}
+\begin{equation}
+\text{APLT}_u = \frac{|\{i \in \text{Rec}_u^{(K)} : B'(i, g_u) < \theta\}|}{K},\quad \theta = 0.2
+\label{eq:aplt}
+\end{equation}
+
+We report two APLT variants: $\text{APLT}_{\text{slice}}$ uses the user's own slice column, $\text{APLT}_{\text{neutral}}$ uses the global $B'(\cdot, \emptyset)$ column. The first measures niche exposure relative to the user's demographic peers; the second measures global niche exposure.
+
+\paragraph{Corpus-level diversity.}
+\begin{equation}
+\text{Coverage} = \frac{|\bigcup_{u \in \mathcal{U}} \text{Rec}_u^{(K)}|}{|\mathcal{I}|}
+\label{eq:coverage}
+\end{equation}
+\begin{equation}
+G = \frac{2 \sum_{i=1}^{n} i \cdot v_{(i)}}{n \sum_{i=1}^{n} v_{(i)}} - \frac{n+1}{n}
+\label{eq:gini}
+\end{equation}
+with $v_{(1)} \leq v_{(2)} \leq \dots \leq v_{(n)}$ the sorted non-zero recommendation frequencies of items in the corpus. Lower Gini $\Rightarrow$ flatter exposure distribution.

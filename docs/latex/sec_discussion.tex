@@ -1,0 +1,40 @@
+\section{Discussion}
+\label{sec:discussion}
+
+\subsection{Implications for Fair LLM-Based Recommendation Deployment}
+
+Our framing, which casts exposure-opportunity differential on protected attributes as the operational definition of statistical discrimination, clarifies what a fair LLM recommender must achieve and offers a directly measurable proxy. Practitioners can audit any closed-source LLM recommender for cross-slice APLT, Coverage, and Gini differentials using our pipeline without retraining the model.
+
+\subsection{Why Post-hoc}
+
+Three properties of post-hoc reranking are critical for the deployment scenarios we envision:
+\begin{itemize}
+\item \textbf{Compatible with closed-source LLMs}: GPT-4-class models cannot be fine-tuned for fairness by most operators.
+\item \textbf{Train-free, deterministic, auditable}: a single closed-form $\alpha$ rule plus a popularity table.
+\item \textbf{Modular}: the popularity table can be updated as the corpus evolves; the LLM and the reranker can be versioned independently.
+\end{itemize}
+
+In-processing methods such as Up5~\cite{hua2023up5} achieve different trade-offs and are valuable when fine-tuning the recommender backbone is feasible. Our approach is complementary, not competitive.
+
+\subsection{The Personalization vs Discrimination Dichotomy in Practice}
+
+A reranker like ours can only discharge the discrimination half: it cannot manufacture preference signal where none exists. If a niche listener under a mainstream demographic provides weak signal in $\mathcal{H}_u$, the LLM still returns mainstream candidates and our reranker down-weights them, producing exposure rebalance but not necessarily a more accurate recommendation. This is the cost of operating under partial information about preference. The remedy is to enrich $\mathcal{H}_u$ (longer, denser histories) so that personalization can do more work and reranking does less.
+
+\subsection{Limitations}
+
+\begin{itemize}
+\item \textbf{Coverage decrease on LFM-1K}: while individual user lists are more diverse and Gini is reduced, the corpus-level unique-item count actually decreases by $17$--$25\%$ (the reranker concentrates exposure on a wider but still bounded set of mid-tail items). A future $v3$ should add an inter-user anti-concentration term.
+\item \textbf{MRR loss is statistically significant on LFM-1K} (though small effect size, $d \approx 0.26$). A perfectly Pareto-dominating outcome on long-tail-extreme datasets remains elusive.
+\item \textbf{Single LLM evaluated}. Cross-LLM consistency (Claude, Qwen) is left for future work.
+\item \textbf{Two datasets}. Generalization to BookCrossing, Amazon Reviews, etc. is open.
+\item \textbf{Stratification on observed demographic only}. Race / ethnicity is unobserved in both benchmarks.
+\end{itemize}
+
+\subsection{Future Work}
+
+\begin{itemize}
+\item $v3$ algorithm with inter-user anti-concentration penalty.
+\item Cross-LLM (Claude-3.5, Qwen2.5-72B) and cross-domain (BookCrossing, Amazon) generalization.
+\item Investigating preference-drift mitigation by counterfactual prompting.
+\item Combining post-hoc rerank with in-processing methods (Up5, LoRA debias) for compounded effect.
+\end{itemize}

@@ -1,0 +1,7 @@
+=== Up5 search ===
+  hit 1: Robust Tabular Foundation Models
+    pub: 2023-05-20, link: ?
+  hit 2: UP5: Unbiased Foundation Model for Fairness-aware Recommendation
+    pub: 2024-08-28, link: ?
+  hit 3: Using Backbone Foundation Model for Evaluating Fairness in Chest Radiography Without Demog
+    pub: ?, link: ?

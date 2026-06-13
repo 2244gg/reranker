@@ -1,0 +1,62 @@
+\section{Problem Formulation}
+\label{sec:problem}
+
+\subsection{Notation}
+
+Let $\mathcal{U}$ be the user set, $\mathcal{I}$ the item catalog, and $D = \{d_1, \dots, d_p\}$ the set of protected demographic attributes. Each user $u \in \mathcal{U}$ has a feature vector $\mathbf{d}_u = (d_{u,1}, \dots, d_{u,p})$. A \emph{slice} $g$ is a value-tuple over a subset of $D$:
+\begin{itemize}
+\item $g = \emptyset$\,: \emph{neutral} (all users)
+\item $g = \{(\textsf{gender},\textsf{male})\}$\,: \emph{gender\_M}
+\item $g = \{(\textsf{gender},\textsf{female}),(\textsf{age},\textsf{young})\}$\,: \emph{cross\_F\_Youth}
+\end{itemize}
+
+Let $\mathcal{P}_u \subseteq \mathcal{I}$ denote the user's positive feedback set (items engaged at strength above threshold; see Section~\ref{sec:method}).
+
+\subsection{Slice-Conditional Popularity}
+
+For slice $g$ and item $i$, define the \textbf{slice-conditional positive-feedback count}:
+\begin{equation}
+\text{count}(i, g) = \sum_{u \in g} \mathbb{1}[i \in \mathcal{P}_u]
+\end{equation}
+
+and the \textbf{normalized slice popularity}:
+\begin{equation}
+B_{\text{raw}}(i, g) = \frac{\text{count}(i, g)}{\max_{j \in \mathcal{I}} \text{count}(j, g)} \in [0, 1]
+\end{equation}
+
+so that the most-engaged item per slice has $B = 1$.
+
+\subsection{Exposure Opportunity}
+
+Given a recommender that emits a top-$K$ list $\text{Rec}_u^{(K)}$ for user $u$, the \textbf{population-level exposure} of item $i$ is:
+\begin{equation}
+\text{Exp}(i) = \sum_{u \in \mathcal{U}} \mathbb{1}[i \in \text{Rec}_u^{(K)}]
+\end{equation}
+
+The \textbf{slice-conditional exposure} is:
+\begin{equation}
+\text{Exp}(i \mid g) = \sum_{u \in g} \mathbb{1}[i \in \text{Rec}_u^{(K)}]
+\end{equation}
+
+\subsection{Statistical Discrimination Criterion}
+\label{subsec:stat-disc}
+
+Let $f_{\text{LLM}}$ be a recommender that takes prompt features $\mathbf{x}_u = (\mathbf{h}_u, \mathbf{d}_u)$ (interaction history plus demographic descriptors) and emits $\text{Rec}_u^{(K)}$. We define $f_{\text{LLM}}$ to \textbf{statistically discriminate} if for some protected attribute $d \in D$ and pair of values $a, b$ of $d$:
+\begin{equation}
+\Big| \mathbb{E}_{u : d_u = a} [\Phi(\text{Rec}_u^{(K)})] - \mathbb{E}_{u : d_u = b} [\Phi(\text{Rec}_u^{(K)})] \Big| > \tau
+\label{eq:stat-disc}
+\end{equation}
+for some exposure-related functional $\Phi$ \emph{and} the disparity is not justified by genuine within-slice preference difference.
+
+We instantiate $\Phi$ as:
+\begin{itemize}
+\item $\Phi_1 = $ APLT (higher = more long-tail exposure)
+\item $\Phi_2 = $ Coverage (corpus-level recommendation uniqueness)
+\item $\Phi_3 = $ Gini (distributional inequality of exposure)
+\end{itemize}
+
+A reranker is \textbf{fair} in our sense if it reduces the cross-slice differential in $\Phi_1, \Phi_2, \Phi_3$ without sacrificing within-user preference alignment (measured by Hit, MRR, NDCG).
+
+\subsection{Personalization Criterion}
+
+A recommender preserves \emph{personalization} if, conditional on demographic attributes, the per-user list-quality metrics (MRR, NDCG, HitRate@K) do not degrade meaningfully. Our reranker targets a Pareto improvement: increase exposure fairness measurably (large effect size), decrease accuracy minimally (small effect size).

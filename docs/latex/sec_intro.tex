@@ -1,0 +1,43 @@
+\section{Introduction}
+\label{sec:intro}
+
+\subsection{Motivation}
+
+Large Language Models (LLMs) are increasingly deployed as zero-shot or few-shot recommenders~\cite{liu2023chatgpt,hou2024llmranker,bao2023tallrec}. They take a natural-language prompt containing the user's interaction history and (optionally) demographic descriptors, and emit a ranked candidate list. Compared with classical collaborative filtering, LLM recommenders enjoy strong cold-start coverage, transferability across domains, and high explainability.
+
+However, LLM recommenders inherit the statistical regularities of their pre-training corpora. When a user-identity prompt such as \emph{``the listener is a 22-year-old male''} is injected, the model's posterior over candidate items shifts in ways that reflect \textbf{the corpus's stereotyped associations} rather than purely the user's interaction history. Three failure modes are commonly observed:
+
+\begin{itemize}
+\item \textbf{Preference drift}: the model's top-ranked items change when only the demographic descriptor changes, even though the interaction history remains identical.
+\item \textbf{Homogenization (category collapse)}: users sharing a demographic label receive overlapping, stereotype-aligned candidate sets, regardless of finer individual preferences.
+\item \textbf{Off-category recommendation}: niche listeners under a mainstream demographic label may be served items unrelated to their actual taste, simply because those items are statistically dominant in the corpus's mental model of the demographic.
+\end{itemize}
+
+\subsection{Statistical Discrimination vs Personalization}
+
+Following the algorithmic-fairness literature~\cite{dwork2012fairness,barocas2017fairness}, we distinguish two regimes:
+
+\begin{itemize}
+\item \textbf{Personalization.} Recommendation incrementally adapts to a user's preference signal; no systematic exposure differential is induced by protected attributes (gender, age, race) once preferences are controlled for. Legitimate; desirable.
+\item \textbf{Statistical discrimination.} Recommendation systematically alters the \emph{exposure opportunity} of items conditional on a user's protected attribute, creating a measurable disparity in long-tail exposure, item coverage, or unpopularity-weighted hit rate across demographic slices. Problematic; must be mitigated.
+\end{itemize}
+
+Our framing is sharper than the colloquial \emph{``the LLM has bias''} because it ties the empirical phenomenon to a normative criterion: an LLM recommender is \textbf{discriminatory only if exposure opportunity, not just hit accuracy, differs systematically across protected demographic slices}.
+
+\subsection{Contributions}
+
+This paper makes four concrete contributions:
+
+\begin{itemize}
+\item \textbf{C1.} A \textbf{slice-conditional stereotype quantification} procedure (DiffScore) that scores every item by its inverse popularity within each demographic slice, and aggregates over a user's recommendation list to produce a per-(user, scenario) stereotype index that is interpretable and statistically tractable.
+
+\item \textbf{C2.} A \textbf{user-mainstream-ness-aware adaptive reranker} that adjusts the rebalancing intensity per user: mainstream users are nudged less, niche users are protected with stronger long-tail injection. Implemented through a closed-form $\alpha$ adjustment with \emph{no training}.
+
+\item \textbf{C3.} Two algorithmic refinements that resolve practical pathologies on long-tail-heavy datasets: (i) a \textbf{rank-percentile transformation} of the slice popularity matrix that prevents the long-tail-collapse degeneracy where the unpopularity bonus loses discrimination, and (ii) a \textbf{top-$K'$ protect} mechanism that preserves the LLM's high-confidence early-rank picks, capping MRR loss at $\leq 2\%$.
+
+\item \textbf{C4.} \textbf{Empirical evidence on two complementary benchmarks} (ML-1M for movies; LFM-1K for music tracks). On LFM-1K our reranker delivers a $+16$\,pp absolute APLT lift (${+}53\%$ relative), $-10$\,pp Gini reduction, and net positive total weighted hit score with only $-1.6\%$ MRR. On ML-1M, the reranker achieves a Pareto-dominating outcome: NDCG and MRR both improve while exposure rebalancing also improves.
+\end{itemize}
+
+\subsection{Paper Organization}
+
+Section~\ref{sec:related} reviews related work. Section~\ref{sec:problem} formalizes the problem. Section~\ref{sec:method} details the methodology. Section~\ref{sec:setup} describes the experimental setup. Sections~\ref{sec:results-ml1m} and~\ref{sec:results-lfm1k} present results on ML-1M and LFM-1K respectively. Section~\ref{sec:ablation} covers ablations and Pareto analysis. Section~\ref{sec:discussion} discusses limitations and future work. Section~\ref{sec:conclusion} concludes.

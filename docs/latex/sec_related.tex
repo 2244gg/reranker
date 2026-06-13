@@ -1,0 +1,34 @@
+\section{Related Work}
+\label{sec:related}
+
+\subsection{LLM-based Recommendation}
+
+The first wave of work on LLM recommendation focused on prompt-engineering benchmarks~\cite{liu2023chatgpt,hou2024llmranker,wang2023genrec}. Subsequent work introduced parameter-efficient fine-tuning approaches such as TALLRec~\cite{bao2023tallrec}, BIGRec~\cite{li2024bigrec}, and P5~\cite{geng2022p5}. These methods improve recommendation accuracy but do not specifically target exposure fairness. Closed-source frontier LLMs (GPT-4o, Claude-3.5, Qwen2.5) cannot be fine-tuned at all by most academic users, making post-hoc methods the only viable route in many practical settings.
+
+\subsection{Bias and Fairness in Recommendation}
+
+Bias in classical recommenders has been surveyed in~\cite{chen2023biassurvey}. Three intervention loci are commonly distinguished:
+\begin{itemize}
+\item \textbf{Pre-processing}: training-data resampling, long-tail oversampling.
+\item \textbf{In-processing}: modify model architecture or loss (IPS weighting, Up5~\cite{hua2023up5}).
+\item \textbf{Post-processing}: rerank model output (xQuAD~\cite{santos2010xquad}, FA*IR~\cite{zehlike2017fair}, Calibrated Recommendations~\cite{steck2018calibrated}).
+\end{itemize}
+
+For LLM recommenders specifically, recent in-processing methods include Up5~\cite{hua2023up5}, which adds fairness-aware bias tokens to a generative recommender backbone. Such methods require model fine-tuning access, which is unavailable for closed-source LLMs. The closest line to ours is post-hoc reranking on top of frozen LLM outputs; we extend it with a user-adaptive $\alpha$ and a rank-percentile $B$-transform (see Section~\ref{sec:method}).
+
+\subsection{Stereotype Audits of LLMs}
+
+Audits by Liu et al.~\cite{liu2023chatgpt} and Zhang et al.~\cite{zhang2024counterfactual} have demonstrated systematic preference drift in ChatGPT recommendations under identity-prompt perturbation. Our DiffScore quantification (Section~\ref{sec:method}) is directly inspired by these audits but moves beyond pure diagnosis to provide an \textbf{operational, training-free correction}.
+
+\subsection{Long-tail and Diversity Metrics}
+
+Abdollahpouri et al.~\cite{abdollahpouri2017aplt} introduced APLT (Average Percentage of Long-Tail items) as the standard long-tail exposure indicator. Steck~\cite{steck2018calibrated} proposed Calibration as a divergence-based diversity metric. The Gini index~\cite{atkinson1970gini} was repurposed for recommendation evaluation by Adomavicius and Kwon~\cite{adomavicius2012diversity}. We adopt all three as our exposure-fairness metrics, complementing classical accuracy metrics (Hit, Precision, Recall, MRR, NDCG).
+
+\subsection{Position of This Work}
+
+Our work differs from prior art on three axes:
+\begin{enumerate}
+\item \textbf{Framing}: we formalize the problem as \emph{statistical discrimination by exposure differential} on protected attributes, not generic ``popularity bias''. This connects empirical behaviour to fairness theory.
+\item \textbf{Method}: a training-free post-hoc reranker applicable to closed-source LLMs, with novel rank-percentile $B$-transform and protect-top mechanism.
+\item \textbf{Evaluation}: a paired, slice-conditional analysis with both accuracy and exposure-fairness metrics, validated across two benchmarks of distinct domain (movies, music tracks) and granularity (item-level).
+\end{enumerate}

@@ -1,0 +1,100 @@
+\documentclass[sigconf,review,anonymous]{acmart}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage{CJKutf8}                 % Chinese support for the bilingual abstract
+
+% ACM-required dummy fields (replace at camera-ready)
+\acmConference[RecSys '26]{ACM Conference on Recommender Systems}{September 2026}{Anonymous Venue}
+\acmYear{2026}
+\copyrightyear{2026}
+\setcopyright{rightsretained}
+\acmISBN{978-x-xxxx-xxxx-x/26/09}
+\acmDOI{10.1145/nnnnnnn.nnnnnnn}
+
+\settopmatter{printacmref=false}
+\renewcommand\footnotetextcopyrightpermission[1]{}
+\pagestyle{plain}
+
+\begin{document}
+
+\title{From Personalization to Statistical Discrimination: A Slice-Conditional Reranking Approach for Identity-Driven Drift in LLM-based Recommenders}
+
+\author{Anonymous Author(s)}
+\affiliation{%
+  \institution{Anonymous Institution}
+  \country{}}
+\email{anonymous@example.com}
+
+\renewcommand{\shortauthors}{Anonymous}
+
+\begin{abstract}
+\textbf{Background.} Large language models (LLMs) deployed as zero-shot recommenders are highly prompt-sensitive: introducing a user-identity descriptor (gender, age, race) into the prompt can shift the candidate posterior toward stereotype-aligned items, a behaviour that violates fairness criteria when it produces a measurable exposure-opportunity differential conditioned on protected attributes.
+\textbf{Purpose.} We formalize this behaviour as \emph{statistical discrimination} in the sense of Dwork et al., distinct from legitimate \emph{personalization}, and propose a training-free post-hoc reranker that quantifies and mitigates the discrimination component while preserving personalization.
+\textbf{Method.} Our reranker (i) builds a slice-conditional popularity matrix and applies a rank-percentile transform to recover discrimination signal under long-tail distributions, (ii) computes a per-user mainstream-ness score and adapts the rebalancing intensity $\alpha$ accordingly, and (iii) applies a top-$K'$ protection mechanism to preserve the LLM's high-confidence early ranks. We evaluate on MovieLens-1M (movie domain, $n=6{,}031$) and LastFM-1K (music track domain, $n=600$), reporting accuracy (Hit, MRR, NDCG) and exposure-fairness (APLT, Gini, Coverage, DiffScore) metrics under four demographic-conditioned scenarios.
+\textbf{Findings.} On MovieLens-1M the reranker Pareto-dominates the LLM baseline, simultaneously improving NDCG (${+}8.7\%$), MRR (${+}10.7\%$), and the stereotype-defying weighted hit score (${+}12.9\%$). On LastFM-1K (track-level, long-tail-extreme) the reranker delivers a $+16$\,pp absolute APLT lift (${+}53\%$ relative) and $-10$\,pp Gini reduction, with exposure improving for $98\%$ of users and regressing for none, at the cost of $-1.6\%$ MRR and $-11\%$ NDCG. All effects are significant at $p < 10^{-5}$ in paired $t$-tests.
+\textbf{Implications.} The framework provides a measurable bridge between fairness theory and operational LLM-recommender behaviour, applicable to any closed-source LLM API without retraining.
+\end{abstract}
+
+\begin{CCSXML}
+<ccs2012>
+   <concept>
+       <concept_id>10002951.10003317.10003347</concept_id>
+       <concept_desc>Information systems~Recommender systems</concept_desc>
+       <concept_significance>500</concept_significance>
+   </concept>
+   <concept>
+       <concept_id>10010147.10010178.10010187</concept_id>
+       <concept_desc>Computing methodologies~Natural language generation</concept_desc>
+       <concept_significance>300</concept_significance>
+   </concept>
+</ccs2012>
+\end{CCSXML}
+
+\ccsdesc[500]{Information systems~Recommender systems}
+\ccsdesc[300]{Computing methodologies~Natural language generation}
+
+\keywords{LLM recommendation, statistical discrimination, post-hoc reranking, popularity debias, exposure fairness, slice-conditional analysis}
+
+\maketitle
+
+% =================================================================
+% Chinese (zh-CN) abstract — supplementary, for thesis / journal use.
+% Independently composed per ARS bilingual_abstract_template guideline,
+% not a mechanical translation. Disable this block for venue submission
+% if Chinese abstract is not required.
+% =================================================================
+\begin{CJK}{UTF8}{gbsn}
+\noindent\textbf{中文摘要}\medskip
+
+\noindent\textbf{研究背景.} 大语言模型在被用作零样本推荐系统时对提示词高度敏感，当用户身份描述（性别、年龄、种族）被注入提示后，模型给出的候选分布会向语料中的刻板关联倾斜，使不同人口切片之间的物品曝光机会出现可测量的差异，从而构成对受保护特征的统计歧视。
+\textbf{研究目的.} 本研究将该行为形式化为 Dwork 等人意义下的统计歧视，与合法的个性化推荐严格区分，进而提出一种无需训练的后处理重排序算法，在不降低个性化精度的前提下抑制歧视成分。
+\textbf{研究方法.} 该算法包含三个关键步骤：先构建按受保护特征切片的物品流行度矩阵并施加分位数转换以在长尾数据上恢复区分信号；再利用用户历史序列计算用户在自身切片下的主流度，自适应调节重排序强度系数 $\alpha$；最后引入头部前 $K'$ 名保护机制以避免大模型的高置信首位推荐被破坏。我们在 MovieLens-1M（电影领域，6{,}031 用户）与 LastFM-1K（音乐单曲，600 用户）两个数据集上分四种人口场景同时评估准确性指标（Hit、MRR、NDCG）与曝光公平性指标（APLT、Gini、Coverage、DiffScore）。
+\textbf{研究发现.} 在 MovieLens-1M 上算法相对大模型基线实现帕累托占优：NDCG 提升 8.7\%、MRR 提升 10.7\%、刻板印象加权命中分提升 12.9\%。在 LastFM-1K 单曲场景下 APLT 绝对值提升 16 个百分点（相对提升约 53\%）、Gini 下降 10 个百分点，600 用户中 98\% 的曝光得到改善而无人退化，代价为 MRR 下降 1.6\% 与 NDCG 下降 11\%；所有效应在配对 $t$ 检验下 $p < 10^{-5}$ 显著。
+\textbf{研究意义.} 本工作把公平性理论与大模型推荐系统的实际行为通过可观测指标桥接起来，且无需训练即可应用于任何闭源大模型 API，为工业级部署的合规审计提供了可行路径。
+
+\noindent\textbf{关键词:} 大模型推荐, 统计歧视, 后处理重排序, 流行度去偏, 曝光公平性, 切片条件分析, 公平性审计
+\end{CJK}
+
+\bigskip
+
+% body sections to be added
+\input{sec_intro}
+\input{sec_related}
+\input{sec_problem}
+\input{sec_method}
+\input{sec_setup}
+\input{sec_results_ml1m}
+\input{sec_results_lfm1k}
+\input{sec_ablation}
+\input{sec_discussion}
+\input{sec_conclusion}
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{paper}
+
+\end{document}
